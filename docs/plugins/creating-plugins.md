@@ -9,10 +9,10 @@ This guide walks you through creating a Noteriv plugin from scratch, covering th
 
 ## Plugin Structure
 
-A plugin is a folder inside `.noteriv/plugins/` containing at minimum two files:
+A plugin is a folder inside `.glyph/plugins/` containing at minimum two files:
 
 ```
-.noteriv/plugins/my-plugin/
+.glyph/plugins/my-plugin/
   manifest.json
   main.js
 ```
@@ -303,7 +303,7 @@ You do not need to include the prefix yourself. Use short, descriptive IDs in yo
 
 ## Testing Your Plugin
 
-1. Create your plugin folder in `.noteriv/plugins/`.
+1. Create your plugin folder in `.glyph/plugins/`.
 2. Write your `manifest.json` and `main.js`.
 3. Open Settings > Plugins and toggle your plugin on.
 4. Check the browser developer console (F12 on desktop) for errors.

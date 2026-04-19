@@ -24,8 +24,8 @@ export interface CommunitySnippetEntry {
 
 // --- Constants ---
 
-const SNIPPETS_DIR = '.noteriv/snippets';
-const SNIPPET_CONFIG_FILE = '.noteriv/snippet-config.json';
+const SNIPPETS_DIR = '.glyph/snippets';
+const SNIPPET_CONFIG_FILE = '.glyph/snippet-config.json';
 const COMMUNITY_URL = 'https://raw.githubusercontent.com/thejacedev/NoterivSnippets/master';
 
 // --- Helpers ---
@@ -60,7 +60,7 @@ async function loadConfig(vaultPath: string): Promise<SnippetConfig> {
 }
 
 function saveConfig(vaultPath: string, config: SnippetConfig): void {
-  createDir(`${vaultPath}/.noteriv`);
+  createDir(`${vaultPath}/.glyph`);
   writeFile(configPath(vaultPath), JSON.stringify(config, null, 2));
 }
 

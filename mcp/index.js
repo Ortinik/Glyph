@@ -29,10 +29,10 @@ function findConfigDir() {
   const platform = os.platform();
   if (platform === "darwin") return path.join(os.homedir(), "Library", "Application Support", "Noteriv");
   if (platform === "win32") return path.join(process.env.APPDATA || path.join(os.homedir(), "AppData", "Roaming"), "Noteriv");
-  // Linux: ~/.config/noteriv (Electron uses lowercase app name)
+  // Linux: ~/.config/glyph (Electron uses lowercase app name)
   const base = process.env.XDG_CONFIG_HOME || path.join(os.homedir(), ".config");
   // Try lowercase first (how Electron names it on Linux), fall back to capitalized
-  const lower = path.join(base, "noteriv");
+  const lower = path.join(base, "glyph");
   if (fs.existsSync(lower)) return lower;
   return path.join(base, "Noteriv");
 }
@@ -137,7 +137,7 @@ function searchNotes(vaultPath, query) {
 // --- MCP Server ---
 
 const server = new Server(
-  { name: "noteriv", version: "1.0.0" },
+  { name: "glyph", version: "1.0.0" },
   { capabilities: { tools: {}, resources: {} } }
 );
 
@@ -236,7 +236,7 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
         const vp = requireVault();
         const full = path.join(vp, args.path);
         if (!fs.existsSync(full)) return err(`Not found: ${args.path}`);
-        const trashDir = path.join(vp, ".noteriv", "trash");
+        const trashDir = path.join(vp, ".glyph", "trash");
         if (!fs.existsSync(trashDir)) fs.mkdirSync(trashDir, { recursive: true });
         const id = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
         fs.renameSync(full, path.join(trashDir, `${id}.md`));

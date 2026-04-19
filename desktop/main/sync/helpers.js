@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-const SKIP_DIRS = new Set([".git", ".noteriv", "node_modules", ".obsidian", ".trash"]);
+const SKIP_DIRS = new Set([".git", ".glyph", "node_modules", ".obsidian", ".trash"]);
 const SYNC_EXTS = new Set([".md", ".markdown", ".txt", ".css", ".json", ".yaml", ".yml"]);
 
 function walkFiles(dir, base) {

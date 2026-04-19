@@ -33,8 +33,8 @@ export interface CommunityPluginEntry {
 
 // --- Constants ---
 
-const PLUGINS_DIR = '.noteriv/plugins';
-const PLUGIN_CONFIG_FILE = '.noteriv/plugin-config.json';
+const PLUGINS_DIR = '.glyph/plugins';
+const PLUGIN_CONFIG_FILE = '.glyph/plugin-config.json';
 const COMMUNITY_URL = 'https://raw.githubusercontent.com/thejacedev/NoterivPlugins/master';
 
 // --- Helpers ---
@@ -58,7 +58,7 @@ async function loadConfig(vaultPath: string): Promise<PluginConfig> {
 }
 
 function saveConfig(vaultPath: string, config: PluginConfig): void {
-  createDir(`${vaultPath}/.noteriv`);
+  createDir(`${vaultPath}/.glyph`);
   writeFile(configPath(vaultPath), JSON.stringify(config, null, 2));
 }
 

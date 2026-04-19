@@ -15,18 +15,18 @@ Before Noteriv writes new content to a file, it saves the current content as a s
 
 ### Storage Location
 
-Snapshots are stored in `.noteriv/snapshots/` within your vault directory:
+Snapshots are stored in `.glyph/snapshots/` within your vault directory:
 
 ```
 vault/
-  .noteriv/
+  .glyph/
     snapshots/
       meeting-notes-1698012345678.md
       meeting-notes-1698015678901.md
       project-plan-1698018901234.md
 ```
 
-The `.noteriv/` folder is created automatically when the first snapshot is saved. You should add `.noteriv/` to your `.gitignore` if you do not want snapshots synced to a remote repository (they are local recovery data and can be large).
+The `.glyph/` folder is created automatically when the first snapshot is saved. You should add `.glyph/` to your `.gitignore` if you do not want snapshots synced to a remote repository (they are local recovery data and can be large).
 
 ### Naming Convention
 
@@ -107,7 +107,7 @@ Noteriv has two overlapping but distinct history features:
 
 | | File Recovery (Snapshots) | Note History (Git) |
 |---|---|---|
-| Storage | `.noteriv/snapshots/` | Git commit history |
+| Storage | `.glyph/snapshots/` | Git commit history |
 | Trigger | Every save | Every Git commit |
 | Requires Git | No | Yes |
 | Granularity | Per-save | Per-commit |
@@ -132,4 +132,4 @@ For a typical note of 5 KB, 50 snapshots use about 250 KB. Even with thousands o
 - **Check recovery before panicking.** If you accidentally deleted text or overwrote a section, open file recovery before trying to reconstruct from memory. The snapshot is probably there.
 - **Use restore + undo for comparison.** Restore a snapshot, visually compare it to what you had, then `Ctrl+Z` if you want to go back to the current version.
 - **Clean up after experiments.** If you made many test saves while iterating on formatting or structure, delete the intermediate snapshots to keep the list manageable.
-- **Add `.noteriv/` to `.gitignore`.** Snapshots are local recovery data. Syncing them to Git adds noise and uses storage without benefit.
+- **Add `.glyph/` to `.gitignore`.** Snapshots are local recovery data. Syncing them to Git adds noise and uses storage without benefit.

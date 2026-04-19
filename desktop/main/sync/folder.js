@@ -56,7 +56,7 @@ async function testConnection(config) {
     if (!fs.existsSync(config.targetPath)) {
       fs.mkdirSync(config.targetPath, { recursive: true });
     }
-    const testFile = path.join(config.targetPath, ".noteriv-test");
+    const testFile = path.join(config.targetPath, ".glyph-test");
     fs.writeFileSync(testFile, "test");
     fs.unlinkSync(testFile);
     return { ok: true };

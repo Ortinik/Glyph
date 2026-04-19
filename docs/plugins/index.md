@@ -9,7 +9,7 @@ Noteriv has a community plugin system that lets you extend the app with new comm
 
 ## How Plugins Work
 
-Each plugin is a folder inside your vault's `.noteriv/plugins/` directory. The folder contains a `manifest.json` that describes the plugin and a `main.js` (or other entry file) that contains the plugin code. When a plugin is enabled, Noteriv loads its entry file, executes it in a sandboxed environment, and calls the plugin's `onLoad` function with an API object.
+Each plugin is a folder inside your vault's `.glyph/plugins/` directory. The folder contains a `manifest.json` that describes the plugin and a `main.js` (or other entry file) that contains the plugin code. When a plugin is enabled, Noteriv loads its entry file, executes it in a sandboxed environment, and calls the plugin's `onLoad` function with an API object.
 
 Plugins can:
 
@@ -33,7 +33,7 @@ The easiest way to install plugins is through the built-in community browser:
 3. Find a plugin you want and click **Install**.
 4. Toggle the plugin **On** to enable it.
 
-Community plugins are hosted in the [NoterivPlugins](https://github.com/thejacedev/NoterivPlugins) GitHub repository. The app downloads the plugin's `manifest.json` and `main.js` files and saves them to `.noteriv/plugins/{plugin-id}/` in your vault.
+Community plugins are hosted in the [NoterivPlugins](https://github.com/thejacedev/NoterivPlugins) GitHub repository. The app downloads the plugin's `manifest.json` and `main.js` files and saves them to `.glyph/plugins/{plugin-id}/` in your vault.
 
 ### From a Local Folder
 
@@ -42,7 +42,7 @@ If you have a plugin folder on your computer (from a developer or downloaded man
 1. Open **Settings** > **Plugins**.
 2. Click **Install from Folder**.
 3. Select the folder containing the plugin's `manifest.json` and `main.js`.
-4. The plugin is copied to `.noteriv/plugins/` and appears in the plugin list.
+4. The plugin is copied to `.glyph/plugins/` and appears in the plugin list.
 
 ### Manual Installation
 
@@ -50,7 +50,7 @@ Copy the plugin folder directly into your vault:
 
 ```
 your-vault/
-  .noteriv/
+  .glyph/
     plugins/
       my-plugin/
         manifest.json
@@ -61,7 +61,7 @@ The plugin will appear in Settings > Plugins the next time you open the settings
 
 ## Enabling and Disabling Plugins
 
-Each plugin can be toggled on or off individually from **Settings** > **Plugins**. The enabled/disabled state is stored in `.noteriv/plugin-config.json`:
+Each plugin can be toggled on or off individually from **Settings** > **Plugins**. The enabled/disabled state is stored in `.glyph/plugin-config.json`:
 
 ```json
 {
@@ -73,7 +73,7 @@ When a plugin is disabled, its `onUnload` function is called, and all of its reg
 
 ## Plugin Isolation
 
-Plugins are per-vault. Each vault has its own `.noteriv/plugins/` directory and its own `plugin-config.json`. A plugin installed in one vault is not visible in another vault. This means you can have different plugins enabled for different projects.
+Plugins are per-vault. Each vault has its own `.glyph/plugins/` directory and its own `plugin-config.json`. A plugin installed in one vault is not visible in another vault. This means you can have different plugins enabled for different projects.
 
 ## Uninstalling Plugins
 
@@ -83,7 +83,7 @@ To remove a plugin entirely:
 2. Find the plugin and click **Uninstall**.
 3. Confirm the removal.
 
-This calls the plugin's `onUnload` function, removes it from the enabled list, and deletes the plugin's folder from `.noteriv/plugins/`.
+This calls the plugin's `onUnload` function, removes it from the enabled list, and deletes the plugin's folder from `.glyph/plugins/`.
 
 ## Plugin Events
 
@@ -127,4 +127,4 @@ Make sure the plugin is enabled (toggled on) in Settings. Commands are only regi
 
 ### Plugin causes errors
 
-Disable the plugin in Settings. If you cannot access Settings, edit `.noteriv/plugin-config.json` and remove the plugin ID from the `enabled` array, then restart the app.
+Disable the plugin in Settings. If you cannot access Settings, edit `.glyph/plugin-config.json` and remove the plugin ID from the `enabled` array, then restart the app.

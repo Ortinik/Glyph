@@ -95,7 +95,7 @@ State management is handled through React context providers. `AppContext` manage
 
 ## File Storage
 
-On mobile, vaults are stored in the app's document directory under a `vaults/` folder. Each vault is a regular directory containing your markdown files and a `.noteriv/` configuration directory. The file system layer uses Expo's File and Directory APIs for synchronous reads and writes, with async wrappers for operations that touch multiple files.
+On mobile, vaults are stored in the app's document directory under a `vaults/` folder. Each vault is a regular directory containing your markdown files and a `.glyph/` configuration directory. The file system layer uses Expo's File and Directory APIs for synchronous reads and writes, with async wrappers for operations that touch multiple files.
 
 ## Sync on Mobile
 

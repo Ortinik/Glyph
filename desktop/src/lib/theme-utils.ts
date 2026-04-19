@@ -325,7 +325,7 @@ export function applyTheme(theme: ThemeDefinition): void {
 
 export async function loadCustomThemes(vaultPath: string): Promise<ThemeDefinition[]> {
   if (!window.electronAPI) return [];
-  const themesDir = `${vaultPath}/.noteriv/themes`;
+  const themesDir = `${vaultPath}/.glyph/themes`;
   await window.electronAPI.createDir(themesDir);
 
   try {
@@ -351,14 +351,14 @@ export async function loadCustomThemes(vaultPath: string): Promise<ThemeDefiniti
 
 export async function saveCustomTheme(vaultPath: string, theme: ThemeDefinition): Promise<boolean> {
   if (!window.electronAPI) return false;
-  const themesDir = `${vaultPath}/.noteriv/themes`;
+  const themesDir = `${vaultPath}/.glyph/themes`;
   await window.electronAPI.createDir(themesDir);
   return window.electronAPI.writeFile(`${themesDir}/${theme.id}.json`, JSON.stringify(theme, null, 2));
 }
 
 export async function deleteCustomTheme(vaultPath: string, themeId: string): Promise<boolean> {
   if (!window.electronAPI) return false;
-  return window.electronAPI.deleteFile(`${vaultPath}/.noteriv/themes/${themeId}.json`);
+  return window.electronAPI.deleteFile(`${vaultPath}/.glyph/themes/${themeId}.json`);
 }
 
 export function exportTheme(theme: ThemeDefinition): string {

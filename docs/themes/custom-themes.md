@@ -84,11 +84,11 @@ Every theme must define all 18 color properties. Values must be valid CSS color 
 
 ## Installing a Custom Theme
 
-Save your theme JSON file to your vault's `.noteriv/themes/` directory:
+Save your theme JSON file to your vault's `.glyph/themes/` directory:
 
 ```
 your-vault/
-  .noteriv/
+  .glyph/
     themes/
       my-custom-theme.json
 ```
@@ -165,7 +165,7 @@ Switch to your theme in Settings and check these screens:
 
 ## Exporting and Sharing
 
-To share your theme with others, distribute the JSON file. They can install it by placing it in their vault's `.noteriv/themes/` directory.
+To share your theme with others, distribute the JSON file. They can install it by placing it in their vault's `.glyph/themes/` directory.
 
 To submit your theme to the community repository, see the contributing guidelines at [NoterivThemes](https://github.com/thejacedev/NoterivThemes).
 
@@ -173,11 +173,11 @@ To submit your theme to the community repository, see the contributing guideline
 
 If someone shares a theme JSON file with you:
 
-1. Copy the `.json` file to `your-vault/.noteriv/themes/`.
+1. Copy the `.json` file to `your-vault/.glyph/themes/`.
 2. Open Settings and select the theme from the picker.
 
 You can also import themes through the Settings UI by clicking **Import Theme** and pasting the JSON content.
 
 ## Deleting a Custom Theme
 
-To remove a custom theme, delete its JSON file from `.noteriv/themes/` or use the **Delete** button next to the theme in Settings. Built-in themes cannot be deleted.
+To remove a custom theme, delete its JSON file from `.glyph/themes/` or use the **Delete** button next to the theme in Settings. Built-in themes cannot be deleted.

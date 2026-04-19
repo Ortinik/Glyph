@@ -31,10 +31,10 @@ export async function createVault(name: string): Promise<Vault> {
   const vaultPath = getVaultPath(name);
   createDir(vaultPath);
 
-  // Create .noteriv metadata directory
-  createDir(`${vaultPath}.noteriv/`);
-  createDir(`${vaultPath}.noteriv/snapshots/`);
-  createDir(`${vaultPath}.noteriv/themes/`);
+  // Create .glyph metadata directory
+  createDir(`${vaultPath}.glyph/`);
+  createDir(`${vaultPath}.glyph/snapshots/`);
+  createDir(`${vaultPath}.glyph/themes/`);
 
   const vault: Vault = {
     id: generateId(),

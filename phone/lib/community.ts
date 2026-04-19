@@ -16,7 +16,7 @@ export interface CommunityThemeEntry {
 // --- Constants ---
 
 const THEMES_URL = 'https://raw.githubusercontent.com/thejacedev/NoterivThemes/main';
-const CUSTOM_THEMES_DIR = '.noteriv/themes';
+const CUSTOM_THEMES_DIR = '.glyph/themes';
 
 // --- Helpers ---
 

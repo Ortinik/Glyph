@@ -7,7 +7,7 @@ order: 1
 
 Noteriv includes an MCP (Model Context Protocol) server that gives AI assistants full access to your notes. The server exposes 22 tools for reading, writing, searching, and managing your vault, allowing AI agents like Claude, ChatGPT, and others to interact with your knowledge base directly.
 
-The MCP server is published on npm as [`noteriv-mcp`](https://www.npmjs.com/package/noteriv-mcp) and can be run with a single command. It auto-discovers your vaults from the Noteriv desktop app's configuration, so there is no manual setup required in most cases.
+The MCP server is published on npm as [`glyph-mcp`](https://www.npmjs.com/package/glyph-mcp) and can be run with a single command. It auto-discovers your vaults from the Noteriv desktop app's configuration, so there is no manual setup required in most cases.
 
 ## What is MCP?
 
@@ -33,7 +33,7 @@ The server reads the Noteriv desktop app's configuration file to discover your v
 
 - **macOS**: `~/Library/Application Support/Noteriv/config.json`
 - **Windows**: `%APPDATA%/Noteriv/config.json`
-- **Linux**: `~/.config/noteriv/config.json` (or `~/.config/Noteriv/config.json`)
+- **Linux**: `~/.config/glyph/config.json` (or `~/.config/Noteriv/config.json`)
 
 The configuration file contains a list of vault paths and an active vault ID. The server uses the active vault by default, and you can switch vaults at runtime using the `switch_vault` or `set_vault_path` tools.
 
@@ -70,7 +70,7 @@ Here are some things you can do when an AI assistant is connected to your vault 
 The MCP server has full read and write access to your vault files. It can create, modify, and delete notes. Keep the following in mind:
 
 - The server only accesses files within your vault directories. It cannot read or write files outside your vaults.
-- The `delete_note` tool performs a soft delete by moving notes to `.noteriv/trash/`, not a permanent deletion. Notes can be restored.
+- The `delete_note` tool performs a soft delete by moving notes to `.glyph/trash/`, not a permanent deletion. Notes can be restored.
 - The `delete_folder` tool performs a permanent deletion. Use it with caution.
 - The server runs locally on your machine. No data is sent to external servers by the MCP server itself. The AI assistant you connect it to may send data to its own servers as part of its normal operation.
 - Treat your vault path and MCP configuration as you would any sensitive local data.
@@ -81,11 +81,11 @@ The MCP server is implemented as a single JavaScript file (`mcp/index.js`) using
 
 Key implementation details:
 
-- **Config discovery**: The server reads the Noteriv config file from the platform-appropriate location (macOS: `~/Library/Application Support/Noteriv/`, Windows: `%APPDATA%/Noteriv/`, Linux: `~/.config/noteriv/`).
+- **Config discovery**: The server reads the Noteriv config file from the platform-appropriate location (macOS: `~/Library/Application Support/Noteriv/`, Windows: `%APPDATA%/Noteriv/`, Linux: `~/.config/glyph/`).
 - **Vault resolution**: If a vault path is passed as a command-line argument, it is used directly. Otherwise, the server reads the config file and uses the active vault, falling back to the first configured vault.
-- **File walking**: The `walkDir` function recursively lists files and folders, skipping hidden directories (`.git`, `.noteriv`) and `node_modules`.
+- **File walking**: The `walkDir` function recursively lists files and folders, skipping hidden directories (`.git`, `.glyph`) and `node_modules`.
 - **Search**: Full-text search is case-insensitive and checks both filenames and file content. Results are capped at 20 files with up to 5 matching lines per file.
-- **Soft delete**: The `delete_note` tool moves files to `.noteriv/trash/` with a timestamped ID and a metadata file recording the original path and deletion time.
+- **Soft delete**: The `delete_note` tool moves files to `.glyph/trash/` with a timestamped ID and a metadata file recording the original path and deletion time.
 - **Daily notes**: Stored in a `Daily/` folder with `YYYY-MM-DD.md` filenames. The `create_daily_note` tool creates the folder if it does not exist.
 
 The server also exposes MCP resources, listing up to 200 notes as readable resources with `note:///` URIs.

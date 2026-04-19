@@ -141,7 +141,7 @@ A card is due for review if:
 
 ## Progress Storage
 
-Review progress is saved in `.noteriv/flashcard-reviews.json` inside your vault:
+Review progress is saved in `.glyph/flashcard-reviews.json` inside your vault:
 
 ```json
 {
@@ -158,7 +158,7 @@ Review progress is saved in `.noteriv/flashcard-reviews.json` inside your vault:
 
 Each card has a unique ID generated from a hash of its question text and source file path. Progress is saved immediately after each grade, so closing the review mid-session does not lose data.
 
-The `.noteriv/` directory is created automatically if it does not exist.
+The `.glyph/` directory is created automatically if it does not exist.
 
 ## Card Identification
 
@@ -207,4 +207,4 @@ The {{Krebs cycle}} produces {{2 ATP}} per glucose molecule.
 - **Review daily.** Spaced repetition works best with consistent daily reviews. Even 5 minutes a day is effective.
 - **Grade honestly.** The algorithm depends on accurate self-assessment. If you had to think hard, grade "OK" (3), not "Easy" (5).
 - **Keep cards atomic.** Each card should test one piece of knowledge. "What are the three branches of government?" is too broad -- make three separate cards.
-- **Add `.noteriv/` to `.gitignore`** if you do not want review progress synced across devices. Or leave it tracked if you do want cross-device consistency.
+- **Add `.glyph/` to `.gitignore`** if you do not want review progress synced across devices. Or leave it tracked if you do want cross-device consistency.

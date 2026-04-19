@@ -1,6 +1,6 @@
 /**
  * Trash / Soft Delete utilities
- * Moves files to .noteriv/trash/ instead of permanently deleting them.
+ * Moves files to .glyph/trash/ instead of permanently deleting them.
  */
 
 export interface TrashItem {
@@ -13,12 +13,12 @@ export interface TrashItem {
 }
 
 /**
- * Move a file to .noteriv/trash/ with metadata sidecar.
+ * Move a file to .glyph/trash/ with metadata sidecar.
  */
 export async function trashFile(vaultPath: string, filePath: string): Promise<boolean> {
   if (!window.electronAPI) return false;
 
-  const trashDir = `${vaultPath}/.noteriv/trash`;
+  const trashDir = `${vaultPath}/.glyph/trash`;
   await window.electronAPI.createDir(trashDir);
 
   const fileName = filePath.split("/").pop() || "unknown";
@@ -54,11 +54,11 @@ export async function trashFile(vaultPath: string, filePath: string): Promise<bo
 export async function listTrash(vaultPath: string): Promise<TrashItem[]> {
   if (!window.electronAPI) return [];
 
-  const trashDir = `${vaultPath}/.noteriv/trash`;
+  const trashDir = `${vaultPath}/.glyph/trash`;
   await window.electronAPI.createDir(trashDir);
 
   // readDir filters out dot files, but our trash files don't start with dot
-  // We need to read the trash dir — but .noteriv starts with dot, so readDir
+  // We need to read the trash dir — but .glyph starts with dot, so readDir
   // won't list it from the vault root. We call readDir directly on the trash path.
   let entries: { name: string; path: string; isDirectory: boolean }[];
   try {
@@ -101,7 +101,7 @@ export async function listTrash(vaultPath: string): Promise<TrashItem[]> {
 export async function restoreFile(vaultPath: string, trashId: string): Promise<boolean> {
   if (!window.electronAPI) return false;
 
-  const trashDir = `${vaultPath}/.noteriv/trash`;
+  const trashDir = `${vaultPath}/.glyph/trash`;
   const metaPath = `${trashDir}/${trashId}.meta.json`;
   const contentPath = `${trashDir}/${trashId}`;
 
@@ -141,7 +141,7 @@ export async function restoreFile(vaultPath: string, trashId: string): Promise<b
 export async function permanentDelete(vaultPath: string, trashId: string): Promise<boolean> {
   if (!window.electronAPI) return false;
 
-  const trashDir = `${vaultPath}/.noteriv/trash`;
+  const trashDir = `${vaultPath}/.glyph/trash`;
   const contentPath = `${trashDir}/${trashId}`;
   const metaPath = `${trashDir}/${trashId}.meta.json`;
 

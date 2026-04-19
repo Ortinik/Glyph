@@ -279,7 +279,7 @@ export default function Home() {
 
       // Load recent commands from localStorage
       try {
-        const saved = localStorage.getItem("noteriv-recent-commands");
+        const saved = localStorage.getItem("glyph-recent-commands");
         if (saved) setRecentCommands(JSON.parse(saved));
       } catch {}
 
@@ -1303,7 +1303,7 @@ export default function Home() {
       const filtered = prev.filter((a) => a !== action);
       const updated = [action, ...filtered].slice(0, 5);
       try {
-        localStorage.setItem("noteriv-recent-commands", JSON.stringify(updated));
+        localStorage.setItem("glyph-recent-commands", JSON.stringify(updated));
       } catch {}
       return updated;
     });

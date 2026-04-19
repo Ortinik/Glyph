@@ -123,7 +123,7 @@ KaTeX supports a wide range of LaTeX commands including fractions (`\frac`), int
 ### External Links
 
 ```markdown
-[Noteriv Website](https://www.noteriv.com)
+[Noteriv Website](https://www.glyph.com)
 ```
 
 ### Wiki-Links

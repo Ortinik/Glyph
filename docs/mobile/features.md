@@ -94,13 +94,13 @@ A: Paris
 The {{capital of France}} is known for the Eiffel Tower.
 ```
 
-The review screen shows one card at a time. Tap to reveal the answer, then rate your recall (Again, Hard, Good, Easy). The app uses the SM-2 spaced repetition algorithm to schedule future reviews, storing review data in `.noteriv/flashcard-reviews.json`.
+The review screen shows one card at a time. Tap to reveal the answer, then rate your recall (Again, Hard, Good, Easy). The app uses the SM-2 spaced repetition algorithm to schedule future reviews, storing review data in `.glyph/flashcard-reviews.json`.
 
 Cards are collected from all notes in your vault. The review screen shows how many cards are due today and lets you review them in a focused, distraction-free interface.
 
 ## Trash
 
-When you delete a note, it is moved to a `.noteriv/trash/` directory rather than being permanently removed. The trash screen shows all soft-deleted notes with their original name and deletion date.
+When you delete a note, it is moved to a `.glyph/trash/` directory rather than being permanently removed. The trash screen shows all soft-deleted notes with their original name and deletion date.
 
 From the trash screen, you can:
 
@@ -174,7 +174,7 @@ You can also choose from 8 accent colors (Blue, Lavender, Mauve, Pink, Peach, Ye
 
 - **Templates** -- Insert pre-built templates into new or existing notes from a template picker.
 - **Note composer** -- Merge selected notes into one, or split a note at a heading into separate files.
-- **File recovery** -- Access automatic snapshots stored in `.noteriv/snapshots/` to restore previous versions.
+- **File recovery** -- Access automatic snapshots stored in `.glyph/snapshots/` to restore previous versions.
 - **Slide presentation** -- Present any note as a slideshow, split at horizontal rules.
 - **Frontmatter editor** -- Visual editor for YAML frontmatter without hand-editing the YAML block.
 - **Bookmarks** -- Pin frequently accessed notes for quick access from the home screen.

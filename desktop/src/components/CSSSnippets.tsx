@@ -465,7 +465,7 @@ export default function CSSSnippets({
         <div className="snippets-footer">
           <span className="snippets-footer-text">
             Snippets are stored in{" "}
-            <code>.noteriv/snippets/</code> in your vault
+            <code>.glyph/snippets/</code> in your vault
           </span>
         </div>
       </div>

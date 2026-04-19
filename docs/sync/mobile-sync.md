@@ -60,10 +60,10 @@ The pull operation downloads files from GitHub to the local vault:
 
 1. **Detect default branch**: Queries `GET /repos/:owner/:repo` and reads the `default_branch` field (usually `main`).
 2. **Get remote tree**: Queries `GET /repos/:owner/:repo/git/trees/:branch?recursive=1` to get a flat list of all files in the repository, including their paths, types, and SHA hashes.
-3. **Filter files**: Keeps only blob (file) entries that are Markdown files (`.md` or `.markdown`) and are not inside the `.noteriv/` directory.
+3. **Filter files**: Keeps only blob (file) entries that are Markdown files (`.md` or `.markdown`) and are not inside the `.glyph/` directory.
 4. **Compare with local**: For each remote file, checks if a local copy exists. If the local copy matches the remote content, it is skipped.
 5. **Download changed files**: For files that are new or modified, calls `GET /repos/:owner/:repo/contents/:path` to retrieve the file content (base64-encoded), decodes it, and writes it to the local filesystem.
-6. **Delete removed files**: Local files that no longer exist on the remote (excluding `.noteriv/` and `.trash/`) are deleted from the device.
+6. **Delete removed files**: Local files that no longer exist on the remote (excluding `.glyph/` and `.trash/`) are deleted from the device.
 
 ### Push
 
@@ -95,7 +95,7 @@ The sync is non-blocking -- it runs in the background while you continue editing
 
 The "Fresh Clone" button in sync settings performs a destructive re-download of the entire vault from GitHub:
 
-1. **Delete all local files**: Every file and directory in the vault is deleted, except `.noteriv/` (configuration) and `.trash/` (soft-deleted files).
+1. **Delete all local files**: Every file and directory in the vault is deleted, except `.glyph/` (configuration) and `.trash/` (soft-deleted files).
 2. **Download everything**: All files from the remote repository (not just Markdown -- everything) are downloaded and written to the vault directory.
 
 Fresh Clone is useful when:
@@ -147,7 +147,7 @@ If you encounter rate limiting (`403` responses), increase the sync interval or 
 
 The following paths are excluded from sync:
 
-- **`.noteriv/`**: Application configuration directory. Contains vault settings, themes, and other metadata that should not be synced.
+- **`.glyph/`**: Application configuration directory. Contains vault settings, themes, and other metadata that should not be synced.
 - **`.trash/`**: Soft-deleted files. Kept locally for recovery but not synced to remote.
 
 All other files participate in sync.

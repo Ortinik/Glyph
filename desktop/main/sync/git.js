@@ -9,7 +9,7 @@ function git(args, cwd, token = null) {
     const env = { ...process.env };
 
     if (token) {
-      const askpassScript = path.join(os.tmpdir(), `noteriv-askpass-${process.pid}.sh`);
+      const askpassScript = path.join(os.tmpdir(), `glyph-askpass-${process.pid}.sh`);
       const isWin = process.platform === "win32";
 
       if (isWin) {
@@ -174,7 +174,7 @@ async function sync(dir, commitMessage, token = null) {
     const needsStash = !!hasChanges;
 
     if (needsStash) {
-      await git(["stash", "push", "-m", "noteriv-sync-stash"], dir).catch(() => {});
+      await git(["stash", "push", "-m", "glyph-sync-stash"], dir).catch(() => {});
     }
 
     // Fetch first so we know what remote has
@@ -209,7 +209,7 @@ async function pull(dir, token = null) {
   const needsStash = !!hasChanges;
 
   if (needsStash) {
-    await git(["stash", "push", "-m", "noteriv-pull-stash"], dir);
+    await git(["stash", "push", "-m", "glyph-pull-stash"], dir);
   }
 
   try {

@@ -12,10 +12,10 @@ This guide shows you how to install and configure the Noteriv MCP server with di
 The fastest way to get started is with Claude Code. Run this single command:
 
 ```bash
-claude mcp add --scope user noteriv -- npx -y noteriv-mcp
+claude mcp add --scope user glyph -- npx -y glyph-mcp
 ```
 
-This registers the Noteriv MCP server as a user-scoped tool in Claude Code. The `npx -y` flag downloads and runs the latest version of `noteriv-mcp` from npm automatically. The server will start whenever Claude Code needs it and stop when the session ends.
+This registers the Noteriv MCP server as a user-scoped tool in Claude Code. The `npx -y` flag downloads and runs the latest version of `glyph-mcp` from npm automatically. The server will start whenever Claude Code needs it and stop when the session ends.
 
 After adding the server, you can immediately ask Claude to interact with your notes:
 
@@ -38,9 +38,9 @@ Add the following to the `mcpServers` section:
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["-y", "noteriv-mcp"]
+      "args": ["-y", "glyph-mcp"]
     }
   }
 }
@@ -55,9 +55,9 @@ To use with Cursor, add the Noteriv MCP server to your Cursor MCP configuration.
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["-y", "noteriv-mcp"]
+      "args": ["-y", "glyph-mcp"]
     }
   }
 }
@@ -68,9 +68,9 @@ Alternatively, create or edit `.cursor/mcp.json` in your project root:
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["-y", "noteriv-mcp"]
+      "args": ["-y", "glyph-mcp"]
     }
   }
 }
@@ -83,9 +83,9 @@ For Windsurf, add the server to your MCP configuration at `~/.codeium/windsurf/m
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["-y", "noteriv-mcp"]
+      "args": ["-y", "glyph-mcp"]
     }
   }
 }
@@ -104,7 +104,7 @@ node index.js
 To use the source version with Claude Code:
 
 ```bash
-claude mcp add --scope user noteriv -- node /path/to/Noteriv/mcp/index.js
+claude mcp add --scope user glyph -- node /path/to/Noteriv/mcp/index.js
 ```
 
 ## Specifying a Vault Path
@@ -116,13 +116,13 @@ By default, the MCP server auto-discovers your vaults from the Noteriv desktop a
 node index.js /path/to/my-vault
 
 # Or via npx
-npx -y noteriv-mcp /path/to/my-vault
+npx -y glyph-mcp /path/to/my-vault
 ```
 
 To configure this in Claude Code:
 
 ```bash
-claude mcp add --scope user noteriv -- npx -y noteriv-mcp /path/to/my-vault
+claude mcp add --scope user glyph -- npx -y glyph-mcp /path/to/my-vault
 ```
 
 Or in a JSON config file:
@@ -130,9 +130,9 @@ Or in a JSON config file:
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["-y", "noteriv-mcp", "/path/to/my-vault"]
+      "args": ["-y", "glyph-mcp", "/path/to/my-vault"]
     }
   }
 }
@@ -146,7 +146,7 @@ When no vault path is provided as a command-line argument, the server reads the 
 |---|---|
 | macOS | `~/Library/Application Support/Noteriv/config.json` |
 | Windows | `%APPDATA%/Noteriv/config.json` |
-| Linux | `~/.config/noteriv/config.json` |
+| Linux | `~/.config/glyph/config.json` |
 
 The configuration file contains a list of vaults with their names, paths, and IDs, along with the ID of the currently active vault. The server uses the active vault by default.
 
@@ -183,7 +183,7 @@ You should see a list of your vault names and paths. If you see an error, check 
 The server could not find a vault. Either the Noteriv config file does not exist, or it does not contain any vaults. Solutions:
 
 - Open the Noteriv desktop app and create or open a vault.
-- Pass a vault path explicitly: `npx -y noteriv-mcp /path/to/vault`.
+- Pass a vault path explicitly: `npx -y glyph-mcp /path/to/vault`.
 - Use the `set_vault_path` tool at runtime.
 
 ### Server does not start
@@ -192,4 +192,4 @@ Make sure `npx` is available in your PATH. Run `npx --version` in your terminal 
 
 ### Tools are not showing up
 
-Some AI assistants cache the tool list. Restart the AI assistant or reload the MCP configuration. In Claude Code, run `claude mcp list` to verify that the `noteriv` server is registered.
+Some AI assistants cache the tool list. Restart the AI assistant or reload the MCP configuration. In Claude Code, run `claude mcp list` to verify that the `glyph` server is registered.

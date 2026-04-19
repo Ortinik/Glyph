@@ -41,7 +41,7 @@ Yes. The mobile app is built with React Native and Expo and runs natively on And
 
 ## 8. What is the MCP server?
 
-The MCP (Model Context Protocol) server gives AI assistants like Claude, ChatGPT, and Cursor direct access to your notes. It exposes 22 tools for reading, writing, searching, and managing your vault. Install it with `npx -y noteriv-mcp` and connect it to any MCP-compatible AI assistant. See the [MCP Server](./mcp/) documentation for setup instructions.
+The MCP (Model Context Protocol) server gives AI assistants like Claude, ChatGPT, and Cursor direct access to your notes. It exposes 22 tools for reading, writing, searching, and managing your vault. Install it with `npx -y glyph-mcp` and connect it to any MCP-compatible AI assistant. See the [MCP Server](./mcp/) documentation for setup instructions.
 
 ## 9. Can I install plugins?
 
@@ -49,7 +49,7 @@ Yes. Noteriv has a community plugin system. Plugins are JavaScript files that ex
 
 ## 10. Can I customize the theme?
 
-Yes. Noteriv ships with 10 built-in themes (8 dark, 2 light) and supports custom themes. Create a theme by writing a JSON file with 18 color properties and saving it to `.noteriv/themes/` in your vault. You can also install community themes from the [NoterivThemes](https://github.com/thejacedev/NoterivThemes) repository. For finer control, CSS snippets let you override any visual style. See [Themes](./themes/) for details.
+Yes. Noteriv ships with 10 built-in themes (8 dark, 2 light) and supports custom themes. Create a theme by writing a JSON file with 18 color properties and saving it to `.glyph/themes/` in your vault. You can also install community themes from the [NoterivThemes](https://github.com/thejacedev/NoterivThemes) repository. For finer control, CSS snippets let you override any visual style. See [Themes](./themes/) for details.
 
 ## 11. Does Noteriv have Vim mode?
 
@@ -105,7 +105,7 @@ Dataview is a query engine that lets you treat your notes as a database. Write q
 
 ## 19. How do flashcards work?
 
-Noteriv extracts flashcards from your notes using two formats: Q:/A: pairs and {{cloze}} deletions. The review system uses the SM-2 spaced repetition algorithm to schedule cards based on your recall performance. Review data is stored in `.noteriv/flashcard-reviews.json`. Cards are collected from all notes in your vault, so you can embed study material directly in your regular notes. See [Markdown Syntax - Flashcards](./reference/markdown-syntax.md#flashcards).
+Noteriv extracts flashcards from your notes using two formats: Q:/A: pairs and {{cloze}} deletions. The review system uses the SM-2 spaced repetition algorithm to schedule cards based on your recall performance. Review data is stored in `.glyph/flashcard-reviews.json`. Cards are collected from all notes in your vault, so you can embed study material directly in your regular notes. See [Markdown Syntax - Flashcards](./reference/markdown-syntax.md#flashcards).
 
 ## 20. How can I contribute?
 
@@ -137,7 +137,7 @@ Absolutely. The daily notes feature creates a new note for each day in a `Daily/
 
 ### What happens if I delete a note accidentally?
 
-Noteriv uses soft delete by default. When you delete a note, it moves to `.noteriv/trash/` in your vault. You can restore it from the trash panel at any time. Additionally, if your vault is synced with git, you can recover any previous version from the git history. The file recovery system also keeps automatic snapshots in `.noteriv/snapshots/`.
+Noteriv uses soft delete by default. When you delete a note, it moves to `.glyph/trash/` in your vault. You can restore it from the trash panel at any time. Additionally, if your vault is synced with git, you can recover any previous version from the git history. The file recovery system also keeps automatic snapshots in `.glyph/snapshots/`.
 
 ### Can I use Noteriv without the desktop app?
 

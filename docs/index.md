@@ -37,7 +37,7 @@ The React Native mobile app: available features, setup for development, swipe na
 
 ### [MCP Server](./mcp/)
 
-The Model Context Protocol server that gives AI assistants access to your vault. 22 tools for reading, writing, searching, and managing notes. Published as `noteriv-mcp` on npm. [Read more](./mcp/)
+The Model Context Protocol server that gives AI assistants access to your vault. 22 tools for reading, writing, searching, and managing notes. Published as `glyph-mcp` on npm. [Read more](./mcp/)
 
 ### [Themes](./themes/)
 
@@ -49,7 +49,7 @@ Community plugin system with a sandboxed JavaScript API. Install plugins from th
 
 ### [Reference](./reference/)
 
-Comprehensive reference documentation: complete markdown syntax (including all extensions), YAML frontmatter fields, all 14 callout types, supported file types, and the `.noteriv/` directory structure. [Read more](./reference/)
+Comprehensive reference documentation: complete markdown syntax (including all extensions), YAML frontmatter fields, all 14 callout types, supported file types, and the `.glyph/` directory structure. [Read more](./reference/)
 
 ### [FAQ](./faq.md)
 
@@ -77,8 +77,8 @@ How to contribute to Noteriv: reporting bugs, suggesting features, submitting pu
 ## Links
 
 - **GitHub**: [github.com/thejacedev/Noteriv](https://github.com/thejacedev/Noteriv)
-- **Website**: [noteriv.com](https://www.noteriv.com)
-- **MCP Server**: [npmjs.com/package/noteriv-mcp](https://www.npmjs.com/package/noteriv-mcp)
+- **Website**: [glyph.com](https://www.glyph.com)
+- **MCP Server**: [npmjs.com/package/glyph-mcp](https://www.npmjs.com/package/glyph-mcp)
 - **Plugins**: [github.com/thejacedev/NoterivPlugins](https://github.com/thejacedev/NoterivPlugins)
 - **Themes**: [github.com/thejacedev/NoterivThemes](https://github.com/thejacedev/NoterivThemes)
 - **CSS Snippets**: [github.com/thejacedev/NoterivSnippets](https://github.com/thejacedev/NoterivSnippets)

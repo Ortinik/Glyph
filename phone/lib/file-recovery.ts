@@ -9,7 +9,7 @@ export interface SnapshotInfo {
   displayDate: string;
 }
 
-const SNAPSHOTS_DIR = '.noteriv/snapshots';
+const SNAPSHOTS_DIR = '.glyph/snapshots';
 const MAX_SNAPSHOTS_PER_FILE = 50;
 
 /**

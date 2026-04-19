@@ -38,17 +38,17 @@ For Debian-based distributions (Debian, Ubuntu, Linux Mint, Pop!_OS, elementary 
 1. Download the `.deb` file from the releases page.
 2. Install it with `dpkg`:
    ```bash
-   sudo dpkg -i noteriv_*.deb
+   sudo dpkg -i glyph_*.deb
    ```
 3. If there are missing dependencies, fix them with:
    ```bash
    sudo apt-get install -f
    ```
-4. Launch Noteriv from your application menu or run `noteriv` from the terminal.
+4. Launch Noteriv from your application menu or run `glyph` from the terminal.
 
 To uninstall:
 ```bash
-sudo apt-get remove noteriv
+sudo apt-get remove glyph
 ```
 
 ### Fedora / openSUSE (.rpm)
@@ -59,20 +59,20 @@ For RPM-based distributions (Fedora, openSUSE, CentOS, RHEL, etc.):
 2. Install it:
    ```bash
    # Fedora
-   sudo dnf install noteriv-*.rpm
+   sudo dnf install glyph-*.rpm
 
    # openSUSE
-   sudo zypper install noteriv-*.rpm
+   sudo zypper install glyph-*.rpm
    ```
-3. Launch Noteriv from your application menu or run `noteriv` from the terminal.
+3. Launch Noteriv from your application menu or run `glyph` from the terminal.
 
 To uninstall:
 ```bash
 # Fedora
-sudo dnf remove noteriv
+sudo dnf remove glyph
 
 # openSUSE
-sudo zypper remove noteriv
+sudo zypper remove glyph
 ```
 
 ## Windows

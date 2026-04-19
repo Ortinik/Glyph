@@ -29,7 +29,7 @@ export interface CardReview {
   lastReview: string;
 }
 
-const REVIEW_DIR = '.noteriv';
+const REVIEW_DIR = '.glyph';
 const REVIEW_FILE = 'flashcard-reviews.json';
 
 /** Extract flashcards from markdown content */

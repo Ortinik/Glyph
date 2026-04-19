@@ -366,11 +366,11 @@
 
   function showToast(message, success) {
     // Remove any existing toast
-    const existing = document.getElementById("noteriv-clipper-toast");
+    const existing = document.getElementById("glyph-clipper-toast");
     if (existing) existing.remove();
 
     const toast = document.createElement("div");
-    toast.id = "noteriv-clipper-toast";
+    toast.id = "glyph-clipper-toast";
     toast.textContent = message;
     toast.style.cssText = `
       position: fixed !important;

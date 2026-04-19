@@ -5,7 +5,7 @@ order: 5
 
 # File Types
 
-Noteriv works with several file types, each serving a specific purpose. This page documents all supported file extensions and the `.noteriv/` configuration directory structure.
+Noteriv works with several file types, each serving a specific purpose. This page documents all supported file extensions and the `.glyph/` configuration directory structure.
 
 ## Note Files
 
@@ -118,15 +118,15 @@ Noteriv can display and manage various attachment file types within your vault:
 
 Attachments are typically stored in an `attachments/` folder within your vault, but they can be placed anywhere. Reference them in markdown using standard image syntax or relative links.
 
-## The .noteriv Directory
+## The .glyph Directory
 
-Every vault contains a `.noteriv/` hidden directory that stores Noteriv-specific configuration, plugins, themes, and data. This directory is automatically created when you open a vault.
+Every vault contains a `.glyph/` hidden directory that stores Noteriv-specific configuration, plugins, themes, and data. This directory is automatically created when you open a vault.
 
 ### Directory Structure
 
 ```
 your-vault/
-  .noteriv/
+  .glyph/
     themes/               # Custom theme JSON files
       my-theme.json
     snippets/             # CSS snippet files
@@ -192,33 +192,33 @@ Stores spaced repetition review data for all flashcards in the vault. Each card 
 
 ### Themes Directory
 
-Custom theme files (`.json`) are stored in `.noteriv/themes/`. Each file defines a complete color scheme. See [Custom Themes](../themes/custom-themes.md) for the JSON format.
+Custom theme files (`.json`) are stored in `.glyph/themes/`. Each file defines a complete color scheme. See [Custom Themes](../themes/custom-themes.md) for the JSON format.
 
 ### Snippets Directory
 
-CSS snippet files (`.css`) are stored in `.noteriv/snippets/`. Each file contains CSS rules that are injected into the app when the snippet is enabled. See [CSS Snippets](../themes/css-snippets.md) for details.
+CSS snippet files (`.css`) are stored in `.glyph/snippets/`. Each file contains CSS rules that are injected into the app when the snippet is enabled. See [CSS Snippets](../themes/css-snippets.md) for details.
 
 ### Plugins Directory
 
-Each plugin is a subdirectory of `.noteriv/plugins/` containing at minimum `manifest.json` and an entry JavaScript file. See [Creating Plugins](../plugins/creating-plugins.md) for the plugin structure.
+Each plugin is a subdirectory of `.glyph/plugins/` containing at minimum `manifest.json` and an entry JavaScript file. See [Creating Plugins](../plugins/creating-plugins.md) for the plugin structure.
 
 ### Snapshots Directory
 
-The file recovery system stores automatic snapshots of your notes in `.noteriv/snapshots/`. Each note has its own subdirectory containing timestamped copies. These snapshots are separate from git history and provide a safety net even for vaults that are not synced with git.
+The file recovery system stores automatic snapshots of your notes in `.glyph/snapshots/`. Each note has its own subdirectory containing timestamped copies. These snapshots are separate from git history and provide a safety net even for vaults that are not synced with git.
 
 ### Trash Directory
 
-When you delete a note (soft delete), it is moved to `.noteriv/trash/` with a unique ID. A companion `.meta.json` file records the original path, filename, and deletion timestamp so the note can be restored to its original location.
+When you delete a note (soft delete), it is moved to `.glyph/trash/` with a unique ID. A companion `.meta.json` file records the original path, filename, and deletion timestamp so the note can be restored to its original location.
 
 ## App Configuration
 
-Separate from the per-vault `.noteriv/` directory, the Noteriv app stores global configuration (vault list, active vault, window state) in the operating system's standard configuration directory:
+Separate from the per-vault `.glyph/` directory, the Noteriv app stores global configuration (vault list, active vault, window state) in the operating system's standard configuration directory:
 
 | Platform | Path |
 |---|---|
 | macOS | `~/Library/Application Support/Noteriv/config.json` |
 | Windows | `%APPDATA%/Noteriv/config.json` |
-| Linux | `~/.config/noteriv/config.json` |
+| Linux | `~/.config/glyph/config.json` |
 
 This file contains the list of registered vaults with their names, paths, and IDs, along with the active vault ID and global settings.
 
@@ -228,6 +228,6 @@ Daily notes are stored in a `Daily/` folder at the vault root. Filenames follow 
 
 ## Git and Sync
 
-If your vault is synced with GitHub, a `.git/` directory is present at the vault root (managed by git, not Noteriv). The `.noteriv/` directory is included in git sync by default, so your plugins, themes, snippets, and flashcard review data are synced across devices.
+If your vault is synced with GitHub, a `.git/` directory is present at the vault root (managed by git, not Noteriv). The `.glyph/` directory is included in git sync by default, so your plugins, themes, snippets, and flashcard review data are synced across devices.
 
-The `.noteriv/trash/` directory is typically excluded from git sync to avoid syncing deleted files. You can configure this in your `.gitignore`.
+The `.glyph/trash/` directory is typically excluded from git sync to avoid syncing deleted files. You can configure this in your `.gitignore`.

@@ -200,7 +200,7 @@ function isMarkdownFile(path: string): boolean {
 }
 
 function shouldSkipPath(path: string): boolean {
-  return path.startsWith('.noteriv/') || path.startsWith('.noteriv\\');
+  return path.startsWith('.glyph/') || path.startsWith('.glyph\\');
 }
 
 /** Normalize vault path to ensure trailing separator, then build full path. */
@@ -235,7 +235,7 @@ export async function pull(
     const branchName = branch ?? (await getDefaultBranch(owner, repo, token));
     const tree = await getTree(owner, repo, branchName, token);
 
-    // Filter to markdown files only, skip .noteriv/
+    // Filter to markdown files only, skip .glyph/
     const remoteFiles = tree.filter(
       (item) =>
         item.type === 'blob' &&
@@ -447,14 +447,14 @@ export async function freshClone(
     const branchName = branch ?? (await getDefaultBranch(owner, repo, token));
     const tree = await getTree(owner, repo, branchName, token);
 
-    // Nuke all vault contents except .noteriv/ and .trash/
+    // Nuke all vault contents except .glyph/ and .trash/
     const base = vaultPath.endsWith('/') ? vaultPath.slice(0, -1) : vaultPath;
     console.log('[FreshClone] Vault path:', base);
     const entries = FS.readDir(base);
     console.log('[FreshClone] Found', entries.length, 'entries to process');
     for (const entry of entries) {
       const name = entry.name;
-      if (name === '.noteriv' || name === '.trash') {
+      if (name === '.glyph' || name === '.trash') {
         console.log('[FreshClone] Skipping:', name);
         continue;
       }

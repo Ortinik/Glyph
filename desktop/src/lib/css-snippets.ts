@@ -6,8 +6,8 @@ export interface CSSSnippet {
   content: string;
 }
 
-const SNIPPETS_DIR = ".noteriv/snippets";
-const CONFIG_FILE = ".noteriv/snippet-config.json";
+const SNIPPETS_DIR = ".glyph/snippets";
+const CONFIG_FILE = ".glyph/snippet-config.json";
 
 export async function loadSnippets(vaultPath: string): Promise<CSSSnippet[]> {
   if (!window.electronAPI) return [];

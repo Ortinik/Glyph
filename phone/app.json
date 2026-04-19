@@ -1,16 +1,16 @@
 {
   "expo": {
-    "name": "noteriv",
-    "slug": "noteriv",
+    "name": "glyph",
+    "slug": "glyph",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "noteriv",
+    "scheme": "glyph",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.ironstacksoftware.noteriv",
+      "bundleIdentifier": "com.ironstacksoftware.glyph",
       "infoPlist": {
         "ITSAppUsesNonExemptEncryption": false
       }
@@ -22,7 +22,7 @@
       },
       "edgeToEdgeEnabled": true,
       "predictiveBackGestureEnabled": false,
-      "package": "com.ironstacksoftware.noteriv"
+      "package": "com.ironstacksoftware.glyph"
     },
     "web": {
       "output": "static",

@@ -31,7 +31,7 @@ export function generateRoomId(): string {
   for (let i = 0; i < 8; i++) {
     id += chars[Math.floor(Math.random() * chars.length)];
   }
-  return `noteriv-${id}`;
+  return `glyph-${id}`;
 }
 
 /** Get a random color for the user cursor */
@@ -42,10 +42,10 @@ export function getCollabColor(): string {
 /** Get or create a persistent user name for collaboration */
 export function getCollabUserName(): string {
   if (typeof localStorage === "undefined") return "Anonymous";
-  let name = localStorage.getItem("noteriv-collab-name");
+  let name = localStorage.getItem("glyph-collab-name");
   if (!name) {
     name = `User-${Math.floor(Math.random() * 9999)}`;
-    localStorage.setItem("noteriv-collab-name", name);
+    localStorage.setItem("glyph-collab-name", name);
   }
   return name;
 }
@@ -53,7 +53,7 @@ export function getCollabUserName(): string {
 /** Set the collaboration user name */
 export function setCollabUserName(name: string): void {
   if (typeof localStorage !== "undefined") {
-    localStorage.setItem("noteriv-collab-name", name);
+    localStorage.setItem("glyph-collab-name", name);
   }
 }
 

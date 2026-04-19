@@ -1,7 +1,7 @@
 // ─── Plugin System for Noteriv ───
-// Plugins live in {vaultPath}/.noteriv/plugins/{plugin-id}/
+// Plugins live in {vaultPath}/.glyph/plugins/{plugin-id}/
 // Each plugin has a manifest.json and a main.js entry file.
-// Plugin config (enabled/disabled) stored in {vaultPath}/.noteriv/plugin-config.json
+// Plugin config (enabled/disabled) stored in {vaultPath}/.glyph/plugin-config.json
 
 // ─── Types ───
 
@@ -119,8 +119,8 @@ interface PluginConfig {
 }
 
 const APP_VERSION = "1.0.0";
-const PLUGINS_DIR = ".noteriv/plugins";
-const CONFIG_FILE = ".noteriv/plugin-config.json";
+const PLUGINS_DIR = ".glyph/plugins";
+const CONFIG_FILE = ".glyph/plugin-config.json";
 
 // ─── Plugin Manager ───
 
@@ -199,8 +199,8 @@ export class PluginManager {
     if (!window.electronAPI) return;
     const configPath = `${this.vaultPath}/${CONFIG_FILE}`;
     const config: PluginConfig = { enabled: ids };
-    // Ensure .noteriv directory exists
-    await window.electronAPI.createDir(`${this.vaultPath}/.noteriv`);
+    // Ensure .glyph directory exists
+    await window.electronAPI.createDir(`${this.vaultPath}/.glyph`);
     await window.electronAPI.writeFile(configPath, JSON.stringify(config, null, 2));
   }
 
@@ -382,7 +382,7 @@ export class PluginManager {
     const destDir = `${this.vaultPath}/${PLUGINS_DIR}/${manifest.id}`;
 
     // Ensure directories exist
-    await window.electronAPI.createDir(`${this.vaultPath}/.noteriv`);
+    await window.electronAPI.createDir(`${this.vaultPath}/.glyph`);
     await window.electronAPI.createDir(`${this.vaultPath}/${PLUGINS_DIR}`);
     await window.electronAPI.createDir(destDir);
 
@@ -695,7 +695,7 @@ export async function installCommunityPlugin(
   if (!manifestContent || !mainContent) return false;
 
   const pluginDir = `${vaultPath}/${PLUGINS_DIR}/${entry.id}`;
-  await window.electronAPI.createDir(`${vaultPath}/.noteriv`);
+  await window.electronAPI.createDir(`${vaultPath}/.glyph`);
   await window.electronAPI.createDir(`${vaultPath}/${PLUGINS_DIR}`);
   await window.electronAPI.createDir(pluginDir);
 

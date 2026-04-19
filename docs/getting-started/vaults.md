@@ -11,7 +11,7 @@ A vault is the fundamental organizational unit in Noteriv. Understanding how vau
 
 A vault is a folder on your filesystem that Noteriv treats as a self-contained workspace. Everything inside that folder -- markdown files, subfolders, images, attachments, drawings, canvases -- belongs to that vault. When you open a vault in Noteriv, the sidebar shows its file tree, the search indexes its contents, the graph view maps its links, and sync operates on its files.
 
-There is nothing special about the folder itself. It is a regular directory that you can browse in your file manager, open in a terminal, or process with other tools. Noteriv stores its own configuration (plugins, themes, CSS snippets, trash) in a `.noteriv/` subdirectory inside the vault, but your notes are plain `.md` files at the top level and in whatever subfolder structure you create.
+There is nothing special about the folder itself. It is a regular directory that you can browse in your file manager, open in a terminal, or process with other tools. Noteriv stores its own configuration (plugins, themes, CSS snippets, trash) in a `.glyph/` subdirectory inside the vault, but your notes are plain `.md` files at the top level and in whatever subfolder structure you create.
 
 ## Vault configuration storage
 
@@ -26,11 +26,11 @@ This configuration is stored outside the vault folder itself, in the standard ap
 
 | Platform | Config location |
 |---|---|
-| Linux | `~/.config/noteriv/` |
-| Windows | `%APPDATA%/noteriv/` |
-| macOS | `~/Library/Application Support/noteriv/` |
+| Linux | `~/.config/glyph/` |
+| Windows | `%APPDATA%/glyph/` |
+| macOS | `~/Library/Application Support/glyph/` |
 
-The vault folder only contains your notes and the `.noteriv/` directory for vault-specific customization (plugins, themes, snippets, trash).
+The vault folder only contains your notes and the `.glyph/` directory for vault-specific customization (plugins, themes, snippets, trash).
 
 ## Creating a vault
 
@@ -77,7 +77,7 @@ A typical vault might look like this on disk:
 
 ```
 My Notes/
-├── .noteriv/              Noteriv configuration (auto-created)
+├── .glyph/              Noteriv configuration (auto-created)
 │   ├── plugins/           Installed plugins
 │   ├── themes/            Custom themes
 │   ├── snippets/          CSS snippets
@@ -110,7 +110,7 @@ Inside a vault, you can organize your notes however you like:
 - **Rename** files and folders by right-clicking and selecting "Rename" or by pressing F2.
 - **Move** files by dragging them in the sidebar from one folder to another.
 - **Reorder** files within a folder by dragging them up or down. The custom order is saved per-vault.
-- **Delete** files by right-clicking and selecting "Delete" or "Move to Trash". Soft-deleted files go to `.noteriv/trash/` and can be restored from the Trash panel.
+- **Delete** files by right-clicking and selecting "Delete" or "Move to Trash". Soft-deleted files go to `.glyph/trash/` and can be restored from the Trash panel.
 - **Multi-select** files with `Ctrl+Click` (toggle individual files) or `Shift+Click` (select a range). Then right-click to merge, delete, or move the selection in bulk.
 
 ## Deleting a vault
@@ -138,12 +138,12 @@ You can manage a vault's git settings from the vault switcher by clicking the gi
 
 ## Vault-specific customization
 
-Each vault stores its own customizations in the `.noteriv/` directory:
+Each vault stores its own customizations in the `.glyph/` directory:
 
-- **Plugins** -- Installed plugins live in `.noteriv/plugins/<plugin-id>/`. Each plugin has a `manifest.json` and a `main.js`. You can enable or disable plugins per vault.
-- **Themes** -- Custom themes live in `.noteriv/themes/`. Install community themes from the Theme Picker or create your own.
-- **CSS Snippets** -- Custom CSS files live in `.noteriv/snippets/`. Toggle them individually to fine-tune the editor and preview appearance.
-- **Trash** -- Soft-deleted notes live in `.noteriv/trash/` with metadata for restoration. Open the Trash panel to browse and restore deleted notes.
+- **Plugins** -- Installed plugins live in `.glyph/plugins/<plugin-id>/`. Each plugin has a `manifest.json` and a `main.js`. You can enable or disable plugins per vault.
+- **Themes** -- Custom themes live in `.glyph/themes/`. Install community themes from the Theme Picker or create your own.
+- **CSS Snippets** -- Custom CSS files live in `.glyph/snippets/`. Toggle them individually to fine-tune the editor and preview appearance.
+- **Trash** -- Soft-deleted notes live in `.glyph/trash/` with metadata for restoration. Open the Trash panel to browse and restore deleted notes.
 
 ## Tips for vault organization
 

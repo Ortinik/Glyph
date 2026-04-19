@@ -96,7 +96,7 @@ Several panels can appear in the sidebar area, toggled via keyboard shortcuts or
 - **Outline panel** -- Displays a table of contents generated from headings in the current note. Click a heading to jump to it. Toggle with `Ctrl+Shift+O`.
 - **Backlinks panel** -- Lists every note that links to the current file via wiki-links. Helpful for discovering connections.
 - **Tag pane** -- Shows all tags used across your vault in a hierarchical tree. Click a tag to see all notes that use it.
-- **Trash panel** -- Browse soft-deleted notes and restore them. Deleted notes are kept in `.noteriv/trash/`.
+- **Trash panel** -- Browse soft-deleted notes and restore them. Deleted notes are kept in `.glyph/trash/`.
 
 ## Editor area
 

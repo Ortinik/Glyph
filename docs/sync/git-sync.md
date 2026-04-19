@@ -62,7 +62,7 @@ git status --porcelain
 If there are uncommitted changes, they are stashed before the pull:
 
 ```
-git stash push -m "noteriv-sync-stash"
+git stash push -m "glyph-sync-stash"
 ```
 
 After the pull completes, the stash is popped:
@@ -164,7 +164,7 @@ When Noteriv initializes a new git repository, it creates a `.gitignore` with de
 
 ## Security
 
-Tokens are never stored in the git config or credential helper -- only in the temporary askpass script, which is deleted immediately after each command. Each git command has a 60-second timeout (30 seconds for non-authenticated commands). Remote URLs are stored in `.noteriv/`, which is excluded from git commits.
+Tokens are never stored in the git config or credential helper -- only in the temporary askpass script, which is deleted immediately after each command. Each git command has a 60-second timeout (30 seconds for non-authenticated commands). Remote URLs are stored in `.glyph/`, which is excluded from git commits.
 
 ## Troubleshooting
 

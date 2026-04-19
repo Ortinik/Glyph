@@ -92,7 +92,7 @@ One of the context menu's most useful features is the ability to set a default v
 
 When you set a per-file default:
 
-1. The setting is stored in the workspace configuration file (`.noteriv/workspace.json` in your vault root).
+1. The setting is stored in the workspace configuration file (`.glyph/workspace.json` in your vault root).
 2. Every time you open that file, it automatically opens in the specified mode instead of the global default.
 3. You can still switch modes manually after opening -- the default only controls the initial mode.
 4. The setting persists across Noteriv restarts, vault switches, and application updates.
@@ -122,7 +122,7 @@ Per-file defaults are stored as a mapping from file paths (relative to the vault
 }
 ```
 
-This file is inside the `.noteriv` directory in your vault, which you can include or exclude from version control as you prefer.
+This file is inside the `.glyph` directory in your vault, which you can include or exclude from version control as you prefer.
 
 ## Context Menu in Different Modes
 

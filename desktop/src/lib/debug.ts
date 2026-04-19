@@ -1,6 +1,6 @@
 /**
  * Debug logger that writes to a file via Electron IPC.
- * Logs go to {vaultPath}/.noteriv/debug.log
+ * Logs go to {vaultPath}/.glyph/debug.log
  *
  * Usage:
  *   import { dbg } from "@/lib/debug";
@@ -45,7 +45,7 @@ async function flush() {
       // Find vault path from DOM
       const vaultPath = document.querySelector("[data-vault-path]")?.getAttribute("data-vault-path");
       if (vaultPath) {
-        const dir = `${vaultPath}/.noteriv`;
+        const dir = `${vaultPath}/.glyph`;
         await window.electronAPI.createDir(dir);
         const logPath = `${dir}/debug.log`;
         // Read existing, append, write back
@@ -65,7 +65,7 @@ export async function clearDebugLog(): Promise<void> {
     if (window.electronAPI) {
       const vaultPath = document.querySelector("[data-vault-path]")?.getAttribute("data-vault-path");
       if (vaultPath) {
-        await window.electronAPI.writeFile(`${vaultPath}/.noteriv/debug.log`, "");
+        await window.electronAPI.writeFile(`${vaultPath}/.glyph/debug.log`, "");
       }
     }
   } catch {}

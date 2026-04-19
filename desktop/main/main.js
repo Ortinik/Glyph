@@ -34,7 +34,7 @@ function startVaultWatch(vaultPath) {
   if (!vaultPath || !fs.existsSync(vaultPath)) return;
 
   const watchers = new Map();
-  const noterivInternal = path.join(vaultPath, ".noteriv");
+  const glyphInternal = path.join(vaultPath, ".glyph");
 
   function notifyChange(filePath) {
     if (vaultChangeDebounce) clearTimeout(vaultChangeDebounce);
@@ -57,8 +57,8 @@ function startVaultWatch(vaultPath) {
             walkAndWatch(fullPath);
           }
         } catch {}
-        // Ignore internal .noteriv changes to avoid loops
-        if (!fullPath.startsWith(noterivInternal)) {
+        // Ignore internal .glyph changes to avoid loops
+        if (!fullPath.startsWith(glyphInternal)) {
           notifyChange(fullPath);
         }
       });
@@ -201,7 +201,7 @@ ipcMain.handle("shell:openPath", (_, filePath) => {
 // ============================================================
 
 ipcMain.handle("workspace:load", (_, vaultPath) => {
-  const wsPath = path.join(vaultPath, ".noteriv", "workspace.json");
+  const wsPath = path.join(vaultPath, ".glyph", "workspace.json");
   try {
     if (fs.existsSync(wsPath)) {
       return JSON.parse(fs.readFileSync(wsPath, "utf-8"));
@@ -211,7 +211,7 @@ ipcMain.handle("workspace:load", (_, vaultPath) => {
 });
 
 ipcMain.handle("workspace:save", (_, { vaultPath, state }) => {
-  const wsDir = path.join(vaultPath, ".noteriv");
+  const wsDir = path.join(vaultPath, ".glyph");
   const wsPath = path.join(wsDir, "workspace.json");
   try {
     if (!fs.existsSync(wsDir)) fs.mkdirSync(wsDir, { recursive: true });

@@ -71,13 +71,13 @@ To install a community theme:
 3. Preview and install themes directly from the community repository.
 4. Installed themes appear in the theme picker alongside the built-in options.
 
-Community themes are saved as JSON files in your vault's `.noteriv/themes/` directory. They follow the same format as custom themes (see [Custom Themes](./custom-themes.md)).
+Community themes are saved as JSON files in your vault's `.glyph/themes/` directory. They follow the same format as custom themes (see [Custom Themes](./custom-themes.md)).
 
 To submit your own theme to the community repository, see the repository's contributing guidelines.
 
 ## Custom Themes
 
-You can create your own themes by writing a JSON file with 16 color properties and saving it to `.noteriv/themes/` in your vault. Custom themes appear in the theme picker alongside built-in and community themes.
+You can create your own themes by writing a JSON file with 16 color properties and saving it to `.glyph/themes/` in your vault. Custom themes appear in the theme picker alongside built-in and community themes.
 
 See [Custom Themes](./custom-themes.md) for the full JSON format and a step-by-step guide.
 

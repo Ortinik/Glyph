@@ -68,7 +68,7 @@ These two features serve different purposes and complement each other:
 
 | | Note History | File Recovery |
 |---|---|---|
-| Backend | Git commits | Local `.noteriv/snapshots/` files |
+| Backend | Git commits | Local `.glyph/snapshots/` files |
 | Requires Git | Yes | No |
 | Granularity | Per-commit (per-sync) | Per-save |
 | Retention | Unlimited (full Git history) | 50 snapshots, 30-day default |

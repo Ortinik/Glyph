@@ -122,7 +122,7 @@ Append text to the end of an existing note. A newline is inserted between the ex
 
 ### delete_note
 
-Move a note to the trash (soft delete). The note is moved to `.noteriv/trash/` with a metadata file recording its original path and deletion time. The note can be restored later.
+Move a note to the trash (soft delete). The note is moved to `.glyph/trash/` with a metadata file recording its original path and deletion time. The note can be restored later.
 
 **Parameters**:
 

@@ -114,7 +114,7 @@ On mobile, sync settings are in the vault settings screen.
 
 All files in the vault directory are included in sync, with a few exceptions:
 
-- `.noteriv/` directory: Contains application configuration and is excluded from git commits.
+- `.glyph/` directory: Contains application configuration and is excluded from git commits.
 - `.trash/` directory: Contains soft-deleted files and is excluded from git sync.
 - `.DS_Store` and `Thumbs.db`: Operating system metadata files, excluded via `.gitignore`.
 - `*.tmp` files: Temporary files, excluded via `.gitignore`.

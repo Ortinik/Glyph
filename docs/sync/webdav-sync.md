@@ -158,7 +158,7 @@ For Nextcloud and ownCloud, use app-specific passwords rather than your main acc
 
 ### Credential Storage
 
-WebDAV credentials (username and password) are stored in the vault's configuration file within the `.noteriv/` directory. This directory is excluded from git sync, so credentials are not committed to version control. However, they are stored as plain text in the JSON configuration file. If you are concerned about local credential security, ensure your disk is encrypted.
+WebDAV credentials (username and password) are stored in the vault's configuration file within the `.glyph/` directory. This directory is excluded from git sync, so credentials are not committed to version control. However, they are stored as plain text in the JSON configuration file. If you are concerned about local credential security, ensure your disk is encrypted.
 
 ## Combining with Other Providers
 

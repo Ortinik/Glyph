@@ -61,7 +61,7 @@ Before the first sync, you can click the "Test Connection" button in settings. T
 1. The target path is accessible.
 2. Noteriv has write permission to the target directory.
 
-The test creates a small temporary file (`.noteriv-test`), verifies it was written, and then deletes it. If the test fails, check that the path exists and that your user account has write access.
+The test creates a small temporary file (`.glyph-test`), verifies it was written, and then deletes it. If the test fails, check that the path exists and that your user account has write access.
 
 ## Sync Interval
 
@@ -81,7 +81,7 @@ This includes:
 - Images (`.png`, `.jpg`, `.svg`, etc.)
 - PDFs (`.pdf`)
 - PDF annotation sidecars (`.pdf-annotations.json`)
-- Configuration files in `.noteriv/`
+- Configuration files in `.glyph/`
 
 If you want to exclude certain files from folder sync, move them outside the vault directory.
 

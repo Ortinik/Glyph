@@ -107,7 +107,7 @@ Noteriv includes an MCP (Model Context Protocol) server that lets AI assistants 
 Install it with a single command:
 
 ```bash
-npx noteriv-mcp
+npx glyph-mcp
 ```
 
 The MCP server auto-discovers your vaults from the Noteriv config file, so no manual path setup is needed. Changes made by the MCP server are detected by the desktop app's vault file watcher and reflected in the sidebar and open files automatically.
@@ -115,11 +115,11 @@ The MCP server auto-discovers your vaults from the Noteriv config file, so no ma
 ## Links
 
 - **GitHub:** [github.com/thejacedev/Noteriv](https://github.com/thejacedev/Noteriv)
-- **Website:** [noteriv.com](https://www.noteriv.com)
+- **Website:** [glyph.com](https://www.glyph.com)
 - **Plugins:** [github.com/thejacedev/NoterivPlugins](https://github.com/thejacedev/NoterivPlugins)
 - **Themes:** [github.com/thejacedev/NoterivThemes](https://github.com/thejacedev/NoterivThemes)
 - **CSS Snippets:** [github.com/thejacedev/NoterivSnippets](https://github.com/thejacedev/NoterivSnippets)
-- **MCP Server:** Available on npm as `noteriv-mcp`
+- **MCP Server:** Available on npm as `glyph-mcp`
 
 ## License
 

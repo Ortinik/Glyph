@@ -1,9 +1,9 @@
 /**
  * File recovery system — local snapshots for recovering previous versions of notes.
- * Snapshots are stored in `.noteriv/snapshots/` within the vault directory.
+ * Snapshots are stored in `.glyph/snapshots/` within the vault directory.
  */
 
-const SNAPSHOT_DIR = ".noteriv/snapshots";
+const SNAPSHOT_DIR = ".glyph/snapshots";
 const MAX_SNAPSHOTS_PER_FILE = 50;
 
 /**

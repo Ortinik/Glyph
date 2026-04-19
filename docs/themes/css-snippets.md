@@ -9,7 +9,7 @@ CSS snippets let you fine-tune the visual appearance of Noteriv beyond what them
 
 ## How Snippets Work
 
-Each snippet is a `.css` file stored in your vault's `.noteriv/snippets/` directory. When a snippet is enabled, its CSS is injected into the application's `<head>` as a `<style>` element. This means snippets can override any CSS rule in the interface, from font sizes and spacing to hiding UI elements entirely.
+Each snippet is a `.css` file stored in your vault's `.glyph/snippets/` directory. When a snippet is enabled, its CSS is injected into the application's `<head>` as a `<style>` element. This means snippets can override any CSS rule in the interface, from font sizes and spacing to hiding UI elements entirely.
 
 Snippets are applied after the theme, so they take precedence over theme styles. Multiple enabled snippets are applied in alphabetical order by filename.
 
@@ -23,15 +23,15 @@ Snippets are applied after the theme, so they take precedence over theme styles.
 4. Write your CSS in the editor.
 5. Click **Save**.
 
-The snippet is saved as a `.css` file in `.noteriv/snippets/` and is initially disabled.
+The snippet is saved as a `.css` file in `.glyph/snippets/` and is initially disabled.
 
 ### Manually
 
-Create a `.css` file directly in your vault's `.noteriv/snippets/` directory:
+Create a `.css` file directly in your vault's `.glyph/snippets/` directory:
 
 ```
 your-vault/
-  .noteriv/
+  .glyph/
     snippets/
       wider-editor.css
       custom-fonts.css
@@ -44,7 +44,7 @@ The filename (without the `.css` extension) becomes the snippet ID. The display 
 
 Open **Settings** > **CSS Snippets** to see all available snippets. Each one has a toggle switch. Enable a snippet to apply it immediately. Disable it to remove its styles. Changes take effect in real time without a restart.
 
-The enabled/disabled state is stored in `.noteriv/snippet-config.json`:
+The enabled/disabled state is stored in `.glyph/snippet-config.json`:
 
 ```json
 {
@@ -188,7 +188,7 @@ The [NoterivSnippets](https://github.com/thejacedev/NoterivSnippets) repository 
 2. Click **Browse Community Snippets**.
 3. Preview snippets and click **Install** to add them to your vault.
 
-Installed community snippets are saved to `.noteriv/snippets/` just like manually created ones. You can edit them after installation.
+Installed community snippets are saved to `.glyph/snippets/` just like manually created ones. You can edit them after installation.
 
 Community snippets are organized by category:
 
@@ -223,7 +223,7 @@ To delete a snippet:
 2. Click the **Delete** button next to the snippet.
 3. Confirm the deletion.
 
-This removes the `.css` file from `.noteriv/snippets/` and removes it from the enabled list. The change takes effect immediately.
+This removes the `.css` file from `.glyph/snippets/` and removes it from the enabled list. The change takes effect immediately.
 
 ## Order of Application
 
@@ -241,4 +241,4 @@ Because snippets come last, they can override anything. Use `!important` only wh
 - Keep snippets small and focused. One snippet per visual change makes it easy to toggle individual tweaks.
 - Name your snippet files descriptively: `wider-editor.css` is better than `fix.css`.
 - Test snippets with multiple themes to make sure they look good everywhere. Use `var(--bg-primary)` instead of hard-coded colors.
-- If a snippet causes visual issues, disable it from Settings. If you cannot access Settings, delete the `.css` file from `.noteriv/snippets/` manually.
+- If a snippet causes visual issues, disable it from Settings. If you cannot access Settings, delete the `.css` file from `.glyph/snippets/` manually.

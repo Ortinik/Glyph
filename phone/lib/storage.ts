@@ -1,12 +1,12 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const KEYS = {
-  VAULTS: 'noteriv:vaults',
-  ACTIVE_VAULT: 'noteriv:activeVault',
-  SETTINGS: 'noteriv:settings',
-  SETUP_COMPLETE: 'noteriv:setupComplete',
-  WORKSPACE: (vaultId: string) => `noteriv:workspace:${vaultId}`,
-  GITHUB_TOKEN: (vaultId: string) => `noteriv:ghToken:${vaultId}`,
+  VAULTS: 'glyph:vaults',
+  ACTIVE_VAULT: 'glyph:activeVault',
+  SETTINGS: 'glyph:settings',
+  SETUP_COMPLETE: 'glyph:setupComplete',
+  WORKSPACE: (vaultId: string) => `glyph:workspace:${vaultId}`,
+  GITHUB_TOKEN: (vaultId: string) => `glyph:ghToken:${vaultId}`,
 };
 
 export async function getItem<T>(key: string): Promise<T | null> {

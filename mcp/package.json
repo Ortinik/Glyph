@@ -1,13 +1,13 @@
 {
-  "name": "noteriv-mcp",
+  "name": "glyph-mcp",
   "version": "1.0.1",
   "description": "MCP server for Noteriv — lets AI assistants read, write, and search your notes",
   "main": "index.js",
   "type": "module",
   "bin": {
-    "noteriv-mcp": "./index.js"
+    "glyph-mcp": "./index.js"
   },
-  "keywords": ["mcp", "noteriv", "notes", "vault", "ai", "claude"],
+  "keywords": ["mcp", "glyph", "notes", "vault", "ai", "claude"],
   "license": "MIT",
   "repository": {
     "type": "git",
