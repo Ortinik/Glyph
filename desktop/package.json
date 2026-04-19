@@ -20,7 +20,7 @@
   },
   "build": {
     "appId": "com.glyph.app",
-    "productName": "Noteriv",
+    "productName": "Glyph",
     "files": [
       "main/**/*",
       "out/**/*",
@@ -52,7 +52,7 @@
     "publish": {
       "provider": "github",
       "owner": "thejacedev",
-      "repo": "Noteriv"
+      "repo": "Glyph"
     }
   },
   "dependencies": {

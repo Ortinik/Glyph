@@ -7,13 +7,13 @@ const API_BASE = "http://127.0.0.1:27123";
 chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
     id: "clip-page",
-    title: "Clip Page to Noteriv",
+    title: "Clip Page to Glyph",
     contexts: ["page"],
   });
 
   chrome.contextMenus.create({
     id: "clip-selection",
-    title: "Clip Selection to Noteriv",
+    title: "Clip Selection to Glyph",
     contexts: ["selection"],
   });
 });
@@ -38,11 +38,11 @@ async function clipFromContextMenu(tab, mode) {
     });
 
     if (!response || !response.content) {
-      console.error("[Noteriv Clipper] No content received from content script");
+      console.error("[Glyph Clipper] No content received from content script");
       return;
     }
 
-    const result = await clipToNoteriv({
+    const result = await clipToGlyph({
       title: response.title || tab.title || "Untitled",
       content: response.content,
       url: tab.url,
@@ -53,11 +53,11 @@ async function clipFromContextMenu(tab, mode) {
       action: "showToast",
       success: result.success,
       message: result.success
-        ? "Clipped to Noteriv!"
+        ? "Clipped to Glyph!"
         : `Clip failed: ${result.error}`,
     });
   } catch (err) {
-    console.error("[Noteriv Clipper] Context menu clip failed:", err);
+    console.error("[Glyph Clipper] Context menu clip failed:", err);
   }
 }
 
@@ -65,7 +65,7 @@ async function clipFromContextMenu(tab, mode) {
 // API communication
 // ============================================================
 
-async function clipToNoteriv({ title, content, url, tags, folder }) {
+async function clipToGlyph({ title, content, url, tags, folder }) {
   try {
     const res = await fetch(`${API_BASE}/clip`, {
       method: "POST",
@@ -74,7 +74,7 @@ async function clipToNoteriv({ title, content, url, tags, folder }) {
     });
     return await res.json();
   } catch (err) {
-    return { success: false, error: "Cannot connect to Noteriv. Is the app running?" };
+    return { success: false, error: "Cannot connect to Glyph. Is the app running?" };
   }
 }
 
@@ -98,7 +98,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
 
   if (message.action === "clip") {
-    clipToNoteriv(message.data).then((result) => {
+    clipToGlyph(message.data).then((result) => {
       sendResponse(result);
 
       // Show toast in the active tab
@@ -107,7 +107,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
           action: "showToast",
           success: result.success,
           message: result.success
-            ? "Clipped to Noteriv!"
+            ? "Clipped to Glyph!"
             : `Clip failed: ${result.error}`,
         });
       }
@@ -135,7 +135,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
             return;
           }
 
-          clipToNoteriv({
+          clipToGlyph({
             title: message.title || contentResponse.title || tab.title || "Untitled",
             content: contentResponse.content,
             url: tab.url,
@@ -147,7 +147,7 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
               action: "showToast",
               success: result.success,
               message: result.success
-                ? "Clipped to Noteriv!"
+                ? "Clipped to Glyph!"
                 : `Clip failed: ${result.error}`,
             });
             sendResponse(result);

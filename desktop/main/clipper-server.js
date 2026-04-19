@@ -118,7 +118,7 @@ async function handleClip(req, res) {
   if (!vault) {
     sendJson(res, 500, {
       success: false,
-      error: "No active vault. Please open Noteriv and select a vault.",
+      error: "No active vault. Please open Glyph and select a vault.",
     });
     return;
   }

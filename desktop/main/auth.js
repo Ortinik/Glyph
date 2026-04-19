@@ -64,7 +64,7 @@ function ghRequest(method, urlPath, token, body = null) {
       path: urlPath,
       method,
       headers: {
-        "User-Agent": "Noteriv",
+        "User-Agent": "Glyph",
         Accept: "application/vnd.github+json",
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
         ...(body ? { "Content-Type": "application/json" } : {}),
@@ -141,7 +141,7 @@ async function createRepo(token, name, isPrivate = true, description = "") {
   const repo = await ghRequest("POST", "/user/repos", token, {
     name,
     private: isPrivate,
-    description: description || `Notes vault managed by Noteriv`,
+    description: description || `Notes vault managed by Glyph`,
     auto_init: true,
   });
   return {
@@ -156,7 +156,7 @@ async function createRepo(token, name, isPrivate = true, description = "") {
 // Open GitHub PAT creation page in browser
 function openTokenPage() {
   shell.openExternal(
-    "https://github.com/settings/tokens/new?scopes=repo&description=Noteriv"
+    "https://github.com/settings/tokens/new?scopes=repo&description=Glyph"
   );
 }
 

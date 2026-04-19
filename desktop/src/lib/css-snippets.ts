@@ -122,7 +122,7 @@ export function refreshSnippets(snippets: CSSSnippet[]): void {
 // ── Community snippets ──
 
 const COMMUNITY_SNIPPETS_BASE =
-  "https://raw.githubusercontent.com/thejacedev/NoterivSnippets/master";
+  "https://raw.githubusercontent.com/thejacedev/GlyphSnippets/master";
 
 export interface CommunitySnippetEntry {
   id: string;

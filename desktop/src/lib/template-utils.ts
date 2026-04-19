@@ -1,5 +1,5 @@
 /**
- * Template engine for Noteriv.
+ * Template engine for Glyph.
  *
  * Templates are regular .md files stored in a `Templates/` folder within the vault.
  * Template variables (e.g. {{date}}, {{title}}) are replaced at insertion time.

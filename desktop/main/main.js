@@ -90,7 +90,7 @@ function createWindow() {
     height: 800,
     minWidth: 800,
     minHeight: 500,
-    title: "Noteriv",
+    title: "Glyph",
     icon: path.join(__dirname, "../public/icon.png"),
     backgroundColor: "#1e1e2e",
     frame: false,

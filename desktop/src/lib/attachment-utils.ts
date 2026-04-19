@@ -1,5 +1,5 @@
 /**
- * Attachment management utilities for Noteriv.
+ * Attachment management utilities for Glyph.
  *
  * Handles listing, categorising, and managing files in the vault's
  * `attachments/` folder.

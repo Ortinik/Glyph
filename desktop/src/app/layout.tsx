@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Noteriv",
+  title: "Glyph",
   description: "A modern markdown editor",
 };
 

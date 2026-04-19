@@ -26,7 +26,7 @@ async function loadVimModule(): Promise<boolean> {
     return true;
   } catch {
     console.warn(
-      "[Noteriv] @replit/codemirror-vim is not installed. " +
+      "[Glyph] @replit/codemirror-vim is not installed. " +
         "Vim mode will be unavailable. Install it with:\n" +
         "  npm install @replit/codemirror-vim"
     );

@@ -31,7 +31,7 @@ export const DEFAULT_SETTINGS: AppSettings = {
   commitMessageFormat: "Sync {date} {time}",
   extraSyncProvider: "none",
   folderSync: { targetPath: "", direction: "both" },
-  webdavSync: { url: "", username: "", password: "", remotePath: "/Noteriv" },
+  webdavSync: { url: "", username: "", password: "", remotePath: "/Glyph" },
   theme: "catppuccin-mocha",
   autoUpdate: true,
 };

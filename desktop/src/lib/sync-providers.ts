@@ -21,7 +21,7 @@ export const DEFAULT_WEBDAV_CONFIG: WebDAVSyncConfig = {
   url: "",
   username: "",
   password: "",
-  remotePath: "/Noteriv",
+  remotePath: "/Glyph",
 };
 
 export interface SyncProviderInfo {

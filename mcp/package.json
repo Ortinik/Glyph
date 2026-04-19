@@ -1,7 +1,7 @@
 {
   "name": "glyph-mcp",
   "version": "1.0.1",
-  "description": "MCP server for Noteriv — lets AI assistants read, write, and search your notes",
+  "description": "MCP server for Glyph — lets AI assistants read, write, and search your notes",
   "main": "index.js",
   "type": "module",
   "bin": {
@@ -11,9 +11,9 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/thejacedev/Noteriv"
+    "url": "https://github.com/thejacedev/Glyph"
   },
-  "homepage": "https://github.com/thejacedev/Noteriv#readme",
+  "homepage": "https://github.com/thejacedev/Glyph#readme",
   "files": ["index.js"],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.0.0"

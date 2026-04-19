@@ -1,5 +1,5 @@
 /**
- * Audio recording utilities for Noteriv.
+ * Audio recording utilities for Glyph.
  *
  * Provides helpers for recording audio via MediaRecorder, converting blobs
  * to base64 for saving through the Electron IPC bridge, and generating

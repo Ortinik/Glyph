@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
 /**
- * Noteriv MCP Server
+ * Glyph MCP Server
  *
  * Full vault management for AI assistants.
- * Reads the Noteriv config to discover vaults automatically.
+ * Reads the Glyph config to discover vaults automatically.
  *
  * Usage:
- *   node index.js                    # auto-detect vaults from Noteriv config
+ *   node index.js                    # auto-detect vaults from Glyph config
  *   node index.js /path/to/vault     # use a specific vault
  */
 
@@ -27,17 +27,17 @@ import os from "os";
 
 function findConfigDir() {
   const platform = os.platform();
-  if (platform === "darwin") return path.join(os.homedir(), "Library", "Application Support", "Noteriv");
-  if (platform === "win32") return path.join(process.env.APPDATA || path.join(os.homedir(), "AppData", "Roaming"), "Noteriv");
+  if (platform === "darwin") return path.join(os.homedir(), "Library", "Application Support", "Glyph");
+  if (platform === "win32") return path.join(process.env.APPDATA || path.join(os.homedir(), "AppData", "Roaming"), "Glyph");
   // Linux: ~/.config/glyph (Electron uses lowercase app name)
   const base = process.env.XDG_CONFIG_HOME || path.join(os.homedir(), ".config");
   // Try lowercase first (how Electron names it on Linux), fall back to capitalized
   const lower = path.join(base, "glyph");
   if (fs.existsSync(lower)) return lower;
-  return path.join(base, "Noteriv");
+  return path.join(base, "Glyph");
 }
 
-function loadNoterivConfig() {
+function loadGlyphConfig() {
   const configPath = path.join(findConfigDir(), "config.json");
   try {
     if (fs.existsSync(configPath)) {
@@ -47,7 +47,7 @@ function loadNoterivConfig() {
   return { vaults: [], activeVaultId: null };
 }
 
-function saveNoterivConfig(config) {
+function saveGlyphConfig(config) {
   const configDir = findConfigDir();
   if (!fs.existsSync(configDir)) fs.mkdirSync(configDir, { recursive: true });
   fs.writeFileSync(path.join(configDir, "config.json"), JSON.stringify(config, null, 2));
@@ -59,7 +59,7 @@ let activeVaultPath = process.argv[2] || null;
 
 function getActiveVault() {
   if (activeVaultPath) return activeVaultPath;
-  const config = loadNoterivConfig();
+  const config = loadGlyphConfig();
   if (config.activeVaultId) {
     const vault = config.vaults.find(v => v.id === config.activeVaultId);
     if (vault) return vault.path;
@@ -144,10 +144,10 @@ const server = new Server(
 server.setRequestHandler(ListToolsRequestSchema, async () => ({
   tools: [
     // --- Vault management ---
-    { name: "list_vaults", description: "List all Noteriv vaults with their names, paths, and IDs", inputSchema: { type: "object", properties: {} } },
+    { name: "list_vaults", description: "List all Glyph vaults with their names, paths, and IDs", inputSchema: { type: "object", properties: {} } },
     { name: "get_active_vault", description: "Get the currently active vault name and path", inputSchema: { type: "object", properties: {} } },
     { name: "switch_vault", description: "Switch to a different vault by name or ID", inputSchema: { type: "object", properties: { name_or_id: { type: "string", description: "Vault name or ID" } }, required: ["name_or_id"] } },
-    { name: "set_vault_path", description: "Set a custom vault path (for vaults not in Noteriv config)", inputSchema: { type: "object", properties: { path: { type: "string", description: "Absolute path to vault directory" } }, required: ["path"] } },
+    { name: "set_vault_path", description: "Set a custom vault path (for vaults not in Glyph config)", inputSchema: { type: "object", properties: { path: { type: "string", description: "Absolute path to vault directory" } }, required: ["path"] } },
 
     // --- Note CRUD ---
     { name: "read_note", description: "Read a note's full content by relative path", inputSchema: { type: "object", properties: { path: { type: "string", description: "Relative path (e.g. 'Projects/todo.md')" } }, required: ["path"] } },
@@ -188,19 +188,19 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
     switch (name) {
       // --- Vault management ---
       case "list_vaults": {
-        const config = loadNoterivConfig();
+        const config = loadGlyphConfig();
         const text = config.vaults.map(v => `${v.name} (${v.id})\n  Path: ${v.path}${v.id === config.activeVaultId ? "\n  [ACTIVE]" : ""}`).join("\n\n");
         return ok(text || "No vaults configured");
       }
       case "get_active_vault": {
-        const config = loadNoterivConfig();
+        const config = loadGlyphConfig();
         const vault = config.vaults.find(v => v.id === config.activeVaultId);
         if (activeVaultPath) return ok(`Active vault (manual): ${activeVaultPath}`);
         if (vault) return ok(`${vault.name}\nPath: ${vault.path}\nID: ${vault.id}`);
         return ok("No active vault");
       }
       case "switch_vault": {
-        const config = loadNoterivConfig();
+        const config = loadGlyphConfig();
         const vault = config.vaults.find(v => v.id === args.name_or_id || v.name.toLowerCase() === args.name_or_id.toLowerCase());
         if (!vault) return err(`Vault not found: ${args.name_or_id}\nAvailable: ${config.vaults.map(v => v.name).join(", ")}`);
         activeVaultPath = vault.path;
@@ -443,6 +443,6 @@ async function main() {
   const transport = new StdioServerTransport();
   await server.connect(transport);
   const vp = getActiveVault();
-  console.error(`Noteriv MCP server running${vp ? ` — vault: ${vp}` : " — no vault (use switch_vault)"}`);
+  console.error(`Glyph MCP server running${vp ? ` — vault: ${vp}` : " — no vault (use switch_vault)"}`);
 }
 main().catch(e => { console.error("MCP server error:", e); process.exit(1); });

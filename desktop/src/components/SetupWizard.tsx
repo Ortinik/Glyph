@@ -100,7 +100,7 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
         await window.electronAPI.gitInit(finalPath);
         if (gitRemote) {
           await window.electronAPI.gitSetRemote(finalPath, gitRemote);
-          try { await window.electronAPI.gitSync(finalPath, "Initial commit from Noteriv", vault.id); } catch { /* ok */ }
+          try { await window.electronAPI.gitSync(finalPath, "Initial commit from Glyph", vault.id); } catch { /* ok */ }
         }
       }
       onComplete(vault);
@@ -112,7 +112,7 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
   };
 
   function getDefaultBase(): string {
-    return process.platform === "win32" ? `${process.env.USERPROFILE || "C:\\Users\\user"}\\Noteriv` : `${process.env.HOME || "~"}/Noteriv`;
+    return process.platform === "win32" ? `${process.env.USERPROFILE || "C:\\Users\\user"}\\Glyph` : `${process.env.HOME || "~"}/Glyph`;
   }
 
   const canProceedFromName = vaultName.trim().length > 0;
@@ -164,7 +164,7 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
               <rect x="2" y="4" width="24" height="20" rx="3" stroke="var(--accent)" strokeWidth="1.8" />
               <path d="M8 10h12M8 14h8M8 18h10" stroke="var(--accent)" strokeWidth="1.6" strokeLinecap="round" opacity="0.7" />
             </svg>
-            <span style={{ fontSize: 22, fontWeight: 700, color: "var(--accent)", letterSpacing: "-0.03em" }}>Noteriv</span>
+            <span style={{ fontSize: 22, fontWeight: 700, color: "var(--accent)", letterSpacing: "-0.03em" }}>Glyph</span>
           </div>
           <p style={{ fontSize: 12, color: "var(--text-muted)", margin: 0, letterSpacing: "0.02em", textTransform: "uppercase" as const }}>Markdown notes, everywhere</p>
         </div>
@@ -261,7 +261,7 @@ export default function SetupWizard({ onComplete }: SetupWizardProps) {
                   <span style={{ color: vaultPath ? "var(--text-primary)" : "var(--text-muted)", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" as const }}>{vaultPath || "Click to choose folder..."}</span>
                 </button>
                 {setupType !== "existing" && !vaultPath && (
-                  <p style={{ fontSize: 11, color: "var(--text-muted)", margin: 0 }}>Default: ~/Noteriv/{vaultName.replace(/\s+/g, "-")}</p>
+                  <p style={{ fontSize: 11, color: "var(--text-muted)", margin: 0 }}>Default: ~/Glyph/{vaultName.replace(/\s+/g, "-")}</p>
                 )}
                 <div style={S.nav}>
                   <button style={S.back} onClick={() => setStep("name")}>Back</button>

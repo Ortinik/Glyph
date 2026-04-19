@@ -382,7 +382,7 @@ export function getDefaultTheme(): ThemeDefinition {
 // ── Community themes ──
 
 const COMMUNITY_REPO_BASE =
-  "https://raw.githubusercontent.com/thejacedev/NoterivThemes/main";
+  "https://raw.githubusercontent.com/thejacedev/GlyphThemes/main";
 
 export interface CommunityThemeEntry {
   id: string;

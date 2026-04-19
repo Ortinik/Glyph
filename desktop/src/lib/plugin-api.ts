@@ -1,4 +1,4 @@
-// ─── Plugin System for Noteriv ───
+// ─── Plugin System for Glyph ───
 // Plugins live in {vaultPath}/.glyph/plugins/{plugin-id}/
 // Each plugin has a manifest.json and a main.js entry file.
 // Plugin config (enabled/disabled) stored in {vaultPath}/.glyph/plugin-config.json
@@ -644,7 +644,7 @@ export class PluginManager {
 // ── Community plugins ──
 
 const COMMUNITY_PLUGINS_BASE =
-  "https://raw.githubusercontent.com/thejacedev/NoterivPlugins/master";
+  "https://raw.githubusercontent.com/thejacedev/GlyphPlugins/master";
 
 export interface CommunityPluginEntry {
   id: string;

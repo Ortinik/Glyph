@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Noteriv Web Clipper",
+  "name": "Glyph Web Clipper",
   "version": "1.0.0",
-  "description": "Clip web pages to Noteriv",
+  "description": "Clip web pages to Glyph",
   "permissions": ["activeTab", "contextMenus"],
   "action": {
     "default_popup": "popup.html",

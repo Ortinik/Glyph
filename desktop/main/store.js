@@ -3,7 +3,7 @@ const path = require("path");
 const fs = require("fs");
 
 // Stores vault configs and app settings in the user's app data directory
-// e.g. ~/.config/Noteriv/config.json (Linux), ~/Library/Application Support/Noteriv/config.json (macOS), %APPDATA%/Noteriv/config.json (Windows)
+// e.g. ~/.config/Glyph/config.json (Linux), ~/Library/Application Support/Glyph/config.json (macOS), %APPDATA%/Glyph/config.json (Windows)
 
 const CONFIG_DIR = path.join(app.getPath("userData"));
 const CONFIG_FILE = path.join(CONFIG_DIR, "config.json");

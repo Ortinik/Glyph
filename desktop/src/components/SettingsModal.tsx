@@ -140,7 +140,7 @@ export default function SettingsModal({
       <div className="st-group-label">Updates</div>
 
       {appVersion && (
-        <Row label="Version" desc="Currently installed version of Noteriv.">
+        <Row label="Version" desc="Currently installed version of Glyph.">
           <span className="st-version-badge">v{appVersion}</span>
         </Row>
       )}
@@ -517,7 +517,7 @@ export default function SettingsModal({
               className="st-text-input"
               value={settings.webdavSync.remotePath}
               onChange={(e) => update({ webdavSync: { ...settings.webdavSync, remotePath: e.target.value } })}
-              placeholder="/Noteriv"
+              placeholder="/Glyph"
             />
           </Row>
         </>
@@ -555,7 +555,7 @@ export default function SettingsModal({
         </div>
         <div className="st-ecosystem-info">
           <span className="st-ecosystem-title">Community Plugins</span>
-          <span className="st-ecosystem-desc">Extend Noteriv with plugins. Install, enable, and manage third-party plugins.</span>
+          <span className="st-ecosystem-desc">Extend Glyph with plugins. Install, enable, and manage third-party plugins.</span>
         </div>
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" className="st-ecosystem-arrow">
           <path d="M5 3l4 4-4 4" stroke="currentColor" strokeWidth="1.2" strokeLinecap="round" strokeLinejoin="round" />

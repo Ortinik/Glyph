@@ -1,5 +1,5 @@
 // ============================================================
-// Noteriv Web Clipper - Content Script
+// Glyph Web Clipper - Content Script
 // HTML to Markdown conversion and content extraction
 // ============================================================
 
