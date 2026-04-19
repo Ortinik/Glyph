@@ -3,20 +3,20 @@ title: Contributing
 order: 91
 ---
 
-# Contributing to Noteriv
+# Contributing to Glyph
 
-Noteriv is an open-source project, and contributions of all kinds are welcome. Whether you are fixing a typo, reporting a bug, suggesting a feature, building a plugin, or submitting a pull request with a new feature, your contribution helps make Noteriv better for everyone.
+Glyph is an open-source project, and contributions of all kinds are welcome. Whether you are fixing a typo, reporting a bug, suggesting a feature, building a plugin, or submitting a pull request with a new feature, your contribution helps make Glyph better for everyone.
 
 ## Ways to Contribute
 
 ### Report Bugs
 
-Found a bug? Open an issue on the [GitHub repository](https://github.com/thejacedev/Noteriv/issues) with:
+Found a bug? Open an issue on the [GitHub repository](https://github.com/thejacedev/Glyph/issues) with:
 
 - A clear, descriptive title.
 - Steps to reproduce the bug.
 - What you expected to happen vs. what actually happened.
-- Your operating system and Noteriv version.
+- Your operating system and Glyph version.
 - Screenshots or screen recordings if applicable.
 
 Check existing issues first to avoid duplicates. If someone has already reported the same bug, add a thumbs-up reaction or a comment with additional details.
@@ -37,15 +37,15 @@ Code contributions are welcome for bug fixes, new features, performance improvem
 
 ### Create Plugins
 
-Plugins extend Noteriv without modifying the core codebase. If you build a useful plugin, consider publishing it to the [NoterivPlugins](https://github.com/thejacedev/NoterivPlugins) repository so others can install it from the community browser. See [Creating Plugins](./plugins/creating-plugins.md) for the API guide.
+Plugins extend Glyph without modifying the core codebase. If you build a useful plugin, consider publishing it to the [GlyphPlugins](https://github.com/thejacedev/GlyphPlugins) repository so others can install it from the community browser. See [Creating Plugins](./plugins/creating-plugins.md) for the API guide.
 
 ### Create Themes
 
-Design a color scheme and share it via the [NoterivThemes](https://github.com/thejacedev/NoterivThemes) repository. Custom themes are JSON files with 18 color properties. See [Custom Themes](./themes/custom-themes.md) for the format.
+Design a color scheme and share it via the [GlyphThemes](https://github.com/thejacedev/GlyphThemes) repository. Custom themes are JSON files with 18 color properties. See [Custom Themes](./themes/custom-themes.md) for the format.
 
 ### Create CSS Snippets
 
-Build useful CSS snippets and share them via the [NoterivSnippets](https://github.com/thejacedev/NoterivSnippets) repository. See [CSS Snippets](./themes/css-snippets.md) for details.
+Build useful CSS snippets and share them via the [GlyphSnippets](https://github.com/thejacedev/GlyphSnippets) repository. See [CSS Snippets](./themes/css-snippets.md) for details.
 
 ### Improve Documentation
 
@@ -62,8 +62,8 @@ Documentation improvements are valuable contributions. Fix typos, add missing de
 ### Clone the Repository
 
 ```bash
-git clone https://github.com/thejacedev/Noteriv.git
-cd Noteriv
+git clone https://github.com/thejacedev/Glyph.git
+cd Glyph
 ```
 
 ### Desktop App
@@ -126,10 +126,10 @@ Load the built extension in Chrome via `chrome://extensions` (developer mode) or
 
 ## Architecture Overview
 
-The Noteriv repository is a monorepo with four main packages:
+The Glyph repository is a monorepo with four main packages:
 
 ```
-Noteriv/
+Glyph/
   desktop/          # Electron + Next.js desktop app
     src/
       app/          # Next.js pages and API routes
@@ -180,7 +180,7 @@ State management uses React context (`AppContext` for vault/file state, `ThemeCo
 
 ### MCP Server Architecture
 
-The MCP server is a single `index.js` file that implements the Model Context Protocol using the `@modelcontextprotocol/sdk`. It communicates over stdio, auto-discovers vaults from the Noteriv config, and provides 22 tools for vault management, note CRUD, browsing, knowledge graph queries, statistics, and daily notes.
+The MCP server is a single `index.js` file that implements the Model Context Protocol using the `@modelcontextprotocol/sdk`. It communicates over stdio, auto-discovers vaults from the Glyph config, and provides 22 tools for vault management, note CRUD, browsing, knowledge graph queries, statistics, and daily notes.
 
 ## Code Style
 
@@ -209,23 +209,23 @@ The MCP server is a single `index.js` file that implements the Model Context Pro
 
 ## Community Repositories
 
-Noteriv has three community repositories for user-created content:
+Glyph has three community repositories for user-created content:
 
-### NoterivPlugins
+### GlyphPlugins
 
-- **Repository**: [github.com/thejacedev/NoterivPlugins](https://github.com/thejacedev/NoterivPlugins)
+- **Repository**: [github.com/thejacedev/GlyphPlugins](https://github.com/thejacedev/GlyphPlugins)
 - **Purpose**: Community plugins installable from the app
 - **To contribute**: Fork, add your plugin folder with `manifest.json` and `main.js`, update the root `manifest.json`, and submit a PR.
 
-### NoterivThemes
+### GlyphThemes
 
-- **Repository**: [github.com/thejacedev/NoterivThemes](https://github.com/thejacedev/NoterivThemes)
+- **Repository**: [github.com/thejacedev/GlyphThemes](https://github.com/thejacedev/GlyphThemes)
 - **Purpose**: Community color themes
 - **To contribute**: Fork, add your theme JSON file, update the root `manifest.json`, and submit a PR.
 
-### NoterivSnippets
+### GlyphSnippets
 
-- **Repository**: [github.com/thejacedev/NoterivSnippets](https://github.com/thejacedev/NoterivSnippets)
+- **Repository**: [github.com/thejacedev/GlyphSnippets](https://github.com/thejacedev/GlyphSnippets)
 - **Purpose**: Community CSS snippets
 - **To contribute**: Fork, add your snippet CSS file, update the root `manifest.json`, and submit a PR.
 
@@ -239,4 +239,4 @@ If you need help with your contribution:
 
 ## License
 
-By contributing to Noteriv, you agree that your contributions will be licensed under the MIT License, the same license as the project itself.
+By contributing to Glyph, you agree that your contributions will be licensed under the MIT License, the same license as the project itself.

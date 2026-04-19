@@ -5,7 +5,7 @@ order: 4
 
 # Callouts
 
-Callouts are styled blockquotes that visually distinguish different types of information in your notes. They are rendered with a colored left border, an icon, and a title. Noteriv supports 14 callout types, each with a distinct color and icon.
+Callouts are styled blockquotes that visually distinguish different types of information in your notes. They are rendered with a colored left border, an icon, and a title. Glyph supports 14 callout types, each with a distinct color and icon.
 
 ## Syntax
 
@@ -49,7 +49,7 @@ Neutral informational content.
 
 ```markdown
 > [!info] For Your Information
-> Noteriv stores notes as standard markdown files.
+> Glyph stores notes as standard markdown files.
 ```
 
 Icon: Info circle. Color: Blue.

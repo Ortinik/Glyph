@@ -5,7 +5,7 @@ order: 3
 
 # CSS Snippets
 
-CSS snippets let you fine-tune the visual appearance of Noteriv beyond what themes control. A snippet is a small CSS file that overrides specific styles. You can toggle individual snippets on and off without affecting each other, making it easy to experiment with visual changes.
+CSS snippets let you fine-tune the visual appearance of Glyph beyond what themes control. A snippet is a small CSS file that overrides specific styles. You can toggle individual snippets on and off without affecting each other, making it easy to experiment with visual changes.
 
 ## How Snippets Work
 
@@ -182,7 +182,7 @@ Available CSS variables from the active theme:
 
 ## Community Snippets
 
-The [NoterivSnippets](https://github.com/thejacedev/NoterivSnippets) repository hosts a curated collection of community-contributed CSS snippets. You can browse and install them from Settings:
+The [GlyphSnippets](https://github.com/thejacedev/GlyphSnippets) repository hosts a curated collection of community-contributed CSS snippets. You can browse and install them from Settings:
 
 1. Open **Settings** > **CSS Snippets**.
 2. Click **Browse Community Snippets**.
@@ -229,7 +229,7 @@ This removes the `.css` file from `.glyph/snippets/` and removes it from the ena
 
 Styles are applied in this order:
 
-1. **Base styles** -- Noteriv's built-in CSS.
+1. **Base styles** -- Glyph's built-in CSS.
 2. **Theme** -- The active theme's CSS custom properties.
 3. **Accent color** -- The selected accent color override.
 4. **CSS snippets** -- Enabled snippets in alphabetical order by filename.

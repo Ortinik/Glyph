@@ -95,7 +95,7 @@ When you set a per-file default:
 1. The setting is stored in the workspace configuration file (`.glyph/workspace.json` in your vault root).
 2. Every time you open that file, it automatically opens in the specified mode instead of the global default.
 3. You can still switch modes manually after opening -- the default only controls the initial mode.
-4. The setting persists across Noteriv restarts, vault switches, and application updates.
+4. The setting persists across Glyph restarts, vault switches, and application updates.
 
 ### Use Cases
 

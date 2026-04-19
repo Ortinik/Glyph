@@ -5,11 +5,11 @@ order: 5
 
 # Mobile Sync
 
-The Noteriv mobile app (iOS and Android, built with React Native and Expo) supports vault synchronization with GitHub repositories. Since mobile platforms do not have a `git` binary available, the mobile app communicates directly with the GitHub REST API to push and pull files. The experience is designed to feel seamless -- you set up a repository once, and your notes sync automatically in the background.
+The Glyph mobile app (iOS and Android, built with React Native and Expo) supports vault synchronization with GitHub repositories. Since mobile platforms do not have a `git` binary available, the mobile app communicates directly with the GitHub REST API to push and pull files. The experience is designed to feel seamless -- you set up a repository once, and your notes sync automatically in the background.
 
 ## How It Differs from Desktop Git Sync
 
-On the desktop, Noteriv calls the system `git` binary to run standard git commands (fetch, pull, commit, push). On mobile, there is no git binary, so the app uses the **GitHub Contents API** and **Git Trees API** to achieve the same result through HTTP requests.
+On the desktop, Glyph calls the system `git` binary to run standard git commands (fetch, pull, commit, push). On mobile, there is no git binary, so the app uses the **GitHub Contents API** and **Git Trees API** to achieve the same result through HTTP requests.
 
 | Operation | Desktop | Mobile |
 |---|---|---|
@@ -25,7 +25,7 @@ The trade-off is that mobile sync is slower for large vaults (each file requires
 
 ### Connecting a Repository
 
-1. Open the Noteriv mobile app.
+1. Open the Glyph mobile app.
 2. Go to Settings (gear icon).
 3. Tap "GitHub Sync" under the vault settings.
 4. Enter your GitHub repository URL. Both HTTPS formats are supported:
@@ -41,10 +41,10 @@ The app parses the URL to extract the repository owner and name, which are used 
 
 1. Go to [github.com/settings/tokens](https://github.com/settings/tokens) on your computer or phone browser.
 2. Click "Generate new token (classic)".
-3. Give it a descriptive name like "Noteriv Mobile".
+3. Give it a descriptive name like "Glyph Mobile".
 4. Select the `repo` scope (full control of private repositories).
 5. Generate the token and copy it.
-6. Paste it into Noteriv's GitHub Sync settings.
+6. Paste it into Glyph's GitHub Sync settings.
 
 Fine-grained tokens are also supported as long as they have read and write access to the repository's contents.
 
@@ -74,7 +74,7 @@ The push operation uploads local files to GitHub:
 3. **Compare with remote**: For each local file, fetches the remote version and compares content. If they match, the file is skipped.
 4. **Upload new/changed files**: For files that are new or have different content, calls `PUT /repos/:owner/:repo/contents/:path` with the base64-encoded content, the existing SHA (for updates) or no SHA (for new files), and a commit message.
 
-Each `PUT` request creates an individual commit on the remote with the message "Sync from Noteriv Mobile". This means a push of 10 modified files creates 10 separate commits. While this is noisier than the desktop's single-commit approach, it ensures each file change is tracked independently.
+Each `PUT` request creates an individual commit on the remote with the message "Sync from Glyph Mobile". This means a push of 10 modified files creates 10 separate commits. While this is noisier than the desktop's single-commit approach, it ensures each file change is tracked independently.
 
 ### Full Sync
 

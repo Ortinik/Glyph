@@ -5,7 +5,7 @@ order: 5
 
 # Templates
 
-Templates let you create new notes from predefined structures. Instead of starting from a blank file and retyping the same headings, frontmatter, and boilerplate, you select a template and Noteriv inserts its content with dynamic variables expanded.
+Templates let you create new notes from predefined structures. Instead of starting from a blank file and retyping the same headings, frontmatter, and boilerplate, you select a template and Glyph inserts its content with dynamic variables expanded.
 
 ## Template Storage
 
@@ -22,7 +22,7 @@ vault/
 
 Each file in this folder is treated as a template. The filename (without extension) becomes the template's display name in the picker.
 
-Noteriv reads the `Templates/` directory each time you open the template picker. If the folder does not exist, the picker shows an empty state with instructions for creating it.
+Glyph reads the `Templates/` directory each time you open the template picker. If the folder does not exist, the picker shows an empty state with instructions for creating it.
 
 ### Organizing Templates
 
@@ -50,7 +50,7 @@ Click a template in the list to insert it immediately. Hover over a template to 
 
 ## Template Variables
 
-Variables use double-curly-brace syntax: `{{variable}}`. Noteriv replaces them at insertion time with computed values. Matching is case-insensitive and tolerates whitespace around the variable name, so `{{date}}`, `{{Date}}`, and `{{ date }}` all work.
+Variables use double-curly-brace syntax: `{{variable}}`. Glyph replaces them at insertion time with computed values. Matching is case-insensitive and tolerates whitespace around the variable name, so `{{date}}`, `{{Date}}`, and `{{ date }}` all work.
 
 ### Built-In Variables
 
@@ -66,7 +66,7 @@ Variables use double-curly-brace syntax: `{{variable}}`. Noteriv replaces them a
 
 ### Unrecognized Variables
 
-If a template contains a variable that is not in the built-in list, Noteriv leaves it as-is. This means you can include placeholder patterns like `{{assignee}}` or `{{project-name}}` as manual fill-in reminders without them being silently removed.
+If a template contains a variable that is not in the built-in list, Glyph leaves it as-is. This means you can include placeholder patterns like `{{assignee}}` or `{{project-name}}` as manual fill-in reminders without them being silently removed.
 
 ## Example Templates
 
@@ -153,7 +153,7 @@ week-of: {{date}}
 
 ## How Processing Works
 
-When you insert a template, Noteriv:
+When you insert a template, Glyph:
 
 1. Reads the raw content of the selected template file.
 2. Builds a variables map from the current date/time and the note's title.

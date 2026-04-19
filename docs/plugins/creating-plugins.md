@@ -5,7 +5,7 @@ order: 2
 
 # Creating Plugins
 
-This guide walks you through creating a Noteriv plugin from scratch, covering the plugin structure, manifest format, API methods, event handling, and a complete example.
+This guide walks you through creating a Glyph plugin from scratch, covering the plugin structure, manifest format, API methods, event handling, and a complete example.
 
 ## Plugin Structure
 
@@ -17,11 +17,11 @@ A plugin is a folder inside `.glyph/plugins/` containing at minimum two files:
   main.js
 ```
 
-You can include additional files (utility modules, assets, etc.), but Noteriv only loads the entry file specified in the manifest.
+You can include additional files (utility modules, assets, etc.), but Glyph only loads the entry file specified in the manifest.
 
 ## Manifest Format
 
-The `manifest.json` file describes your plugin to Noteriv:
+The `manifest.json` file describes your plugin to Glyph:
 
 ```json
 {
@@ -44,7 +44,7 @@ The `manifest.json` file describes your plugin to Noteriv:
 | `version` | string | Yes | Semantic version of your plugin (e.g., `1.0.0`). |
 | `description` | string | Yes | Short description of what the plugin does. |
 | `author` | string | Yes | Your name or handle. |
-| `minAppVersion` | string | No | Minimum Noteriv version required. If set, the plugin will not load on older versions. |
+| `minAppVersion` | string | No | Minimum Glyph version required. If set, the plugin will not load on older versions. |
 | `main` | string | Yes | Path to the entry JavaScript file, relative to the plugin folder. |
 
 ## Entry File
@@ -204,7 +204,7 @@ Read-only application state.
 
 | Property | Type | Description |
 |---|---|---|
-| `version` | string | The current Noteriv app version. |
+| `version` | string | The current Glyph app version. |
 | `vaultPath` | string \| null | Absolute path to the active vault. |
 | `currentFile` | string \| null | Relative path to the currently open file. |
 
@@ -219,7 +219,7 @@ Here is a full plugin that adds a word count to the status bar, updates it when 
   "name": "Word Count",
   "version": "1.0.0",
   "description": "Shows a live word count in the status bar.",
-  "author": "Noteriv Community",
+  "author": "Glyph Community",
   "main": "main.js"
 }
 ```
@@ -297,7 +297,7 @@ module.exports.onUnload = function() {
 
 ## Plugin ID Namespacing
 
-When you register commands, status bar items, sidebar panels, or settings tabs, Noteriv automatically prefixes their IDs with your plugin ID. For example, if your plugin ID is `word-count` and you register a command with ID `show-stats`, the internal ID becomes `word-count:show-stats`. This prevents conflicts between plugins.
+When you register commands, status bar items, sidebar panels, or settings tabs, Glyph automatically prefixes their IDs with your plugin ID. For example, if your plugin ID is `word-count` and you register a command with ID `show-stats`, the internal ID becomes `word-count:show-stats`. This prevents conflicts between plugins.
 
 You do not need to include the prefix yourself. Use short, descriptive IDs in your plugin code.
 
@@ -311,11 +311,11 @@ You do not need to include the prefix yourself. Use short, descriptive IDs in yo
 
 ## Publishing to the Community Repository
 
-To share your plugin with the Noteriv community:
+To share your plugin with the Glyph community:
 
-1. Fork the [NoterivPlugins](https://github.com/thejacedev/NoterivPlugins) repository.
+1. Fork the [GlyphPlugins](https://github.com/thejacedev/GlyphPlugins) repository.
 2. Create a folder for your plugin with `manifest.json` and `main.js`.
 3. Add an entry for your plugin in the repository's root `manifest.json`.
 4. Submit a pull request.
 
-After review and approval, your plugin will be available to all Noteriv users through the community plugin browser.
+After review and approval, your plugin will be available to all Glyph users through the community plugin browser.

@@ -1,19 +1,19 @@
 ---
-title: Noteriv Documentation
+title: Glyph Documentation
 order: 1
 ---
 
-# Noteriv Documentation
+# Glyph Documentation
 
-Welcome to the Noteriv documentation. Noteriv is an open-source, cross-platform markdown note-taking application built for writers, developers, researchers, and anyone who wants their notes in a portable, future-proof format. Notes are plain `.md` files stored on your filesystem -- no proprietary format, no cloud lock-in, no database.
+Welcome to the Glyph documentation. Glyph is an open-source, cross-platform markdown note-taking application built for writers, developers, researchers, and anyone who wants their notes in a portable, future-proof format. Notes are plain `.md` files stored on your filesystem -- no proprietary format, no cloud lock-in, no database.
 
-Noteriv runs on desktop (Windows, macOS, Linux) via Electron and on mobile (Android, iOS) via React Native. Both platforms share the same file format and vault structure, so your notes work identically everywhere.
+Glyph runs on desktop (Windows, macOS, Linux) via Electron and on mobile (Android, iOS) via React Native. Both platforms share the same file format and vault structure, so your notes work identically everywhere.
 
 ## Documentation Sections
 
 ### [Getting Started](./getting-started/)
 
-Installation, creating your first vault, understanding the interface, and the quickstart guide. Start here if you are new to Noteriv.
+Installation, creating your first vault, understanding the interface, and the quickstart guide. Start here if you are new to Glyph.
 
 ### [Editor](./editor/)
 
@@ -53,11 +53,11 @@ Comprehensive reference documentation: complete markdown syntax (including all e
 
 ### [FAQ](./faq.md)
 
-Answers to the 20 most common questions about Noteriv.
+Answers to the 20 most common questions about Glyph.
 
 ### [Contributing](./contributing.md)
 
-How to contribute to Noteriv: reporting bugs, suggesting features, submitting pull requests, and creating plugins, themes, and CSS snippets.
+How to contribute to Glyph: reporting bugs, suggesting features, submitting pull requests, and creating plugins, themes, and CSS snippets.
 
 ## Key Features at a Glance
 
@@ -76,12 +76,12 @@ How to contribute to Noteriv: reporting bugs, suggesting features, submitting pu
 
 ## Links
 
-- **GitHub**: [github.com/thejacedev/Noteriv](https://github.com/thejacedev/Noteriv)
+- **GitHub**: [github.com/thejacedev/Glyph](https://github.com/thejacedev/Glyph)
 - **Website**: [glyph.com](https://www.glyph.com)
 - **MCP Server**: [npmjs.com/package/glyph-mcp](https://www.npmjs.com/package/glyph-mcp)
-- **Plugins**: [github.com/thejacedev/NoterivPlugins](https://github.com/thejacedev/NoterivPlugins)
-- **Themes**: [github.com/thejacedev/NoterivThemes](https://github.com/thejacedev/NoterivThemes)
-- **CSS Snippets**: [github.com/thejacedev/NoterivSnippets](https://github.com/thejacedev/NoterivSnippets)
+- **Plugins**: [github.com/thejacedev/GlyphPlugins](https://github.com/thejacedev/GlyphPlugins)
+- **Themes**: [github.com/thejacedev/GlyphThemes](https://github.com/thejacedev/GlyphThemes)
+- **CSS Snippets**: [github.com/thejacedev/GlyphSnippets](https://github.com/thejacedev/GlyphSnippets)
 
 ## Getting Help
 
@@ -89,12 +89,12 @@ If you cannot find what you are looking for in the documentation:
 
 - **Search**: Use the search function to find pages by keyword.
 - **FAQ**: Check the [FAQ](./faq.md) for answers to the 20 most common questions.
-- **GitHub Issues**: Open an issue on the [GitHub repository](https://github.com/thejacedev/Noteriv/issues) for bug reports and feature requests.
+- **GitHub Issues**: Open an issue on the [GitHub repository](https://github.com/thejacedev/Glyph/issues) for bug reports and feature requests.
 - **GitHub Discussions**: Start a discussion for general questions, ideas, and community conversation.
 
-## About Noteriv
+## About Glyph
 
-Noteriv is designed around a few core principles:
+Glyph is designed around a few core principles:
 
 - **Your notes are yours.** Plain markdown files on your filesystem. No cloud requirement, no proprietary format, no lock-in. Move your notes to another app at any time by simply copying the files.
 - **Local-first, sync-optional.** Everything works offline. Sync is available when you want it (GitHub, folder sync, WebDAV) but never required.
@@ -104,4 +104,4 @@ Noteriv is designed around a few core principles:
 
 ## License
 
-Noteriv is released under the MIT License.
+Glyph is released under the MIT License.

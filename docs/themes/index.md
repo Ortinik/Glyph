@@ -5,11 +5,11 @@ order: 1
 
 # Themes
 
-Noteriv ships with 10 built-in themes and supports unlimited custom themes. Themes control every color in the interface: editor background, text, borders, sidebar, status bar, code blocks, callouts, and preview rendering. Combined with 8 accent colors and configurable fonts, you can make Noteriv look exactly how you want.
+Glyph ships with 10 built-in themes and supports unlimited custom themes. Themes control every color in the interface: editor background, text, borders, sidebar, status bar, code blocks, callouts, and preview rendering. Combined with 8 accent colors and configurable fonts, you can make Glyph look exactly how you want.
 
 ## Built-In Themes
 
-Every installation of Noteriv includes these 10 themes, ready to use without any configuration:
+Every installation of Glyph includes these 10 themes, ready to use without any configuration:
 
 ### Dark Themes
 
@@ -45,7 +45,7 @@ You can also switch themes from the **Command Palette** (`Ctrl+P`) by searching 
 
 ## Accent Colors
 
-Independent of the theme, you can choose an accent color that tints interactive elements like links, buttons, selected text, active tabs, and toggle switches. Noteriv provides 8 accent colors:
+Independent of the theme, you can choose an accent color that tints interactive elements like links, buttons, selected text, active tabs, and toggle switches. Glyph provides 8 accent colors:
 
 | Color | Hex Value |
 |---|---|
@@ -62,7 +62,7 @@ The default accent color is Blue. Change it in Settings under the Appearance sec
 
 ## Community Themes
 
-Beyond the built-in themes, the Noteriv community maintains a collection of additional themes in the [NoterivThemes](https://github.com/thejacedev/NoterivThemes) GitHub repository.
+Beyond the built-in themes, the Glyph community maintains a collection of additional themes in the [GlyphThemes](https://github.com/thejacedev/GlyphThemes) GitHub repository.
 
 To install a community theme:
 
@@ -116,7 +116,7 @@ These colors are applied as CSS custom properties on the root element, so they c
 
 ## How Themes Are Applied
 
-When you select a theme, Noteriv sets CSS custom properties on the `:root` element:
+When you select a theme, Glyph sets CSS custom properties on the `:root` element:
 
 ```css
 :root {

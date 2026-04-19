@@ -5,7 +5,7 @@ order: 8
 
 # Drawing Editor
 
-Noteriv includes a built-in drawing editor for creating diagrams, sketches, and illustrations directly inside your vault. Drawings are saved as `.drawing` files in JSON format and can be embedded in Markdown notes using the `![[file.drawing]]` syntax. The editor provides a vector-based canvas with pencil, shape, text, and eraser tools, plus full color and stroke configuration.
+Glyph includes a built-in drawing editor for creating diagrams, sketches, and illustrations directly inside your vault. Drawings are saved as `.drawing` files in JSON format and can be embedded in Markdown notes using the `![[file.drawing]]` syntax. The editor provides a vector-based canvas with pencil, shape, text, and eraser tools, plus full color and stroke configuration.
 
 ## Creating a Drawing
 
@@ -45,7 +45,7 @@ Drawing files use a JSON format with the following structure:
 }
 ```
 
-Each element has a unique ID, a type string, position coordinates, dimensions, and type-specific visual properties. The `appState` object stores the canvas background color and theme, which adapt to the active Noteriv theme when the drawing is first created.
+Each element has a unique ID, a type string, position coordinates, dimensions, and type-specific visual properties. The `appState` object stores the canvas background color and theme, which adapt to the active Glyph theme when the drawing is first created.
 
 ## Drawing Tools
 
@@ -113,7 +113,7 @@ Zoom controls (+ and - buttons) are available in the toolbar. The current zoom l
 
 ## Embedding Drawings in Notes
 
-Drawings can be embedded in any Markdown note using the standard Noteriv embed syntax:
+Drawings can be embedded in any Markdown note using the standard Glyph embed syntax:
 
 ```markdown
 Here is the system architecture:
@@ -140,7 +140,7 @@ The `elementsToSVG` function generates a standalone SVG document from the drawin
 
 - Embedded in Markdown notes (automatic).
 - Copied to the clipboard for pasting into other applications.
-- Saved as an `.svg` file for use outside Noteriv.
+- Saved as an `.svg` file for use outside Glyph.
 
 The SVG includes a background rectangle matching the canvas background color, so the drawing looks correct when embedded in documents with different backgrounds.
 
@@ -164,7 +164,7 @@ Select an element and press `Delete` or `Backspace` to remove it.
 
 ## Theme Integration
 
-The drawing editor reads the active Noteriv theme to set default colors:
+The drawing editor reads the active Glyph theme to set default colors:
 
 - **Canvas background**: Uses the theme's `--bg-primary` color (e.g., `#1e1e2e` for dark themes).
 - **Default stroke**: Uses the theme's `--text-primary` color for good contrast.
@@ -174,7 +174,7 @@ When you open a drawing created in a different theme, the stored background and 
 
 ## Compatibility
 
-The drawing file format is compatible with files that have a `"type": "excalidraw"` header, meaning Noteriv can open drawings exported from Excalidraw. However, not all Excalidraw element types may render identically, since Noteriv uses a simplified element model.
+The drawing file format is compatible with files that have a `"type": "excalidraw"` header, meaning Glyph can open drawings exported from Excalidraw. However, not all Excalidraw element types may render identically, since Glyph uses a simplified element model.
 
 ## Keyboard Shortcuts
 

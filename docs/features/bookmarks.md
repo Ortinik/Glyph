@@ -55,7 +55,7 @@ Click any entry in the bookmarks panel to open that file in the editor. This is 
 
 ## Persistence
 
-Bookmarks are stored as an array of file paths in Noteriv's local settings. They persist across sessions -- closing and reopening the app does not lose your bookmarks.
+Bookmarks are stored as an array of file paths in Glyph's local settings. They persist across sessions -- closing and reopening the app does not lose your bookmarks.
 
 If a bookmarked file is moved or renamed through the sidebar, the bookmark path is updated automatically. If a bookmarked file is deleted, the entry remains in the list but will show as unavailable until you remove it.
 
@@ -79,7 +79,7 @@ Before a recurring meeting, bookmark the meeting notes file. After the meeting, 
 
 ## Bookmarks vs. Favorites vs. Pinned Tabs
 
-Noteriv distinguishes between three related but different features:
+Glyph distinguishes between three related but different features:
 
 | Feature | Scope | Behavior |
 |---|---|---|

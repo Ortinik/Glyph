@@ -96,7 +96,7 @@ To create an edge, drag from the edge handle on one node to another node. The ha
 
 ### Auto-Side Detection
 
-When you create a new edge, Noteriv calculates which sides of the two nodes face each other based on their center positions. If node A is to the left of node B, the edge connects from A's right side to B's left side. If you later move a node, the edge sides can be recalculated automatically.
+When you create a new edge, Glyph calculates which sides of the two nodes face each other based on their center positions. If node A is to the left of node B, the edge connects from A's right side to B's left side. If you later move a node, the edge sides can be recalculated automatically.
 
 ## Drawing Tools
 

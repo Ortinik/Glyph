@@ -5,17 +5,17 @@ order: 1
 
 # Reference
 
-This section contains detailed reference documentation for Noteriv's supported syntax, file formats, and configuration options. Use these pages as a lookup when you need to check a specific feature or format.
+This section contains detailed reference documentation for Glyph's supported syntax, file formats, and configuration options. Use these pages as a lookup when you need to check a specific feature or format.
 
 ## Pages in This Section
 
 ### [Markdown Syntax](./markdown-syntax.md)
 
-A complete reference for every markdown syntax that Noteriv supports, from standard formatting (headings, bold, italic) through extended features (wiki-links, callouts, math, Mermaid diagrams, dataview queries, flashcards, and more). Includes examples for every syntax element.
+A complete reference for every markdown syntax that Glyph supports, from standard formatting (headings, bold, italic) through extended features (wiki-links, callouts, math, Mermaid diagrams, dataview queries, flashcards, and more). Includes examples for every syntax element.
 
 ### [Frontmatter](./frontmatter.md)
 
-YAML frontmatter fields that Noteriv recognizes and uses. Covers built-in fields like `title`, `tags`, `due`, `status`, and `board`, as well as custom fields that can be queried via dataview.
+YAML frontmatter fields that Glyph recognizes and uses. Covers built-in fields like `title`, `tags`, `due`, `status`, and `board`, as well as custom fields that can be queried via dataview.
 
 ### [Callouts](./callouts.md)
 
@@ -23,7 +23,7 @@ All 14 callout types with their syntax, icons, colors, and collapsible variants.
 
 ### [File Types](./file-types.md)
 
-Every file type that Noteriv handles: markdown notes, canvas files, drawing files, and board notes. Also covers the `.glyph/` directory structure and the configuration files stored within it.
+Every file type that Glyph handles: markdown notes, canvas files, drawing files, and board notes. Also covers the `.glyph/` directory structure and the configuration files stored within it.
 
 ## Quick Links
 
@@ -45,7 +45,7 @@ This reference section is designed for quick lookup, not sequential reading. Eac
 
 **I want to format text**: Start with [Markdown Syntax](./markdown-syntax.md). It covers everything from basic bold/italic to advanced features like math, diagrams, and dataview queries.
 
-**I want to add metadata to a note**: See [Frontmatter](./frontmatter.md) for the YAML fields that Noteriv recognizes, including `title`, `tags`, `due`, `status`, and `board`.
+**I want to add metadata to a note**: See [Frontmatter](./frontmatter.md) for the YAML fields that Glyph recognizes, including `title`, `tags`, `due`, `status`, and `board`.
 
 **I want to highlight important information**: See [Callouts](./callouts.md) for the 14 callout types (note, tip, info, warning, danger, bug, example, quote, success, question, abstract, todo, failure, important) with their syntax and color coding.
 
@@ -60,7 +60,7 @@ This reference section is designed for quick lookup, not sequential reading. Eac
 
 ## Syntax Compatibility
 
-Noteriv's markdown parser is designed to be compatible with CommonMark and GitHub Flavored Markdown (GFM) with the following extensions:
+Glyph's markdown parser is designed to be compatible with CommonMark and GitHub Flavored Markdown (GFM) with the following extensions:
 
 | Extension | Standard |
 |---|---|
@@ -68,16 +68,16 @@ Noteriv's markdown parser is designed to be compatible with CommonMark and GitHu
 | Tables, task lists, strikethrough | GFM |
 | Footnotes | PHP Markdown Extra |
 | Definition lists | PHP Markdown Extra |
-| Highlight (`==text==`) | Noteriv extension |
-| Superscript (`^text^`), Subscript (`~text~`) | Noteriv extension |
-| Wiki-links (`[[note]]`), Embeds (`![[note]]`) | Noteriv extension |
-| Callouts (`> [!type]`) | Noteriv extension |
-| Math (`$...$`, `$$...$$`) | Noteriv extension (KaTeX) |
-| Mermaid diagrams | Noteriv extension |
-| Dataview queries | Noteriv extension |
-| Flashcards (Q:/A:, {{cloze}}) | Noteriv extension |
+| Highlight (`==text==`) | Glyph extension |
+| Superscript (`^text^`), Subscript (`~text~`) | Glyph extension |
+| Wiki-links (`[[note]]`), Embeds (`![[note]]`) | Glyph extension |
+| Callouts (`> [!type]`) | Glyph extension |
+| Math (`$...$`, `$$...$$`) | Glyph extension (KaTeX) |
+| Mermaid diagrams | Glyph extension |
+| Dataview queries | Glyph extension |
+| Flashcards (Q:/A:, {{cloze}}) | Glyph extension |
 
-Notes created in Noteriv can be opened in any markdown editor. Standard markdown renders correctly everywhere. Noteriv-specific extensions (wiki-links, callouts, math, dataview) will appear as plain text in editors that do not support them, but the files remain valid and editable.
+Notes created in Glyph can be opened in any markdown editor. Standard markdown renders correctly everywhere. Glyph-specific extensions (wiki-links, callouts, math, dataview) will appear as plain text in editors that do not support them, but the files remain valid and editable.
 
 ## Keyboard Shortcut Quick Reference
 
@@ -99,7 +99,7 @@ These are the most commonly needed shortcuts when working with the syntax docume
 
 ## Related Documentation
 
-For documentation on how Noteriv processes and renders these syntax elements:
+For documentation on how Glyph processes and renders these syntax elements:
 
 - **Editor**: See [Editor Overview](../editor/) for how Live mode renders markdown inline while you type.
 - **Themes**: See [Themes](../themes/) for how code blocks, callouts, and other elements are colored by the active theme.

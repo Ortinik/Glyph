@@ -5,7 +5,7 @@ order: 2
 
 # Live Mode
 
-Live mode is Noteriv's default editing experience. It combines the immediacy of a rich text editor with the precision of raw Markdown by rendering formatted output inline while you type, but revealing the underlying syntax on the line where your cursor sits.
+Live mode is Glyph's default editing experience. It combines the immediacy of a rich text editor with the precision of raw Markdown by rendering formatted output inline while you type, but revealing the underlying syntax on the line where your cursor sits.
 
 ## How It Works
 

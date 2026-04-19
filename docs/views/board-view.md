@@ -9,7 +9,7 @@ The board view transforms a Markdown file into a Kanban-style task board with dr
 
 ## Activating the Board View
 
-There are two ways to tell Noteriv that a file should be displayed as a board:
+There are two ways to tell Glyph that a file should be displayed as a board:
 
 ### Frontmatter Flag
 
@@ -21,7 +21,7 @@ board: true
 ---
 ```
 
-When Noteriv opens this file, it automatically switches to the board renderer instead of the standard editor.
+When Glyph opens this file, it automatically switches to the board renderer instead of the standard editor.
 
 ### File Extension
 
@@ -66,7 +66,7 @@ This file renders as a three-column board with cards in each column. The raw Mar
 
 ### Creating Columns
 
-New columns can be added from the board toolbar. Noteriv inserts a new `## Column Name` heading at the end of the file. You can rename a column by editing its heading directly in the board view or by switching to the editor and modifying the `##` heading.
+New columns can be added from the board toolbar. Glyph inserts a new `## Column Name` heading at the end of the file. You can rename a column by editing its heading directly in the board view or by switching to the editor and modifying the `##` heading.
 
 ### Deleting Columns
 
@@ -74,7 +74,7 @@ Removing a column deletes its heading and all cards under it from the Markdown f
 
 ### Default Columns
 
-When you create a new board file from the file menu ("New Board"), Noteriv generates a starter file with three columns: **To Do**, **In Progress**, and **Done**.
+When you create a new board file from the file menu ("New Board"), Glyph generates a starter file with three columns: **To Do**, **In Progress**, and **Done**.
 
 ```markdown
 ---

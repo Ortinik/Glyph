@@ -5,7 +5,7 @@ order: 3
 
 # Folder Sync
 
-Folder sync mirrors your Noteriv vault to a local folder on your file system. The target folder is typically a directory managed by a cloud storage client -- Google Drive, Dropbox, OneDrive, or iCloud Drive. The cloud provider's own sync engine handles uploading files to the cloud and downloading changes from other devices. Noteriv's job is to keep the vault and the target folder in sync with each other.
+Folder sync mirrors your Glyph vault to a local folder on your file system. The target folder is typically a directory managed by a cloud storage client -- Google Drive, Dropbox, OneDrive, or iCloud Drive. The cloud provider's own sync engine handles uploading files to the cloud and downloading changes from other devices. Glyph's job is to keep the vault and the target folder in sync with each other.
 
 This approach is simple, requires no tokens or server configuration, and works with any cloud service that exposes a local folder.
 
@@ -17,11 +17,11 @@ The sync happens in two passes:
 
 ### Push Pass (Local to Target)
 
-For every file in the vault directory, Noteriv checks whether the file exists in the target directory at the same relative path. If the file does not exist in the target, or the local file has a more recent modification time, the local file is copied to the target.
+For every file in the vault directory, Glyph checks whether the file exists in the target directory at the same relative path. If the file does not exist in the target, or the local file has a more recent modification time, the local file is copied to the target.
 
 ### Pull Pass (Target to Local)
 
-For every file in the target directory, Noteriv checks whether the file exists in the vault at the same relative path. If the file does not exist locally, or the target file has a more recent modification time, the target file is copied to the vault.
+For every file in the target directory, Glyph checks whether the file exists in the vault at the same relative path. If the file does not exist locally, or the target file has a more recent modification time, the target file is copied to the vault.
 
 Both passes run in a single sync cycle. The result is that the vault and the target converge to the same state: every file present in either location ends up in both locations, with the most recently modified version winning.
 
@@ -35,12 +35,12 @@ The local folder to sync to. Click "Browse" to open a directory picker, or type 
 
 | Provider | Typical Path (macOS) | Typical Path (Windows) | Typical Path (Linux) |
 |---|---|---|---|
-| Google Drive | `~/Google Drive/Noteriv` | `G:\My Drive\Noteriv` | `~/google-drive/Noteriv` |
-| Dropbox | `~/Dropbox/Noteriv` | `C:\Users\you\Dropbox\Noteriv` | `~/Dropbox/Noteriv` |
-| OneDrive | `~/OneDrive/Noteriv` | `C:\Users\you\OneDrive\Noteriv` | `~/OneDrive/Noteriv` |
-| iCloud Drive | `~/Library/Mobile Documents/com~apple~CloudDocs/Noteriv` | N/A | N/A |
+| Google Drive | `~/Google Drive/Glyph` | `G:\My Drive\Glyph` | `~/google-drive/Glyph` |
+| Dropbox | `~/Dropbox/Glyph` | `C:\Users\you\Dropbox\Glyph` | `~/Dropbox/Glyph` |
+| OneDrive | `~/OneDrive/Glyph` | `C:\Users\you\OneDrive\Glyph` | `~/OneDrive/Glyph` |
+| iCloud Drive | `~/Library/Mobile Documents/com~apple~CloudDocs/Glyph` | N/A | N/A |
 
-If the target directory does not exist, Noteriv creates it automatically (including intermediate directories) on the first sync.
+If the target directory does not exist, Glyph creates it automatically (including intermediate directories) on the first sync.
 
 ### Sync Direction
 
@@ -52,14 +52,14 @@ You can control which direction files flow:
 | **Push only (local to folder)** | Vault changes are copied to the target. Target changes are ignored. |
 | **Pull only (folder to local)** | Target changes are copied to the vault. Vault changes are not copied out. |
 
-Push-only mode is useful for one-way backup: your vault is the authoritative copy, and the target folder is a read-only mirror. Pull-only mode is useful when another tool writes to the target folder and you want Noteriv to import those changes.
+Push-only mode is useful for one-way backup: your vault is the authoritative copy, and the target folder is a read-only mirror. Pull-only mode is useful when another tool writes to the target folder and you want Glyph to import those changes.
 
 ## Testing the Connection
 
 Before the first sync, you can click the "Test Connection" button in settings. This verifies that:
 
 1. The target path is accessible.
-2. Noteriv has write permission to the target directory.
+2. Glyph has write permission to the target directory.
 
 The test creates a small temporary file (`.glyph-test`), verifies it was written, and then deletes it. If the test fails, check that the path exists and that your user account has write access.
 
@@ -134,19 +134,19 @@ The consequence is that the target folder may accumulate files that have been de
 
 ### Google Drive
 
-Google Drive's desktop app (Backup and Sync or Google Drive for Desktop) syncs a local folder to Google Drive cloud storage. Point Noteriv's folder sync target to a subfolder inside the Google Drive folder. Changes are uploaded automatically by Google's client.
+Google Drive's desktop app (Backup and Sync or Google Drive for Desktop) syncs a local folder to Google Drive cloud storage. Point Glyph's folder sync target to a subfolder inside the Google Drive folder. Changes are uploaded automatically by Google's client.
 
 ### Dropbox
 
-Dropbox's desktop app syncs the `~/Dropbox` folder. Create a `Noteriv` subfolder and set it as the target. Dropbox has fast sync with LAN detection.
+Dropbox's desktop app syncs the `~/Dropbox` folder. Create a `Glyph` subfolder and set it as the target. Dropbox has fast sync with LAN detection.
 
 ### OneDrive
 
-Microsoft OneDrive syncs the `~/OneDrive` folder. Works the same way -- create a `Noteriv` subfolder and point folder sync to it.
+Microsoft OneDrive syncs the `~/OneDrive` folder. Works the same way -- create a `Glyph` subfolder and point folder sync to it.
 
 ### iCloud Drive
 
-On macOS, iCloud Drive files live in `~/Library/Mobile Documents/com~apple~CloudDocs/`. Create a `Noteriv` folder there. Note that iCloud may "evict" (remove) local copies of files to save disk space. If this happens, the files will appear as placeholders and may not be readable by folder sync until they are re-downloaded.
+On macOS, iCloud Drive files live in `~/Library/Mobile Documents/com~apple~CloudDocs/`. Create a `Glyph` folder there. Note that iCloud may "evict" (remove) local copies of files to save disk space. If this happens, the files will appear as placeholders and may not be readable by folder sync until they are re-downloaded.
 
 ## Combining with Git Sync
 

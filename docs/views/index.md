@@ -5,7 +5,7 @@ order: 1
 
 # Views Overview
 
-Noteriv is more than a text editor. In addition to the Markdown editor, it provides a collection of specialized views that let you visualize, organize, and interact with your notes in ways that plain text cannot. Each view is built into the application -- there are no plugins to install. You access them from the ribbon sidebar, the command palette (`Ctrl+P`), or through file associations that activate automatically based on file extension or frontmatter properties.
+Glyph is more than a text editor. In addition to the Markdown editor, it provides a collection of specialized views that let you visualize, organize, and interact with your notes in ways that plain text cannot. Each view is built into the application -- there are no plugins to install. You access them from the ribbon sidebar, the command palette (`Ctrl+P`), or through file associations that activate automatically based on file extension or frontmatter properties.
 
 ## Available Views
 
@@ -51,7 +51,7 @@ See [Canvas](./canvas.md) for details.
 
 ### PDF Viewer
 
-Noteriv opens PDF files inline with annotation tools. Highlight text in four colors, underline passages, and attach text notes. Annotations are saved as a sidecar JSON file next to the PDF, and can be exported to a Markdown note with page references.
+Glyph opens PDF files inline with annotation tools. Highlight text in four colors, underline passages, and attach text notes. Annotations are saved as a sidecar JSON file next to the PDF, and can be exported to a Markdown note with page references.
 
 See [PDF Viewer](./pdf-viewer.md) for details.
 
@@ -96,9 +96,9 @@ There are three general ways to open a view:
 
 ## Design Principles
 
-All views in Noteriv share a few guiding principles:
+All views in Glyph share a few guiding principles:
 
 - **Plain-text backing**: Board data is Markdown. Canvas data is JSON. Drawing data is JSON. Nothing is stored in a proprietary binary format.
 - **Round-trip editing**: You can always open the underlying file in the Markdown editor, make changes, and see them reflected in the specialized view.
-- **Theme-aware**: Every view respects the active Noteriv theme, reading CSS custom properties for colors, fonts, and spacing.
+- **Theme-aware**: Every view respects the active Glyph theme, reading CSS custom properties for colors, fonts, and spacing.
 - **No external dependencies**: Views are rendered locally with the application's built-in rendering engine. No web services are contacted, and no data leaves your machine.

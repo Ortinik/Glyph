@@ -5,15 +5,15 @@ order: 1
 
 # Features
 
-Noteriv ships with a full set of tools for writing, organizing, and querying your notes. Every feature works on local Markdown files inside your vault, so your data stays yours whether you sync it with Git, a cloud drive, or not at all.
+Glyph ships with a full set of tools for writing, organizing, and querying your notes. Every feature works on local Markdown files inside your vault, so your data stays yours whether you sync it with Git, a cloud drive, or not at all.
 
-This section covers each major feature in detail. If you are new to Noteriv, reading through this list will give you a clear picture of what is available and how the pieces fit together.
+This section covers each major feature in detail. If you are new to Glyph, reading through this list will give you a clear picture of what is available and how the pieces fit together.
 
 ## Linking and Discovery
 
 ### [Wiki-Links](./wiki-links.md)
 
-Connect your notes with `[[double bracket]]` links. Noteriv resolves links by filename (case-insensitive), supports display text aliases and heading anchors, and provides a backlinks panel that shows every note pointing at the one you are reading.
+Connect your notes with `[[double bracket]]` links. Glyph resolves links by filename (case-insensitive), supports display text aliases and heading anchors, and provides a backlinks panel that shows every note pointing at the one you are reading.
 
 ### [Tags](./tags.md)
 

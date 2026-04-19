@@ -5,7 +5,7 @@ order: 6
 
 # Keyboard Shortcuts
 
-Noteriv has over 70 keyboard shortcuts covering file management, navigation, editing, formatting, views, sync, and more. All shortcuts are customizable -- you can rebind any action to a different key combination in Settings.
+Glyph has over 70 keyboard shortcuts covering file management, navigation, editing, formatting, views, sync, and more. All shortcuts are customizable -- you can rebind any action to a different key combination in Settings.
 
 On macOS, `Ctrl` is replaced by `Cmd` throughout.
 
@@ -54,7 +54,7 @@ If you rebind a shortcut, the command palette and this documentation will reflec
 
 **Quick open** is a fuzzy file finder that searches across all notes in your vault. Start typing any part of a filename to filter results. It matches against the full file path, so you can type folder names to narrow results. Press Enter to open the selected file.
 
-**Command palette** lists every available action in Noteriv, organized by category (File, Navigation, Search, View, Edit, Formatting, Sync). Each entry shows its keyboard shortcut if one is assigned. Start typing to filter commands. Recently used commands appear at the top of the list when the search field is empty, putting your most frequent actions within easy reach.
+**Command palette** lists every available action in Glyph, organized by category (File, Navigation, Search, View, Edit, Formatting, Sync). Each entry shows its keyboard shortcut if one is assigned. Start typing to filter commands. Recently used commands appear at the top of the list when the search field is empty, putting your most frequent actions within easy reach.
 
 **Daily note** opens (or creates) a note for today's date. The note is named with the current date (e.g., `2026-03-20.md`) and placed in the root of your vault or in a configured daily notes folder.
 
@@ -141,7 +141,7 @@ Additional formatting commands are available through the formatting toolbar at t
 |---|---|
 | `Ctrl+Shift+G` | Sync now (push and pull with GitHub) |
 
-**Sync now** triggers an immediate git sync operation. It pulls any remote changes first, then pushes your local changes. The sync status is shown in the status bar. If there are conflicts, Noteriv notifies you so you can resolve them.
+**Sync now** triggers an immediate git sync operation. It pulls any remote changes first, then pushes your local changes. The sync status is shown in the status bar. If there are conflicts, Glyph notifies you so you can resolve them.
 
 Sync also happens automatically in the background if auto-sync is enabled in Settings. The default interval is every 5 minutes, but you can set it to 1, 5, 10, or 30 minutes, or disable it entirely.
 

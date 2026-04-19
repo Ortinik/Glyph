@@ -5,7 +5,7 @@ order: 1
 
 # Editor Overview
 
-Noteriv's editor is built on [CodeMirror 6](https://codemirror.net/), a modern, extensible code editor framework for the web. It provides a fast, accessible editing experience designed specifically for Markdown note-taking, with three distinct view modes, split editing, focus mode, and optional Vim keybindings.
+Glyph's editor is built on [CodeMirror 6](https://codemirror.net/), a modern, extensible code editor framework for the web. It provides a fast, accessible editing experience designed specifically for Markdown note-taking, with three distinct view modes, split editing, focus mode, and optional Vim keybindings.
 
 ## View Modes
 
@@ -56,7 +56,7 @@ See [Focus Mode](./focus-mode.md) for details.
 
 ## Vim Mode
 
-If you prefer modal editing, Noteriv includes full Vim keybinding support powered by `@replit/codemirror-vim`. Enable it in Settings and you get Normal, Insert, and Visual modes with the standard Vim command vocabulary.
+If you prefer modal editing, Glyph includes full Vim keybinding support powered by `@replit/codemirror-vim`. Enable it in Settings and you get Normal, Insert, and Visual modes with the standard Vim command vocabulary.
 
 See [Vim Mode](./vim-mode.md) for details.
 
@@ -77,7 +77,7 @@ See [Context Menu](./context-menu.md) for details.
 Under the hood, the editor is a CodeMirror 6 `EditorView` instance extended with custom plugins:
 
 - **Markdown language support** via `@codemirror/lang-markdown` with inline rendering decorations for live mode.
-- **Syntax highlighting** using a custom theme that adapts to the active Noteriv theme.
+- **Syntax highlighting** using a custom theme that adapts to the active Glyph theme.
 - **State management** through CodeMirror's `EditorState` and `StateField` extensions, keeping mode, focus, and per-file settings in sync with the application state.
 - **Vim bindings** via `@replit/codemirror-vim`, loaded conditionally when the setting is enabled.
 - **Custom keymaps** for formatting shortcuts, mode toggling, split controls, and focus mode.

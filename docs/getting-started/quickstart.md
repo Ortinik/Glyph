@@ -5,25 +5,25 @@ order: 3
 
 # Quickstart
 
-This guide walks you through your first five minutes with Noteriv: running the setup wizard, creating a vault, optionally connecting GitHub sync, and writing your first note.
+This guide walks you through your first five minutes with Glyph: running the setup wizard, creating a vault, optionally connecting GitHub sync, and writing your first note.
 
 ## First launch: the setup wizard
 
-When you open Noteriv for the first time, the setup wizard appears. It guides you through creating your first vault in four steps.
+When you open Glyph for the first time, the setup wizard appears. It guides you through creating your first vault in four steps.
 
 ### Step 1: Choose how to start
 
 The wizard presents three options:
 
 - **New vault** -- Start fresh with an empty folder. This is the right choice for most new users.
-- **Open folder** -- Use an existing folder that already contains markdown notes. Noteriv will index the folder and display your files in the sidebar immediately.
-- **Clone from GitHub** -- Pull notes from a GitHub repository. Choose this if you already have a notes vault stored in a repo and want to sync it with Noteriv.
+- **Open folder** -- Use an existing folder that already contains markdown notes. Glyph will index the folder and display your files in the sidebar immediately.
+- **Clone from GitHub** -- Pull notes from a GitHub repository. Choose this if you already have a notes vault stored in a repo and want to sync it with Glyph.
 
 Click the option that fits your situation.
 
 ### Step 2: Name your vault
 
-Give your vault a name. This is a display name used inside Noteriv -- it does not affect the folder name on disk, though it is used as a suggestion. Pick something descriptive like "Personal", "Work", "Research", or "Journal".
+Give your vault a name. This is a display name used inside Glyph -- it does not affect the folder name on disk, though it is used as a suggestion. Pick something descriptive like "Personal", "Work", "Research", or "Journal".
 
 Type a name and press Enter or click Continue.
 
@@ -31,7 +31,7 @@ Type a name and press Enter or click Continue.
 
 Choose where your vault folder will live on your filesystem.
 
-- For a **new vault**, you can pick a parent directory or leave it blank to use the default location (`~/Noteriv/<vault-name>` on Linux/macOS, `%USERPROFILE%\Noteriv\<vault-name>` on Windows). Noteriv creates the folder for you.
+- For a **new vault**, you can pick a parent directory or leave it blank to use the default location (`~/Glyph/<vault-name>` on Linux/macOS, `%USERPROFILE%\Glyph\<vault-name>` on Windows). Glyph creates the folder for you.
 - For an **existing folder**, click the folder picker and navigate to the directory that contains your notes.
 - For a **clone**, pick the parent directory where the repository will be cloned into.
 
@@ -43,7 +43,7 @@ If you do want GitHub sync:
 
 1. Click **Connect GitHub**.
 2. You need a GitHub Personal Access Token (PAT) with the `repo` scope. Click "Generate on GitHub" to open the token creation page in your browser.
-3. Paste your token into the input field and click **Connect**. Noteriv validates the token, shows your GitHub username and avatar, and loads your repositories.
+3. Paste your token into the input field and click **Connect**. Glyph validates the token, shows your GitHub username and avatar, and loads your repositories.
 4. Your token is encrypted and stored locally using your operating system's keychain. It is never sent anywhere except to GitHub's API.
 
 After connecting, you can enable **Auto-sync on save**, which pushes changes to GitHub every time you save a file.
@@ -52,10 +52,10 @@ After connecting, you can enable **Auto-sync on save**, which pushes changes to 
 
 If you connected GitHub, the wizard shows a repository picker:
 
-- **Create new repo** -- Enter a name for a new GitHub repository. You can make it private (recommended for personal notes). Noteriv creates the repo on your behalf.
+- **Create new repo** -- Enter a name for a new GitHub repository. You can make it private (recommended for personal notes). Glyph creates the repo on your behalf.
 - **Select existing repo** -- Browse your GitHub repositories and pick one. If you chose "Clone from GitHub" in step 1, the repo will be cloned to your chosen location.
 
-Click **Create Vault** (or **Clone & Create** for clone setups) and Noteriv sets everything up. After a moment, the main editor opens and you are ready to go.
+Click **Create Vault** (or **Clone & Create** for clone setups) and Glyph sets everything up. After a moment, the main editor opens and you are ready to go.
 
 ## Creating your first note
 
@@ -72,7 +72,7 @@ Try typing some markdown:
 ```markdown
 # My First Note
 
-Welcome to Noteriv. This is **bold text** and this is *italic text*.
+Welcome to Glyph. This is **bold text** and this is *italic text*.
 
 ## A list of things
 
@@ -113,9 +113,9 @@ You can also set a default view mode per file by right-clicking in the editor an
 
 ## Using the command palette
 
-Press `Ctrl+Shift+P` to open the command palette. It lists every available action in Noteriv, organized by category. Start typing to filter the list -- you can search by command name, category, or action ID.
+Press `Ctrl+Shift+P` to open the command palette. It lists every available action in Glyph, organized by category. Start typing to filter the list -- you can search by command name, category, or action ID.
 
-The command palette is the fastest way to discover features. If you are ever wondering "can Noteriv do X?", open the palette and search for it.
+The command palette is the fastest way to discover features. If you are ever wondering "can Glyph do X?", open the palette and search for it.
 
 Recently used commands appear at the top when the search field is empty, so your most frequent actions are always within reach.
 
@@ -134,7 +134,7 @@ You can nest folders as deep as you like. Drag and drop files and folders in the
 
 ## Daily notes
 
-Press `Ctrl+D` to open today's daily note. If it does not exist yet, Noteriv creates it automatically with the current date as the filename (e.g., `2026-03-20.md`). Daily notes are a great way to keep a running journal, track tasks for the day, or capture quick thoughts.
+Press `Ctrl+D` to open today's daily note. If it does not exist yet, Glyph creates it automatically with the current date as the filename (e.g., `2026-03-20.md`). Daily notes are a great way to keep a running journal, track tasks for the day, or capture quick thoughts.
 
 ## Setting up sync later
 
@@ -154,7 +154,7 @@ You can also set up alternative sync methods here:
 
 Now that you have a vault and your first note, here are some features worth trying:
 
-- **Wiki-links** -- Type `[[` to link to other notes. Noteriv auto-completes note names as you type.
+- **Wiki-links** -- Type `[[` to link to other notes. Glyph auto-completes note names as you type.
 - **Tags** -- Add `#tag` or `#parent/child` tags to your notes. View all tags in the tag pane.
 - **Graph view** -- Press `Ctrl+G` to see a visual map of how your notes connect through wiki-links.
 - **Templates** -- Press `Ctrl+T` to insert a note template with variables like `{{date}}`, `{{time}}`, and `{{title}}`.

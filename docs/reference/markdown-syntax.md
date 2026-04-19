@@ -5,7 +5,7 @@ order: 2
 
 # Markdown Syntax Reference
 
-Noteriv supports standard markdown plus several extensions. This page documents every syntax element with examples.
+Glyph supports standard markdown plus several extensions. This page documents every syntax element with examples.
 
 ---
 
@@ -62,7 +62,7 @@ Renders as: ~~strikethrough text~~
 ==highlighted text==
 ```
 
-Renders with a colored background (yellow by default). Highlighting is a Noteriv extension not found in standard markdown.
+Renders with a colored background (yellow by default). Highlighting is a Glyph extension not found in standard markdown.
 
 ### Inline Code
 
@@ -92,7 +92,7 @@ Text between single tildes is rendered as subscript. Note: this is different fro
 
 ## Math
 
-Noteriv renders math using KaTeX. Both inline and block math are supported.
+Glyph renders math using KaTeX. Both inline and block math are supported.
 
 ### Inline Math
 
@@ -123,7 +123,7 @@ KaTeX supports a wide range of LaTeX commands including fractions (`\frac`), int
 ### External Links
 
 ```markdown
-[Noteriv Website](https://www.glyph.com)
+[Glyph Website](https://www.glyph.com)
 ```
 
 ### Wiki-Links
@@ -132,7 +132,7 @@ KaTeX supports a wide range of LaTeX commands including fractions (`\frac`), int
 [[Another Note]]
 ```
 
-Wiki-links create internal links between notes. The link target is the note name without the file extension. Noteriv resolves wiki-links by searching all folders in the vault for a matching filename.
+Wiki-links create internal links between notes. The link target is the note name without the file extension. Glyph resolves wiki-links by searching all folders in the vault for a matching filename.
 
 ### Wiki-Links with Aliases
 
@@ -229,7 +229,7 @@ Blockquotes are rendered with a colored left border and slightly indented text.
 
 ## Callouts
 
-Callouts are special blockquotes with a type identifier. Noteriv supports 14 callout types:
+Callouts are special blockquotes with a type identifier. Glyph supports 14 callout types:
 
 ```markdown
 > [!note] Title
@@ -266,7 +266,7 @@ function greet(name) {
 
 ### Supported Languages
 
-Noteriv provides syntax highlighting for the following languages:
+Glyph provides syntax highlighting for the following languages:
 
 | Language | Identifier |
 |---|---|
@@ -353,7 +353,7 @@ graph TD
 ```
 ````
 
-Noteriv renders Mermaid diagrams inline in the preview. Supported diagram types include flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, entity-relationship diagrams, and pie charts. See the [Mermaid documentation](https://mermaid.js.org/) for the full syntax reference.
+Glyph renders Mermaid diagrams inline in the preview. Supported diagram types include flowcharts, sequence diagrams, Gantt charts, class diagrams, state diagrams, entity-relationship diagrams, and pie charts. See the [Mermaid documentation](https://mermaid.js.org/) for the full syntax reference.
 
 ---
 
@@ -418,7 +418,7 @@ Collects all task list items (`- [ ]` and `- [x]`) from matching notes.
 
 ## Flashcards
 
-Noteriv extracts flashcards from your notes for spaced repetition review.
+Glyph extracts flashcards from your notes for spaced repetition review.
 
 ### Q:/A: Format
 

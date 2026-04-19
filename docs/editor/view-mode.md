@@ -68,7 +68,7 @@ Footnote references (`[^1]`) appear as superscript numbers that link to footnote
 
 ### Embedded Content
 
-If you use Noteriv's embed syntax (`![[note]]`), the embedded note's content is rendered inline within the parent document, visually distinguished with a border and background.
+If you use Glyph's embed syntax (`![[note]]`), the embedded note's content is rendered inline within the parent document, visually distinguished with a border and background.
 
 ### Frontmatter
 
@@ -88,7 +88,7 @@ If you use checkboxes inside table cells (`| [ ] Task |`), they are also interac
 
 ### Links
 
-All links -- standard Markdown links, wiki-links, and autolinks -- are clickable in view mode. Internal links navigate within Noteriv; external links open in your default browser.
+All links -- standard Markdown links, wiki-links, and autolinks -- are clickable in view mode. Internal links navigate within Glyph; external links open in your default browser.
 
 ### Code Block Copy Button
 
@@ -104,7 +104,7 @@ You can use `Ctrl+F` to search within the rendered content. The search highlight
 
 ## Printing and Export
 
-View mode's rendered output is the basis for Noteriv's print and PDF export features. When you print a note (`Ctrl+Shift+P` or File > Print), the view mode rendering is used, ensuring the printed output matches what you see on screen. Export to PDF uses the same rendering pipeline.
+View mode's rendered output is the basis for Glyph's print and PDF export features. When you print a note (`Ctrl+Shift+P` or File > Print), the view mode rendering is used, ensuring the printed output matches what you see on screen. Export to PDF uses the same rendering pipeline.
 
 ## When to Use View Mode
 

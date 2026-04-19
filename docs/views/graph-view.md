@@ -19,7 +19,7 @@ The graph opens as a full-screen overlay on top of the editor. Press `Escape` or
 
 ## How the Graph Is Built
 
-When you open the graph, Noteriv scans every `.md` and `.markdown` file in the active vault. For each file it:
+When you open the graph, Glyph scans every `.md` and `.markdown` file in the active vault. For each file it:
 
 1. Creates a **node** using the file name (without the `.md` extension) as the label.
 2. Extracts all `[[wiki-link]]` references from the file content using the pattern `[[target]]` or `[[target|alias]]`.

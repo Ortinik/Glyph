@@ -5,7 +5,7 @@ order: 12
 
 # Flashcards
 
-Noteriv includes a spaced repetition flashcard system built directly into your notes. Define question-and-answer pairs or cloze deletions in any Markdown file, and Noteriv will schedule them for review using the SM-2 algorithm. No separate app or export step required -- your flashcards live in the same files as the rest of your knowledge.
+Glyph includes a spaced repetition flashcard system built directly into your notes. Define question-and-answer pairs or cloze deletions in any Markdown file, and Glyph will schedule them for review using the SM-2 algorithm. No separate app or export step required -- your flashcards live in the same files as the rest of your knowledge.
 
 ## Defining Flashcards
 
@@ -43,7 +43,7 @@ When this card is shown during review:
 - **Question:** "The mitochondria is the [...] of the cell."
 - **Answer:** "powerhouse"
 
-Noteriv replaces all `{{...}}` on the line with `[...]` to form the question, and uses the text inside the braces as the answer. Each `{{...}}` instance on a line creates a separate card.
+Glyph replaces all `{{...}}` on the line with `[...]` to form the question, and uses the text inside the braces as the answer. Each `{{...}}` instance on a line creates a separate card.
 
 Cloze deletions work well for factual recall embedded in prose. You can mix them freely with regular text:
 
@@ -61,7 +61,7 @@ Open the flashcard review from the command palette (`Ctrl+Shift+P`, search for "
 
 ### Scanning the Vault
 
-When the review screen opens, Noteriv scans every `.md` and `.markdown` file in the vault for flashcard definitions. This happens in the background, and a loading message is shown while scanning. The scan typically completes in seconds, even for large vaults.
+When the review screen opens, Glyph scans every `.md` and `.markdown` file in the vault for flashcard definitions. This happens in the background, and a loading message is shown while scanning. The scan typically completes in seconds, even for large vaults.
 
 ### Review Interface
 
@@ -106,7 +106,7 @@ When all due cards have been reviewed, the screen shows a "All caught up!" messa
 
 ## The SM-2 Algorithm
 
-Noteriv uses the SM-2 (SuperMemo 2) spaced repetition algorithm to schedule reviews. SM-2 is a well-established algorithm that adjusts the review interval based on how well you recall each card.
+Glyph uses the SM-2 (SuperMemo 2) spaced repetition algorithm to schedule reviews. SM-2 is a well-established algorithm that adjusts the review interval based on how well you recall each card.
 
 ### How It Works
 

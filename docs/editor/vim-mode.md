@@ -5,7 +5,7 @@ order: 7
 
 # Vim Mode
 
-Noteriv includes full Vim keybinding support through the [`@replit/codemirror-vim`](https://github.com/replit/codemirror-vim) package, which implements a Vim emulation layer on top of CodeMirror 6. When enabled, the editor behaves like Vim with Normal, Insert, and Visual modes, giving you access to the modal editing workflow that Vim users rely on for efficient text manipulation.
+Glyph includes full Vim keybinding support through the [`@replit/codemirror-vim`](https://github.com/replit/codemirror-vim) package, which implements a Vim emulation layer on top of CodeMirror 6. When enabled, the editor behaves like Vim with Normal, Insert, and Visual modes, giving you access to the modal editing workflow that Vim users rely on for efficient text manipulation.
 
 ## Enabling Vim Mode
 
@@ -176,9 +176,9 @@ For example, `ci"` changes the content inside double quotes, and `dap` deletes a
 
 Record macros with `q{register}` and play them back with `@{register}`. Repeat the last macro with `@@`. Macros can include any sequence of Normal mode commands, motions, and Insert mode text entry.
 
-## Interaction with Noteriv Features
+## Interaction with Glyph Features
 
-Vim mode integrates with Noteriv's features:
+Vim mode integrates with Glyph's features:
 
 - **Formatting shortcuts**: `Ctrl+B`, `Ctrl+I`, and other formatting shortcuts work in Insert mode.
 - **Command palette**: `Ctrl+P` opens the command palette from any Vim mode.
@@ -191,8 +191,8 @@ Vim mode integrates with Noteriv's features:
 
 The Vim emulation is extensive but not identical to full Vim:
 
-- **Vimscript**: Vimscript (`.vimrc`) is not supported. Configuration is done through Noteriv's settings.
-- **Plugins**: Vim plugins are not supported. Features like surround, commentary, etc. are not available unless Noteriv implements them natively.
+- **Vimscript**: Vimscript (`.vimrc`) is not supported. Configuration is done through Glyph's settings.
+- **Plugins**: Vim plugins are not supported. Features like surround, commentary, etc. are not available unless Glyph implements them natively.
 - **Ex commands**: Only a subset of Ex commands (`:w`, `:q`, `:s`, etc.) are implemented.
-- **Split commands**: `:sp` and `:vsp` are not supported. Use Noteriv's split editor instead.
+- **Split commands**: `:sp` and `:vsp` are not supported. Use Glyph's split editor instead.
 - **Terminal**: `:terminal` is not available.

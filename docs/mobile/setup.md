@@ -5,7 +5,7 @@ order: 2
 
 # Mobile App Setup
 
-This guide walks you through setting up the Noteriv mobile app for local development. If you just want to use the app, download it from the App Store (iOS) or Google Play (Android). This page is for contributors and developers who want to run the app from source.
+This guide walks you through setting up the Glyph mobile app for local development. If you just want to use the app, download it from the App Store (iOS) or Google Play (Android). This page is for contributors and developers who want to run the app from source.
 
 ## Prerequisites
 
@@ -24,8 +24,8 @@ Optional but recommended:
 ## Clone the Repository
 
 ```bash
-git clone https://github.com/thejacedev/Noteriv.git
-cd Noteriv
+git clone https://github.com/thejacedev/Glyph.git
+cd Glyph
 ```
 
 The repository contains both the desktop and mobile apps. The mobile app lives in the `phone/` directory.
@@ -81,7 +81,7 @@ Make sure your phone and development machine are on the same Wi-Fi network. If t
 
 ## Build a Production Binary
 
-For production builds, Noteriv uses EAS Build (Expo Application Services).
+For production builds, Glyph uses EAS Build (Expo Application Services).
 
 ### Android APK or AAB
 

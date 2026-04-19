@@ -49,7 +49,7 @@ Clicking a day in the calendar does one of two things:
 1. **If a daily note exists**: Opens it in the editor.
 2. **If no daily note exists**: Creates a new daily note for that date using your configured daily note template and folder, then opens it.
 
-Daily notes are matched by their file name. Noteriv looks for files named in the `YYYY-MM-DD` format (e.g., `2026-03-20.md`) inside the configured daily notes folder. The matching is based on the formatted date string, so your daily notes must follow this naming convention to be recognized by the calendar.
+Daily notes are matched by their file name. Glyph looks for files named in the `YYYY-MM-DD` format (e.g., `2026-03-20.md`) inside the configured daily notes folder. The matching is based on the formatted date string, so your daily notes must follow this naming convention to be recognized by the calendar.
 
 ## Task Due Dates
 

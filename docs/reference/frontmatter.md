@@ -5,7 +5,7 @@ order: 3
 
 # Frontmatter
 
-Frontmatter is a block of YAML metadata at the very top of a markdown note, delimited by triple dashes (`---`). Noteriv reads frontmatter to enable features like board view, tag filtering, dataview queries, and more.
+Frontmatter is a block of YAML metadata at the very top of a markdown note, delimited by triple dashes (`---`). Glyph reads frontmatter to enable features like board view, tag filtering, dataview queries, and more.
 
 ## Syntax
 
@@ -28,7 +28,7 @@ The YAML block is delimited by `---` on its own line at the start and end. Every
 
 ## Built-In Fields
 
-Noteriv recognizes and uses the following frontmatter fields:
+Glyph recognizes and uses the following frontmatter fields:
 
 ### title
 
@@ -91,7 +91,7 @@ TABLE title, status FROM #project WHERE status != "done"
 board: true
 ```
 
-When set to `true`, Noteriv renders this note as a Kanban board instead of a regular markdown document. In board view, H2 headings become columns and list items become cards. See the [Board View](../views/board.md) documentation for details.
+When set to `true`, Glyph renders this note as a Kanban board instead of a regular markdown document. In board view, H2 headings become columns and list items become cards. See the [Board View](../views/board.md) documentation for details.
 
 Board note example:
 
@@ -159,7 +159,7 @@ tags:
 
 ## Frontmatter Editor
 
-Noteriv includes a visual frontmatter editor that lets you add, edit, and remove frontmatter fields without hand-editing the YAML block. Open it from the editor menu or the command palette ("Edit Frontmatter").
+Glyph includes a visual frontmatter editor that lets you add, edit, and remove frontmatter fields without hand-editing the YAML block. Open it from the editor menu or the command palette ("Edit Frontmatter").
 
 The frontmatter editor displays each field as a labeled input. You can:
 

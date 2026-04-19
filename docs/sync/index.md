@@ -5,13 +5,13 @@ order: 1
 
 # Sync Overview
 
-Noteriv provides built-in synchronization to keep your notes backed up and accessible across devices. There are three sync providers, each suited to a different workflow. You can use one or combine several -- for example, git sync for version control and folder sync for real-time cloud backup.
+Glyph provides built-in synchronization to keep your notes backed up and accessible across devices. There are three sync providers, each suited to a different workflow. You can use one or combine several -- for example, git sync for version control and folder sync for real-time cloud backup.
 
 ## Sync Providers
 
 ### Git Sync
 
-Git sync uses the `git` command-line tool to commit and push your vault to a GitHub repository. On the desktop app, Noteriv runs real git operations (fetch, pull, stash, commit, push) in the background. On the mobile app, where a git binary is not available, Noteriv communicates directly with the GitHub REST API to push and pull files.
+Git sync uses the `git` command-line tool to commit and push your vault to a GitHub repository. On the desktop app, Glyph runs real git operations (fetch, pull, stash, commit, push) in the background. On the mobile app, where a git binary is not available, Glyph communicates directly with the GitHub REST API to push and pull files.
 
 Git sync is the most robust option for version control. Every change is committed with a timestamp message, so you have a full history of your vault that you can browse, diff, and roll back using standard git tools.
 
@@ -28,13 +28,13 @@ See [Folder Sync](./folder-sync.md) for details.
 
 ### WebDAV Sync
 
-WebDAV sync connects your vault to any WebDAV-compatible server, such as Nextcloud, ownCloud, or a self-hosted WebDAV endpoint. Noteriv pushes and pulls files over HTTP using the WebDAV protocol. This option is ideal for users who run their own cloud infrastructure and want to avoid third-party services.
+WebDAV sync connects your vault to any WebDAV-compatible server, such as Nextcloud, ownCloud, or a self-hosted WebDAV endpoint. Glyph pushes and pulls files over HTTP using the WebDAV protocol. This option is ideal for users who run their own cloud infrastructure and want to avoid third-party services.
 
 See [WebDAV Sync](./webdav-sync.md) for details.
 
 ## Auto-Sync
 
-When configured, Noteriv automatically syncs at regular intervals. The default interval is every 5 seconds. This means changes you make are committed and pushed (git) or copied (folder/WebDAV) within seconds, without manual intervention.
+When configured, Glyph automatically syncs at regular intervals. The default interval is every 5 seconds. This means changes you make are committed and pushed (git) or copied (folder/WebDAV) within seconds, without manual intervention.
 
 The auto-sync interval is configurable in Settings under the Sync section. You can set it from 1 second (aggressive, suitable for fast connections) to several minutes (conservative, suitable for metered connections), or disable it entirely and sync manually.
 
@@ -78,7 +78,7 @@ Remote change
 
 You will need to resolve these manually by editing the file and removing the markers. After resolution, the next sync cycle will commit and push the resolved file.
 
-To minimize conflicts, Noteriv stashes any uncommitted local changes before pulling, then pops the stash after the pull completes. This prevents pull failures due to dirty working trees.
+To minimize conflicts, Glyph stashes any uncommitted local changes before pulling, then pops the stash after the pull completes. This prevents pull failures due to dirty working trees.
 
 ### Folder Sync
 
@@ -101,7 +101,7 @@ WebDAV sync uses the same modification-time strategy as folder sync.
 
 ## Settings Location
 
-Sync configuration is stored per-vault. Each vault can have its own git remote, folder target, and WebDAV server. This means you can sync your work vault to a company GitHub repo and your personal vault to a personal Nextcloud server, all within the same Noteriv installation.
+Sync configuration is stored per-vault. Each vault can have its own git remote, folder target, and WebDAV server. This means you can sync your work vault to a company GitHub repo and your personal vault to a personal Nextcloud server, all within the same Glyph installation.
 
 On desktop, sync settings are accessed from:
 

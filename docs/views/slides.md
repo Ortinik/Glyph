@@ -5,7 +5,7 @@ order: 5
 
 # Slide Presentation
 
-Noteriv can present any Markdown note as a fullscreen slideshow. There is no special file format or separate tool -- you write your content in standard Markdown, separate slides with horizontal rules (`---`), and Noteriv renders each section as a full-screen slide with styled typography, code blocks, images, and task lists.
+Glyph can present any Markdown note as a fullscreen slideshow. There is no special file format or separate tool -- you write your content in standard Markdown, separate slides with horizontal rules (`---`), and Glyph renders each section as a full-screen slide with styled typography, code blocks, images, and task lists.
 
 ## Creating a Presentation
 
@@ -125,7 +125,7 @@ A small counter at the bottom of the screen shows your position (e.g., "3 / 12")
 
 ## Styling
 
-Slides are rendered in a fullscreen container with centered content. The styling is theme-aware, pulling colors from the active Noteriv theme's CSS custom properties. Text is set at a larger size than the editor (optimized for readability at a distance), with generous line spacing and padding.
+Slides are rendered in a fullscreen container with centered content. The styling is theme-aware, pulling colors from the active Glyph theme's CSS custom properties. Text is set at a larger size than the editor (optimized for readability at a distance), with generous line spacing and padding.
 
 Code blocks use the same syntax highlighting colors as the editor but are scaled up for slide readability. Tables, blockquotes, and lists are all styled to be legible on a projected display.
 

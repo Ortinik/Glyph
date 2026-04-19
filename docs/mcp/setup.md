@@ -5,7 +5,7 @@ order: 2
 
 # MCP Server Setup
 
-This guide shows you how to install and configure the Noteriv MCP server with different AI assistants.
+This guide shows you how to install and configure the Glyph MCP server with different AI assistants.
 
 ## Quick Start with Claude Code
 
@@ -15,7 +15,7 @@ The fastest way to get started is with Claude Code. Run this single command:
 claude mcp add --scope user glyph -- npx -y glyph-mcp
 ```
 
-This registers the Noteriv MCP server as a user-scoped tool in Claude Code. The `npx -y` flag downloads and runs the latest version of `glyph-mcp` from npm automatically. The server will start whenever Claude Code needs it and stop when the session ends.
+This registers the Glyph MCP server as a user-scoped tool in Claude Code. The `npx -y` flag downloads and runs the latest version of `glyph-mcp` from npm automatically. The server will start whenever Claude Code needs it and stop when the session ends.
 
 After adding the server, you can immediately ask Claude to interact with your notes:
 
@@ -27,7 +27,7 @@ After adding the server, you can immediately ask Claude to interact with your no
 
 ## Claude Desktop
 
-To use the Noteriv MCP server with Claude Desktop, add it to your MCP configuration file.
+To use the Glyph MCP server with Claude Desktop, add it to your MCP configuration file.
 
 **macOS**: `~/Library/Application Support/Claude/claude_desktop_config.json`
 **Windows**: `%APPDATA%/Claude/claude_desktop_config.json`
@@ -50,7 +50,7 @@ Restart Claude Desktop after saving the configuration.
 
 ## Cursor
 
-To use with Cursor, add the Noteriv MCP server to your Cursor MCP configuration. Open Cursor Settings, navigate to the MCP section, and add a new server:
+To use with Cursor, add the Glyph MCP server to your Cursor MCP configuration. Open Cursor Settings, navigate to the MCP section, and add a new server:
 
 ```json
 {
@@ -93,10 +93,10 @@ For Windsurf, add the server to your MCP configuration at `~/.codeium/windsurf/m
 
 ## Running from Source
 
-If you have cloned the Noteriv repository and want to run the MCP server from source:
+If you have cloned the Glyph repository and want to run the MCP server from source:
 
 ```bash
-cd Noteriv/mcp
+cd Glyph/mcp
 npm install
 node index.js
 ```
@@ -104,12 +104,12 @@ node index.js
 To use the source version with Claude Code:
 
 ```bash
-claude mcp add --scope user glyph -- node /path/to/Noteriv/mcp/index.js
+claude mcp add --scope user glyph -- node /path/to/Glyph/mcp/index.js
 ```
 
 ## Specifying a Vault Path
 
-By default, the MCP server auto-discovers your vaults from the Noteriv desktop app's configuration file. If you want to point it at a specific vault directory instead, pass the path as a command-line argument:
+By default, the MCP server auto-discovers your vaults from the Glyph desktop app's configuration file. If you want to point it at a specific vault directory instead, pass the path as a command-line argument:
 
 ```bash
 # Run directly with a specific vault
@@ -140,12 +140,12 @@ Or in a JSON config file:
 
 ## Vault Auto-Discovery
 
-When no vault path is provided as a command-line argument, the server reads the Noteriv configuration file to find your vaults. The config file is located at:
+When no vault path is provided as a command-line argument, the server reads the Glyph configuration file to find your vaults. The config file is located at:
 
 | Platform | Path |
 |---|---|
-| macOS | `~/Library/Application Support/Noteriv/config.json` |
-| Windows | `%APPDATA%/Noteriv/config.json` |
+| macOS | `~/Library/Application Support/Glyph/config.json` |
+| Windows | `%APPDATA%/Glyph/config.json` |
 | Linux | `~/.config/glyph/config.json` |
 
 The configuration file contains a list of vaults with their names, paths, and IDs, along with the ID of the currently active vault. The server uses the active vault by default.
@@ -167,22 +167,22 @@ The AI assistant will call `switch_vault` with the vault name, and all subsequen
 After setting up the MCP server, verify that it is working by asking your AI assistant to list your vaults:
 
 ```
-> List my Noteriv vaults
+> List my Glyph vaults
 ```
 
 You should see a list of your vault names and paths. If you see an error, check that:
 
 1. Node.js 18+ is installed and available in your PATH.
-2. The Noteriv desktop app has been opened at least once (to create the config file).
+2. The Glyph desktop app has been opened at least once (to create the config file).
 3. Your vault path exists and contains markdown files.
 
 ## Troubleshooting
 
 ### "No active vault" error
 
-The server could not find a vault. Either the Noteriv config file does not exist, or it does not contain any vaults. Solutions:
+The server could not find a vault. Either the Glyph config file does not exist, or it does not contain any vaults. Solutions:
 
-- Open the Noteriv desktop app and create or open a vault.
+- Open the Glyph desktop app and create or open a vault.
 - Pass a vault path explicitly: `npx -y glyph-mcp /path/to/vault`.
 - Use the `set_vault_path` tool at runtime.
 

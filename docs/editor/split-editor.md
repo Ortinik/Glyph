@@ -94,7 +94,7 @@ If you close all tabs in one pane, that pane is automatically closed and the rem
 
 The split editor state is saved in your workspace configuration:
 
-- **Split open/closed**: Whether the split was open when you last closed Noteriv is remembered and restored on next launch.
+- **Split open/closed**: Whether the split was open when you last closed Glyph is remembered and restored on next launch.
 - **Divider position**: The position of the divider (e.g., 60/40 split) is preserved across sessions.
 - **Open tabs per pane**: Each pane's set of open tabs is saved and restored independently.
 - **Active tab per pane**: The last active tab in each pane is restored.

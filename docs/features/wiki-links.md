@@ -5,7 +5,7 @@ order: 2
 
 # Wiki-Links
 
-Wiki-links are the primary way to connect notes in Noteriv. They use double-bracket syntax -- `[[note name]]` -- and resolve to files in your vault by filename, making it easy to build a web of interlinked ideas without worrying about file paths or URLs.
+Wiki-links are the primary way to connect notes in Glyph. They use double-bracket syntax -- `[[note name]]` -- and resolve to files in your vault by filename, making it easy to build a web of interlinked ideas without worrying about file paths or URLs.
 
 ## Basic Syntax
 
@@ -15,9 +15,9 @@ To link to another note, wrap the note's filename (without the `.md` extension) 
 See [[meeting-notes]] for context.
 ```
 
-When Noteriv encounters `[[meeting-notes]]`, it searches your vault for a file whose basename matches `meeting-notes` (case-insensitive). If a file called `Meeting-Notes.md`, `meeting-notes.md`, or `MEETING-NOTES.md` exists anywhere in the vault, the link resolves to it.
+When Glyph encounters `[[meeting-notes]]`, it searches your vault for a file whose basename matches `meeting-notes` (case-insensitive). If a file called `Meeting-Notes.md`, `meeting-notes.md`, or `MEETING-NOTES.md` exists anywhere in the vault, the link resolves to it.
 
-You do not need to include the file extension. Writing `[[meeting-notes.md]]` also works -- Noteriv strips a trailing `.md` before matching -- but the extension-free form is conventional.
+You do not need to include the file extension. Writing `[[meeting-notes.md]]` also works -- Glyph strips a trailing `.md` before matching -- but the extension-free form is conventional.
 
 ## Display Text Aliases
 
@@ -39,7 +39,7 @@ You can link to a specific heading within a note by appending `#heading-text`:
 See [[architecture#caching-strategy]] for details.
 ```
 
-When you click this link, Noteriv opens the `architecture.md` file and scrolls to the heading that matches "caching-strategy". The match is case-insensitive and spaces in the heading are converted to hyphens automatically.
+When you click this link, Glyph opens the `architecture.md` file and scrolls to the heading that matches "caching-strategy". The match is case-insensitive and spaces in the heading are converted to hyphens automatically.
 
 You can combine heading anchors with display text:
 
@@ -62,11 +62,11 @@ The completion inserts the filename and closing `]]` brackets for you, so you do
 
 ## How Resolution Works
 
-When Noteriv resolves a wiki-link, it follows a two-pass strategy:
+When Glyph resolves a wiki-link, it follows a two-pass strategy:
 
 1. **Basename match.** It compares the link target (lowercased, `.md` stripped) against the basename of every file in the vault. The first case-insensitive match wins. This means a link like `[[notes]]` will resolve to `Notes.md` regardless of which folder it lives in.
 
-2. **Path match.** If the link target contains a `/` character -- for example, `[[projects/alpha]]` -- Noteriv looks for a file whose relative path ends with `projects/alpha.md`. This lets you disambiguate when two files in different folders share the same basename.
+2. **Path match.** If the link target contains a `/` character -- for example, `[[projects/alpha]]` -- Glyph looks for a file whose relative path ends with `projects/alpha.md`. This lets you disambiguate when two files in different folders share the same basename.
 
 If no file matches, the link is rendered as an unresolved link, styled differently so you can see at a glance that the target does not exist yet. Clicking an unresolved link will create the file for you.
 
@@ -106,7 +106,7 @@ Results are grouped by source file and sorted alphabetically by filename, then b
 
 ### Scanning
 
-When you open the backlinks panel or switch to a different file, Noteriv scans every `.md` and `.markdown` file in the vault for references to the current file's basename. The scan runs in parallel with a concurrency limit to avoid blocking the UI, and self-references (the current file linking to itself) are excluded.
+When you open the backlinks panel or switch to a different file, Glyph scans every `.md` and `.markdown` file in the vault for references to the current file's basename. The scan runs in parallel with a concurrency limit to avoid blocking the UI, and self-references (the current file linking to itself) are excluded.
 
 The regex used for matching handles all wiki-link forms:
 
@@ -130,4 +130,4 @@ In live mode, wiki-links on non-cursor lines are rendered as styled clickable te
 - **Keep filenames short and descriptive.** Since resolution is by filename, shorter names mean faster typing and fewer collisions.
 - **Use aliases for readability.** Write `[[api-auth|authentication flow]]` instead of contorting your prose to fit a filename.
 - **Check backlinks regularly.** The backlinks panel reveals connections you might not remember making, which is valuable when revisiting old notes.
-- **Use the lint panel** to catch broken wiki-links. Noteriv's linting engine flags any `[[target]]` that does not resolve to an existing file.
+- **Use the lint panel** to catch broken wiki-links. Glyph's linting engine flags any `[[target]]` that does not resolve to an existing file.

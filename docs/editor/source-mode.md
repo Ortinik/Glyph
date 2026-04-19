@@ -20,7 +20,7 @@ Source mode is the right choice when you need complete control over the Markdown
 
 ## Syntax Highlighting
 
-Source mode uses CodeMirror 6's `@codemirror/lang-markdown` extension to tokenize the document and apply syntax highlighting. The color scheme adapts to your active Noteriv theme. The following elements are highlighted:
+Source mode uses CodeMirror 6's `@codemirror/lang-markdown` extension to tokenize the document and apply syntax highlighting. The color scheme adapts to your active Glyph theme. The following elements are highlighted:
 
 | Element | Highlighting |
 |---|---|

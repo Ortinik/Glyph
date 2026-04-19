@@ -5,15 +5,15 @@ order: 10
 
 # Note History
 
-Note history provides Git-based version tracking for individual files. If your vault is a Git repository and you use Noteriv's sync feature, you can view the commit timeline for any note, read the content as it existed at any past commit, and diff between versions.
+Note history provides Git-based version tracking for individual files. If your vault is a Git repository and you use Glyph's sync feature, you can view the commit timeline for any note, read the content as it existed at any past commit, and diff between versions.
 
 ## Prerequisites
 
 Note history requires:
 
-1. **A Git repository.** Your vault must be initialized as a Git repo (`git init` in the vault root, or let Noteriv's setup wizard handle it).
-2. **Git sync enabled.** Noteriv's built-in sync (`Ctrl+Shift+G`) commits and pushes changes. Each sync creates a commit, which becomes an entry in the file's history.
-3. **Git installed on the system.** Noteriv calls `git log` and `git show` through the Electron backend. Git must be available in the system PATH.
+1. **A Git repository.** Your vault must be initialized as a Git repo (`git init` in the vault root, or let Glyph's setup wizard handle it).
+2. **Git sync enabled.** Glyph's built-in sync (`Ctrl+Shift+G`) commits and pushes changes. Each sync creates a commit, which becomes an entry in the file's history.
+3. **Git installed on the system.** Glyph calls `git log` and `git show` through the Electron backend. Git must be available in the system PATH.
 
 If any of these are missing, the note history panel will show an empty state.
 
@@ -54,7 +54,7 @@ The diff gives you a precise view of what was added, removed, or rewritten betwe
 
 ### Diff Algorithm
 
-Noteriv uses a custom LCS-based diff rather than calling `git diff`. The algorithm:
+Glyph uses a custom LCS-based diff rather than calling `git diff`. The algorithm:
 
 1. Splits both versions into lines.
 2. Builds a dynamic programming table to find the longest common subsequence.
@@ -105,7 +105,7 @@ A typical workflow combining sync and history:
 ## Tips
 
 - **Sync frequently.** Each sync creates a commit, which becomes a point in the timeline. If you only sync once a week, you have only one historical point per week.
-- **Write meaningful commit messages.** Noteriv's sync uses automated messages by default, but meaningful messages make the timeline much easier to navigate.
+- **Write meaningful commit messages.** Glyph's sync uses automated messages by default, but meaningful messages make the timeline much easier to navigate.
 - **Use diff for reviews.** Before publishing or sharing a note, diff the current version against the last synced version to see all changes at a glance.
 - **Combine both history tools.** Use file recovery for "I just broke this" moments and note history for "what did this look like last month" questions.
 - **Check `--follow` for renamed files.** If you renamed a note and wonder where its old history went, note history tracks through renames automatically.

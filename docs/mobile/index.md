@@ -5,7 +5,7 @@ order: 1
 
 # Mobile App
 
-Noteriv's mobile app brings your notes to your phone and tablet. Built with React Native and Expo, it runs natively on both Android and iOS, giving you a fast, platform-appropriate experience without the overhead of a web wrapper.
+Glyph's mobile app brings your notes to your phone and tablet. Built with React Native and Expo, it runs natively on both Android and iOS, giving you a fast, platform-appropriate experience without the overhead of a web wrapper.
 
 The mobile app is not a stripped-down companion. It is a full-featured note-taking environment that shares the same file format and vault structure as the desktop app. Notes you create on your phone are standard `.md` files in your vault folder, and they work identically when you open them on your desktop.
 

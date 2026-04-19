@@ -1,10 +1,10 @@
-# Noteriv MCP Server
+# Glyph MCP Server
 
-MCP (Model Context Protocol) server that gives AI assistants full access to your Noteriv vault — read, write, search, organize, and manage notes.
+MCP (Model Context Protocol) server that gives AI assistants full access to your Glyph vault — read, write, search, organize, and manage notes.
 
-Auto-discovers your vaults from the Noteriv app config. Works with Claude Code, Cursor, or any MCP-compatible AI.
+Auto-discovers your vaults from the Glyph app config. Works with Claude Code, Cursor, or any MCP-compatible AI.
 
-[![npm](https://img.shields.io/npm/v/noteriv-mcp)](https://www.npmjs.com/package/noteriv-mcp)
+[![npm](https://img.shields.io/npm/v/glyph-mcp)](https://www.npmjs.com/package/glyph-mcp)
 
 ## Setup
 
@@ -14,21 +14,21 @@ Add to `~/.claude/mcp.json` (global — works in every project):
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["noteriv-mcp"]
+      "args": ["glyph-mcp"]
     }
   }
 }
 ```
 
-It auto-detects your active vault from the Noteriv app config. To pin a specific vault:
+It auto-detects your active vault from the Glyph app config. To pin a specific vault:
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["noteriv-mcp", "/path/to/vault"]
+      "args": ["glyph-mcp", "/path/to/vault"]
     }
   }
 }
@@ -40,9 +40,9 @@ Add to your MCP config:
 ```json
 {
   "mcpServers": {
-    "noteriv": {
+    "glyph": {
       "command": "npx",
-      "args": ["noteriv-mcp"]
+      "args": ["glyph-mcp"]
     }
   }
 }
@@ -54,7 +54,7 @@ Add to your MCP config:
 cd mcp && npm install
 ```
 
-Then use `node /path/to/Noteriv/mcp/index.js` as the command instead of `npx noteriv-mcp`.
+Then use `node /path/to/Glyph/mcp/index.js` as the command instead of `npx glyph-mcp`.
 
 ## Tools (22)
 
@@ -114,9 +114,9 @@ All notes are exposed as MCP resources (`note:///path.md`) for direct browsing.
 
 ---
 
-## Noteriv Feature Reference
+## Glyph Feature Reference
 
-Everything Noteriv supports — useful context when writing or editing notes via MCP.
+Everything Glyph supports — useful context when writing or editing notes via MCP.
 
 ---
 
@@ -167,7 +167,7 @@ E=mc^2^                   Superscript
 ![alt|300x200](image.png) Image with fixed width and height
 ```
 
-> **Wiki links** — the primary way to connect notes in Noteriv. Type `[[` in the editor to trigger autocomplete across all notes in your vault. Clicking a wiki link navigates to that note. Use `get_outgoing_links` and `get_backlinks` MCP tools to traverse the link graph.
+> **Wiki links** — the primary way to connect notes in Glyph. Type `[[` in the editor to trigger autocomplete across all notes in your vault. Clicking a wiki link navigates to that note. Use `get_outgoing_links` and `get_backlinks` MCP tools to traverse the link graph.
 
 #### Tables
 ```
@@ -201,7 +201,7 @@ Supported languages with syntax highlighting: `javascript` `typescript` `python`
 ```
 [TOC]
 ```
-Drop `[TOC]` anywhere in a note and Noteriv auto-generates a clickable table of contents from all headings. Updates live as you edit.
+Drop `[TOC]` anywhere in a note and Glyph auto-generates a clickable table of contents from all headings. Updates live as you edit.
 
 **Mermaid Diagrams**
 ````

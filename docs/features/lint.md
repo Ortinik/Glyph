@@ -13,7 +13,7 @@ Press `Ctrl+Shift+L` (or `Cmd+Shift+L` on macOS) to toggle the lint panel. You c
 
 ## Lint Rules
 
-Noteriv checks for the following issues in the current file:
+Glyph checks for the following issues in the current file:
 
 ### Broken Wiki-Links (Error)
 

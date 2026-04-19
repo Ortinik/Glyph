@@ -3,13 +3,13 @@ title: Getting Started
 order: 1
 ---
 
-# Getting Started with Noteriv
+# Getting Started with Glyph
 
-Noteriv is an open-source markdown note-taking application built for writers, developers, researchers, and anyone who thinks in plain text. It runs on desktop (Windows, macOS, Linux) via Electron and on mobile (Android, iOS) via React Native, giving you access to your notes on every device you own.
+Glyph is an open-source markdown note-taking application built for writers, developers, researchers, and anyone who thinks in plain text. It runs on desktop (Windows, macOS, Linux) via Electron and on mobile (Android, iOS) via React Native, giving you access to your notes on every device you own.
 
-## What makes Noteriv different
+## What makes Glyph different
 
-Most note-taking applications lock you into a proprietary cloud, a proprietary format, or a single platform. Noteriv takes a different approach:
+Most note-taking applications lock you into a proprietary cloud, a proprietary format, or a single platform. Glyph takes a different approach:
 
 - **Plain markdown files.** Your notes are standard `.md` files stored in regular folders on your filesystem. Open them in any text editor, move them between machines with a USB drive, or process them with command-line tools. There is no database, no proprietary format, and no vendor lock-in.
 
@@ -19,9 +19,9 @@ Most note-taking applications lock you into a proprietary cloud, a proprietary f
 
 - **Extensible.** Plugins extend functionality, themes change the look, and CSS snippets let you fine-tune every visual detail. Community repositories for all three are available on GitHub.
 
-## Who Noteriv is for
+## Who Glyph is for
 
-Noteriv works well for a wide range of use cases:
+Glyph works well for a wide range of use cases:
 
 - **Developers** who want a note-taking app that feels like a code editor, with keyboard shortcuts, vim mode, split panes, and a command palette.
 - **Writers** who want distraction-free markdown writing with focus mode, zen mode, and a clean reading view.
@@ -40,7 +40,7 @@ A vault is simply a folder on your filesystem that contains your notes. You can 
 
 ### Markdown
 
-Noteriv uses standard markdown with several extensions: wiki-links (`[[note name]]`), callouts, math (LaTeX via KaTeX), Mermaid diagrams, task lists, footnotes, definition lists, and more. If you have never used markdown before, it is a lightweight way to format text using plain characters -- `**bold**` for **bold**, `# Heading` for headings, `- item` for lists.
+Glyph uses standard markdown with several extensions: wiki-links (`[[note name]]`), callouts, math (LaTeX via KaTeX), Mermaid diagrams, task lists, footnotes, definition lists, and more. If you have never used markdown before, it is a lightweight way to format text using plain characters -- `**bold**` for **bold**, `# Heading` for headings, `- item` for lists.
 
 ### View modes
 
@@ -52,19 +52,19 @@ The editor supports three viewing modes that you can switch between at any time:
 
 ### Sync
 
-Noteriv supports multiple sync methods. GitHub sync uses git under the hood (native git binary on desktop, GitHub REST API on mobile). Folder sync mirrors your vault to a cloud storage folder like Dropbox or Google Drive. WebDAV sync connects to Nextcloud, ownCloud, or any compatible server. All sync is optional.
+Glyph supports multiple sync methods. GitHub sync uses git under the hood (native git binary on desktop, GitHub REST API on mobile). Folder sync mirrors your vault to a cloud storage folder like Dropbox or Google Drive. WebDAV sync connects to Nextcloud, ownCloud, or any compatible server. All sync is optional.
 
 ## What to read next
 
-- **[Installation](installation.md)** -- Download and install Noteriv on your platform.
+- **[Installation](installation.md)** -- Download and install Glyph on your platform.
 - **[Quickstart](quickstart.md)** -- Create your first vault and write your first note in under five minutes.
 - **[Vaults](vaults.md)** -- Learn how vaults work and how to manage multiple workspaces.
 - **[Interface](interface.md)** -- Understand the UI layout, from the title bar to the status bar.
-- **[Keyboard Shortcuts](keyboard-shortcuts.md)** -- Master the 70+ keyboard shortcuts that make Noteriv fast to use.
+- **[Keyboard Shortcuts](keyboard-shortcuts.md)** -- Master the 70+ keyboard shortcuts that make Glyph fast to use.
 
 ## Feature highlights
 
-Here is a quick look at what Noteriv offers. Each of these is covered in more detail in the dedicated documentation sections.
+Here is a quick look at what Glyph offers. Each of these is covered in more detail in the dedicated documentation sections.
 
 | Category | Features |
 |---|---|
@@ -80,7 +80,7 @@ Here is a quick look at what Noteriv offers. Each of these is covered in more de
 
 ## Tech stack
 
-Noteriv is built with modern web technologies on both platforms:
+Glyph is built with modern web technologies on both platforms:
 
 | Layer | Desktop | Mobile |
 |---|---|---|
@@ -102,7 +102,7 @@ Both apps share the same core architecture: vaults as filesystem folders, plain 
 
 ## MCP server for AI integration
 
-Noteriv includes an MCP (Model Context Protocol) server that lets AI assistants like Claude read, write, search, and manage your notes directly. The server provides 22 tools covering every vault operation: reading and writing notes, creating folders, full-text search, tag extraction, backlink discovery, vault statistics, and daily note management.
+Glyph includes an MCP (Model Context Protocol) server that lets AI assistants like Claude read, write, search, and manage your notes directly. The server provides 22 tools covering every vault operation: reading and writing notes, creating folders, full-text search, tag extraction, backlink discovery, vault statistics, and daily note management.
 
 Install it with a single command:
 
@@ -110,17 +110,17 @@ Install it with a single command:
 npx glyph-mcp
 ```
 
-The MCP server auto-discovers your vaults from the Noteriv config file, so no manual path setup is needed. Changes made by the MCP server are detected by the desktop app's vault file watcher and reflected in the sidebar and open files automatically.
+The MCP server auto-discovers your vaults from the Glyph config file, so no manual path setup is needed. Changes made by the MCP server are detected by the desktop app's vault file watcher and reflected in the sidebar and open files automatically.
 
 ## Links
 
-- **GitHub:** [github.com/thejacedev/Noteriv](https://github.com/thejacedev/Noteriv)
+- **GitHub:** [github.com/thejacedev/Glyph](https://github.com/thejacedev/Glyph)
 - **Website:** [glyph.com](https://www.glyph.com)
-- **Plugins:** [github.com/thejacedev/NoterivPlugins](https://github.com/thejacedev/NoterivPlugins)
-- **Themes:** [github.com/thejacedev/NoterivThemes](https://github.com/thejacedev/NoterivThemes)
-- **CSS Snippets:** [github.com/thejacedev/NoterivSnippets](https://github.com/thejacedev/NoterivSnippets)
+- **Plugins:** [github.com/thejacedev/GlyphPlugins](https://github.com/thejacedev/GlyphPlugins)
+- **Themes:** [github.com/thejacedev/GlyphThemes](https://github.com/thejacedev/GlyphThemes)
+- **CSS Snippets:** [github.com/thejacedev/GlyphSnippets](https://github.com/thejacedev/GlyphSnippets)
 - **MCP Server:** Available on npm as `glyph-mcp`
 
 ## License
 
-Noteriv is released under the MIT License. You are free to use, modify, and distribute it.
+Glyph is released under the MIT License. You are free to use, modify, and distribute it.

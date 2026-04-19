@@ -5,13 +5,13 @@ order: 2
 
 # Git Sync
 
-Git sync is Noteriv's primary synchronization method on the desktop app. It uses the system-installed `git` binary to commit your vault changes and push them to a remote GitHub repository. Every edit is version-controlled, giving you a complete history of your notes that you can browse, diff, and restore at any time.
+Git sync is Glyph's primary synchronization method on the desktop app. It uses the system-installed `git` binary to commit your vault changes and push them to a remote GitHub repository. Every edit is version-controlled, giving you a complete history of your notes that you can browse, diff, and restore at any time.
 
 ## Prerequisites
 
 Git sync requires:
 
-1. **Git installed**: The `git` command must be available on your system PATH. Noteriv calls `git --version` at startup to verify this. On macOS, git ships with Xcode command-line tools. On Linux, install it via your package manager (`apt install git`, `dnf install git`). On Windows, install [Git for Windows](https://git-scm.com/download/win).
+1. **Git installed**: The `git` command must be available on your system PATH. Glyph calls `git --version` at startup to verify this. On macOS, git ships with Xcode command-line tools. On Linux, install it via your package manager (`apt install git`, `dnf install git`). On Windows, install [Git for Windows](https://git-scm.com/download/win).
 
 2. **A GitHub repository**: Create a repository on GitHub (public or private) to hold your vault. Note the HTTPS URL (e.g., `https://github.com/yourname/notes.git`).
 
@@ -21,19 +21,19 @@ Git sync requires:
 
 ### New Vault with Git
 
-When creating a new vault in the setup wizard, enable the "Git sync" toggle and paste your GitHub remote URL. Noteriv will create the vault directory, run `git init`, create a `.gitignore` with sensible defaults, set the remote URL, and make an initial commit and push.
+When creating a new vault in the setup wizard, enable the "Git sync" toggle and paste your GitHub remote URL. Glyph will create the vault directory, run `git init`, create a `.gitignore` with sensible defaults, set the remote URL, and make an initial commit and push.
 
 ### Existing Vault
 
-Open the sidebar and click "Set up Git sync" at the bottom. Enter the remote URL, toggle auto-sync if desired, and click Save. Noteriv initializes a git repository if needed, sets the remote, and the next sync cycle commits all existing files.
+Open the sidebar and click "Set up Git sync" at the bottom. Enter the remote URL, toggle auto-sync if desired, and click Save. Glyph initializes a git repository if needed, sets the remote, and the next sync cycle commits all existing files.
 
 ### Cloning an Existing Repo
 
-Create a new vault in Noteriv, set the remote URL to an existing repository, and run "Pull" from the sidebar to download all remote files. Alternatively, clone the repository manually with `git clone` and open the directory as a vault.
+Create a new vault in Glyph, set the remote URL to an existing repository, and run "Pull" from the sidebar to download all remote files. Alternatively, clone the repository manually with `git clone` and open the directory as a vault.
 
 ## Sync Cycle
 
-When a sync is triggered (manually or automatically), Noteriv executes the following operations in sequence. This is the core of the sync logic, implemented in `desktop/main/sync/git.js`.
+When a sync is triggered (manually or automatically), Glyph executes the following operations in sequence. This is the core of the sync logic, implemented in `desktop/main/sync/git.js`.
 
 ### 1. Fetch
 
@@ -41,7 +41,7 @@ When a sync is triggered (manually or automatically), Noteriv executes the follo
 git fetch <remote>
 ```
 
-Downloads the latest state from the remote repository without modifying local files. This lets Noteriv know what has changed on the remote.
+Downloads the latest state from the remote repository without modifying local files. This lets Glyph know what has changed on the remote.
 
 ### 2. Pull with Rebase
 
@@ -53,7 +53,7 @@ Integrates remote changes into your local branch using rebase instead of merge. 
 
 ### 3. Stash Protection
 
-Before pulling, Noteriv checks for uncommitted local changes:
+Before pulling, Glyph checks for uncommitted local changes:
 
 ```
 git status --porcelain
@@ -101,9 +101,9 @@ The complete cycle -- fetch, pull, stash/pop, add, commit, push -- is designed t
 
 ## Authentication
 
-Git operations that contact the remote (fetch, pull, push) require authentication. Noteriv handles this via a temporary `GIT_ASKPASS` script:
+Git operations that contact the remote (fetch, pull, push) require authentication. Glyph handles this via a temporary `GIT_ASKPASS` script:
 
-1. Before each authenticated git command, Noteriv writes a small shell script to a temp file that echoes the token.
+1. Before each authenticated git command, Glyph writes a small shell script to a temp file that echoes the token.
 2. The `GIT_ASKPASS` environment variable is set to point to this script.
 3. `GIT_TERMINAL_PROMPT=0` is set to prevent interactive prompts.
 4. The git command runs with these environment variables.
@@ -115,7 +115,7 @@ On Windows, a `.bat` file is used instead of a shell script, with the same creat
 
 ## Auto-Sync
 
-When auto-sync is enabled, Noteriv runs the full sync cycle every 5 seconds (configurable in Settings). The auto-sync timer:
+When auto-sync is enabled, Glyph runs the full sync cycle every 5 seconds (configurable in Settings). The auto-sync timer:
 
 1. Checks if a remote is configured.
 2. Fetches the latest remote state.
@@ -136,7 +136,7 @@ The sidebar displays the current branch name and a colored status dot: green (cl
 
 ## Commit Messages
 
-Automatic commits use the format `Sync notes YYYY-MM-DD`. The setup wizard's initial commit uses `Initial commit from Noteriv`. Custom commit messages are not currently supported through the UI.
+Automatic commits use the format `Sync notes YYYY-MM-DD`. The setup wizard's initial commit uses `Initial commit from Glyph`. Custom commit messages are not currently supported through the UI.
 
 ## Merge Conflicts
 
@@ -150,7 +150,7 @@ The remote version of the line
 >>>>>>> origin/main
 ```
 
-Noteriv does not have a visual merge conflict resolver. To fix a conflict:
+Glyph does not have a visual merge conflict resolver. To fix a conflict:
 
 1. Open the affected file in the editor.
 2. Find the `<<<<<<<`, `=======`, and `>>>>>>>` markers.
@@ -160,7 +160,7 @@ Noteriv does not have a visual merge conflict resolver. To fix a conflict:
 
 ## .gitignore
 
-When Noteriv initializes a new git repository, it creates a `.gitignore` with defaults: `.DS_Store`, `Thumbs.db`, `.trash/`, and `*.tmp`. Edit this file to add exclusions like `node_modules/`, `*.log`, or large binary files.
+When Glyph initializes a new git repository, it creates a `.gitignore` with defaults: `.DS_Store`, `Thumbs.db`, `.trash/`, and `*.tmp`. Edit this file to add exclusions like `node_modules/`, `*.log`, or large binary files.
 
 ## Security
 

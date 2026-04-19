@@ -5,13 +5,13 @@ order: 5
 
 # File Types
 
-Noteriv works with several file types, each serving a specific purpose. This page documents all supported file extensions and the `.glyph/` configuration directory structure.
+Glyph works with several file types, each serving a specific purpose. This page documents all supported file extensions and the `.glyph/` configuration directory structure.
 
 ## Note Files
 
 ### .md / .markdown
 
-Standard markdown files containing your notes. This is the primary file type in Noteriv. Every note you create is a `.md` file stored as plain text on your filesystem.
+Standard markdown files containing your notes. This is the primary file type in Glyph. Every note you create is a `.md` file stored as plain text on your filesystem.
 
 Markdown files can contain:
 
@@ -106,7 +106,7 @@ Drawing files are JSON documents containing stroke data, colors, and tool settin
 
 ## Attachment Files
 
-Noteriv can display and manage various attachment file types within your vault:
+Glyph can display and manage various attachment file types within your vault:
 
 | Type | Extensions | Behavior |
 |---|---|---|
@@ -120,7 +120,7 @@ Attachments are typically stored in an `attachments/` folder within your vault, 
 
 ## The .glyph Directory
 
-Every vault contains a `.glyph/` hidden directory that stores Noteriv-specific configuration, plugins, themes, and data. This directory is automatically created when you open a vault.
+Every vault contains a `.glyph/` hidden directory that stores Glyph-specific configuration, plugins, themes, and data. This directory is automatically created when you open a vault.
 
 ### Directory Structure
 
@@ -212,12 +212,12 @@ When you delete a note (soft delete), it is moved to `.glyph/trash/` with a uniq
 
 ## App Configuration
 
-Separate from the per-vault `.glyph/` directory, the Noteriv app stores global configuration (vault list, active vault, window state) in the operating system's standard configuration directory:
+Separate from the per-vault `.glyph/` directory, the Glyph app stores global configuration (vault list, active vault, window state) in the operating system's standard configuration directory:
 
 | Platform | Path |
 |---|---|
-| macOS | `~/Library/Application Support/Noteriv/config.json` |
-| Windows | `%APPDATA%/Noteriv/config.json` |
+| macOS | `~/Library/Application Support/Glyph/config.json` |
+| Windows | `%APPDATA%/Glyph/config.json` |
 | Linux | `~/.config/glyph/config.json` |
 
 This file contains the list of registered vaults with their names, paths, and IDs, along with the active vault ID and global settings.
@@ -228,6 +228,6 @@ Daily notes are stored in a `Daily/` folder at the vault root. Filenames follow 
 
 ## Git and Sync
 
-If your vault is synced with GitHub, a `.git/` directory is present at the vault root (managed by git, not Noteriv). The `.glyph/` directory is included in git sync by default, so your plugins, themes, snippets, and flashcard review data are synced across devices.
+If your vault is synced with GitHub, a `.git/` directory is present at the vault root (managed by git, not Glyph). The `.glyph/` directory is included in git sync by default, so your plugins, themes, snippets, and flashcard review data are synced across devices.
 
 The `.glyph/trash/` directory is typically excluded from git sync to avoid syncing deleted files. You can configure this in your `.gitignore`.

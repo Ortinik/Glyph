@@ -5,7 +5,7 @@ order: 3
 
 # Mobile Features
 
-This page walks through every feature available in the Noteriv mobile app, with details on how each one works on a touch device.
+This page walks through every feature available in the Glyph mobile app, with details on how each one works on a touch device.
 
 ## Editor
 

@@ -5,7 +5,7 @@ order: 2
 
 # Custom Themes
 
-You can create your own Noteriv theme by writing a JSON file with your color definitions. Custom themes appear in the theme picker alongside the built-in themes, and they work on both desktop and mobile.
+You can create your own Glyph theme by writing a JSON file with your color definitions. Custom themes appear in the theme picker alongside the built-in themes, and they work on both desktop and mobile.
 
 ## Theme File Format
 
@@ -167,7 +167,7 @@ Switch to your theme in Settings and check these screens:
 
 To share your theme with others, distribute the JSON file. They can install it by placing it in their vault's `.glyph/themes/` directory.
 
-To submit your theme to the community repository, see the contributing guidelines at [NoterivThemes](https://github.com/thejacedev/NoterivThemes).
+To submit your theme to the community repository, see the contributing guidelines at [GlyphThemes](https://github.com/thejacedev/GlyphThemes).
 
 ## Importing a Theme
 

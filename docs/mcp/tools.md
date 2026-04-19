@@ -5,7 +5,7 @@ order: 3
 
 # MCP Tools Reference
 
-The Noteriv MCP server exposes 22 tools organized into six categories. This page documents each tool with its parameters, behavior, and usage examples.
+The Glyph MCP server exposes 22 tools organized into six categories. This page documents each tool with its parameters, behavior, and usage examples.
 
 ---
 
@@ -13,7 +13,7 @@ The Noteriv MCP server exposes 22 tools organized into six categories. This page
 
 ### list_vaults
 
-List all Noteriv vaults configured on this machine.
+List all Glyph vaults configured on this machine.
 
 **Parameters**: None
 
@@ -60,7 +60,7 @@ Switch to a different vault by name or ID. All subsequent operations will target
 
 ### set_vault_path
 
-Set a custom vault path for vaults that are not in the Noteriv configuration. Useful for pointing the server at any directory containing markdown files.
+Set a custom vault path for vaults that are not in the Glyph configuration. Useful for pointing the server at any directory containing markdown files.
 
 **Parameters**:
 

@@ -88,7 +88,7 @@ This ensures that right-clicking always acts on the visible selection, preventin
 
 ## Drag and Drop
 
-Multi-select integrates with Noteriv's drag-and-drop system. When you drag a file that is part of a multi-selection, all selected files move together.
+Multi-select integrates with Glyph's drag-and-drop system. When you drag a file that is part of a multi-selection, all selected files move together.
 
 ### Moving to a Folder
 

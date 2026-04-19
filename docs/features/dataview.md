@@ -5,7 +5,7 @@ order: 13
 
 # Dataview
 
-Dataview lets you query your vault like a database. Write a query in a fenced code block, and Noteriv renders the results live in the editor -- tables, lists, or task views filtered by tags, folders, frontmatter fields, and more.
+Dataview lets you query your vault like a database. Write a query in a fenced code block, and Glyph renders the results live in the editor -- tables, lists, or task views filtered by tags, folders, frontmatter fields, and more.
 
 ## Basic Syntax
 
@@ -283,7 +283,7 @@ TABLE title, status FROM #project WHERE status = "active" AND priority = "high" 
 
 ## How Parsing Works
 
-Noteriv's dataview engine:
+Glyph's dataview engine:
 
 1. **Tokenizes** the query string, respecting quoted strings.
 2. **Parses** the query type (TABLE, LIST, TASK), field list, FROM source, WHERE clause, SORT BY, and LIMIT.

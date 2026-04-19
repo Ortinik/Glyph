@@ -1,6 +1,6 @@
 <div align="center">
-  <img src="desktop/public/icon.png" alt="Noteriv" width="140" height="140" />
-  <h1>Noteriv</h1>
+  <img src="desktop/public/icon.png" alt="Glyph" width="140" height="140" />
+  <h1>Glyph</h1>
   <p><strong>Markdown notes, everywhere.</strong></p>
   <p>
     A powerful, open-source note-taking app built for writers, developers, and anyone who thinks in plain text.<br />
@@ -11,10 +11,10 @@
   </p>
 
   <p>
-    <a href="https://www.noteriv.com"><strong>Website</strong></a> &middot;
-    <a href="https://docs.noteriv.com"><strong>Docs</strong></a> &middot;
-    <a href="https://play.google.com/store/apps/details?id=com.ironstacksoftware.noteriv"><strong>Google Play</strong></a> &middot;
-    <a href="https://apps.apple.com/us/app/noteriv/id6761115699"><strong>App Store</strong></a> &middot;
+    <a href="https://www.glyph.com"><strong>Website</strong></a> &middot;
+    <a href="https://docs.glyph.com"><strong>Docs</strong></a> &middot;
+    <a href="https://play.google.com/store/apps/details?id=com.ironstacksoftware.glyph"><strong>Google Play</strong></a> &middot;
+    <a href="https://apps.apple.com/us/app/glyph/id6761115699"><strong>App Store</strong></a> &middot;
     <a href="#-features"><strong>Features</strong></a> &middot;
     <a href="#-getting-started"><strong>Getting Started</strong></a> &middot;
     <a href="#-desktop-app"><strong>Desktop</strong></a> &middot;
@@ -29,9 +29,9 @@
 
 ---
 
-## Why Noteriv?
+## Why Glyph?
 
-Most note apps lock you into their cloud, their format, or their platform. Noteriv is different:
+Most note apps lock you into their cloud, their format, or their platform. Glyph is different:
 
 - **Your notes are plain markdown files.** No proprietary format. Open them in any editor, anywhere.
 - **Your data stays yours.** Notes live on your device. Sync with GitHub if you want, or don't.
@@ -196,18 +196,18 @@ Most note apps lock you into their cloud, their format, or their platform. Noter
   <tr>
     <td colspan="2">
       <h4>MCP Server</h4>
-      <p>Connect any MCP-compatible AI assistant (Claude, Cursor, etc.) directly to your Noteriv vault with full read/write access.</p>
+      <p>Connect any MCP-compatible AI assistant (Claude, Cursor, etc.) directly to your Glyph vault with full read/write access.</p>
       <ul>
         <li><strong>22 tools</strong> &mdash; read, write, append, delete, rename notes; list/create/delete folders; full-text search; tags, backlinks, outgoing links; vault stats; daily notes</li>
         <li><strong>Auto-discovers vaults</strong> &mdash; reads the same config file as the desktop app, no manual path setup needed</li>
         <li><strong>Multi-vault support</strong> &mdash; switch between vaults or pass a path directly as a CLI argument</li>
         <li><strong>Live sync</strong> &mdash; the desktop app watches the vault for external changes and automatically refreshes the sidebar and any open files when the MCP server (or anything else) modifies them</li>
-        <li><strong>Soft delete</strong> &mdash; deleted notes go to <code>.noteriv/trash/</code>, restorable from the app</li>
+        <li><strong>Soft delete</strong> &mdash; deleted notes go to <code>.glyph/trash/</code>, restorable from the app</li>
         <li><strong>MCP resources</strong> &mdash; vault notes are exposed as <code>note:///</code> resources for direct access</li>
       </ul>
       <strong>Setup (Claude Code):</strong>
-      <pre><code>claude mcp add --scope user noteriv -- npx -y noteriv-mcp</code></pre>
-      <p>Or install from npm: <code>npx noteriv-mcp</code>. Auto-detects your active vault from the Noteriv config.</p>
+      <pre><code>claude mcp add --scope user glyph -- npx -y glyph-mcp</code></pre>
+      <p>Or install from npm: <code>npx glyph-mcp</code>. Auto-detects your active vault from the Glyph config.</p>
     </td>
   </tr>
 </table>
@@ -248,7 +248,7 @@ Most note apps lock you into their cloud, their format, or their platform. Noter
         <li>Clip full pages or selected text</li>
         <li>Pure JS HTML-to-markdown conversion (headings, links, images, lists, code, tables)</li>
         <li>Set title, tags, and target folder from the popup</li>
-        <li>Right-click context menu: "Clip to Noteriv" / "Clip Selection to Noteriv"</li>
+        <li>Right-click context menu: "Clip to Glyph" / "Clip Selection to Glyph"</li>
         <li>Auto-generates frontmatter with title, source URL, date, and tags</li>
         <li>Sidebar refreshes instantly when a note is clipped</li>
         <li>Localhost API server on port 27123 &mdash; auto-starts with the app</li>
@@ -277,7 +277,7 @@ Most note apps lock you into their cloud, their format, or their platform. Noter
       </table>
       <br />
       <ul>
-        <li>Community themes from <a href="https://github.com/thejacedev/NoterivThemes">NoterivThemes</a></li>
+        <li>Community themes from <a href="https://github.com/thejacedev/GlyphThemes">GlyphThemes</a></li>
         <li>Custom theme creation and import/export (desktop)</li>
         <li>8 accent colors: Blue, Lavender, Mauve, Pink, Peach, Yellow, Green, Teal</li>
       </ul>
@@ -286,14 +286,14 @@ Most note apps lock you into their cloud, their format, or their platform. Noter
       <h4>Ecosystem</h4>
       <p><strong>Plugins</strong></p>
       <ul>
-        <li>Install community plugins from <a href="https://github.com/thejacedev/NoterivPlugins">NoterivPlugins</a></li>
+        <li>Install community plugins from <a href="https://github.com/thejacedev/GlyphPlugins">GlyphPlugins</a></li>
         <li>Plugin API with vault access, UI commands, events, and editor integration</li>
         <li>Enable/disable per vault</li>
       </ul>
       <p><strong>CSS Snippets</strong></p>
       <ul>
         <li>Create custom CSS to style the editor and preview</li>
-        <li>Install community snippets from <a href="https://github.com/thejacedev/NoterivSnippets">NoterivSnippets</a></li>
+        <li>Install community snippets from <a href="https://github.com/thejacedev/GlyphSnippets">GlyphSnippets</a></li>
         <li>Toggle snippets on/off individually</li>
       </ul>
     </td>
@@ -326,8 +326,8 @@ Most note apps lock you into their cloud, their format, or their platform. Noter
 ### Clone the repo
 
 ```bash
-git clone https://github.com/thejacedev/Noteriv.git
-cd Noteriv
+git clone https://github.com/thejacedev/Glyph.git
+cd Glyph
 ```
 
 ---
@@ -336,7 +336,7 @@ cd Noteriv
 
 > **Electron + Next.js** &mdash; Windows, macOS, Linux
 
-The desktop app provides the full Noteriv experience with a CodeMirror-based editor, native file system access, and Git integration via the system's git binary.
+The desktop app provides the full Glyph experience with a CodeMirror-based editor, native file system access, and Git integration via the system's git binary.
 
 ### Development
 
@@ -570,17 +570,17 @@ Both apps share the same feature set with platform-appropriate adaptations:
 
 ## 🌐 Community
 
-Noteriv has a growing ecosystem of community-created extensions. Browse and install them directly from the app.
+Glyph has a growing ecosystem of community-created extensions. Browse and install them directly from the app.
 
 <table>
   <tr>
     <td align="center" width="33%">
       <h3>Plugins</h3>
-      <a href="https://github.com/thejacedev/NoterivPlugins">
-        <strong>thejacedev/NoterivPlugins</strong>
+      <a href="https://github.com/thejacedev/GlyphPlugins">
+        <strong>thejacedev/GlyphPlugins</strong>
       </a>
       <br /><br />
-      <p>Extend Noteriv with custom commands, sidebar panels, status bar items, and editor integrations. Plugins have access to the vault filesystem, editor state, and event system.</p>
+      <p>Extend Glyph with custom commands, sidebar panels, status bar items, and editor integrations. Plugins have access to the vault filesystem, editor state, and event system.</p>
       <br />
       <sub>
         <strong>Plugin API:</strong> vault read/write, UI commands, event listeners (file-open, file-save, editor-change, etc.), editor manipulation (insert, replace, cursor)
@@ -588,8 +588,8 @@ Noteriv has a growing ecosystem of community-created extensions. Browse and inst
     </td>
     <td align="center" width="33%">
       <h3>Themes</h3>
-      <a href="https://github.com/thejacedev/NoterivThemes">
-        <strong>thejacedev/NoterivThemes</strong>
+      <a href="https://github.com/thejacedev/GlyphThemes">
+        <strong>thejacedev/GlyphThemes</strong>
       </a>
       <br /><br />
       <p>Community color themes beyond the 10 built-in options. Themes define 16 color properties covering backgrounds, text, accent, and syntax colors.</p>
@@ -600,14 +600,14 @@ Noteriv has a growing ecosystem of community-created extensions. Browse and inst
     </td>
     <td align="center" width="33%">
       <h3>CSS Snippets</h3>
-      <a href="https://github.com/thejacedev/NoterivSnippets">
-        <strong>thejacedev/NoterivSnippets</strong>
+      <a href="https://github.com/thejacedev/GlyphSnippets">
+        <strong>thejacedev/GlyphSnippets</strong>
       </a>
       <br /><br />
       <p>Fine-tune the editor and preview with custom CSS. Snippets are stored per-vault and can be toggled individually. Community snippets are organized by category.</p>
       <br />
       <sub>
-        <strong>Snippet storage:</strong> <code>.noteriv/snippets/</code> directory with per-snippet <code>.css</code> files and a config JSON for enable/disable state.
+        <strong>Snippet storage:</strong> <code>.glyph/snippets/</code> directory with per-snippet <code>.css</code> files and a config JSON for enable/disable state.
       </sub>
     </td>
   </tr>
@@ -615,7 +615,7 @@ Noteriv has a growing ecosystem of community-created extensions. Browse and inst
 
 ### Creating Plugins
 
-Plugins live in `.noteriv/plugins/{plugin-id}/` inside your vault. Each plugin needs:
+Plugins live in `.glyph/plugins/{plugin-id}/` inside your vault. Each plugin needs:
 
 ```
 my-plugin/
@@ -681,14 +681,14 @@ Themes are JSON files with 16 color properties:
 }
 ```
 
-Save to `.noteriv/themes/my-theme.json` or submit a PR to [NoterivThemes](https://github.com/thejacedev/NoterivThemes).
+Save to `.glyph/themes/my-theme.json` or submit a PR to [GlyphThemes](https://github.com/thejacedev/GlyphThemes).
 
 ---
 
 ## 📁 Project Structure
 
 ```
-Noteriv/
+Glyph/
 ├── desktop/              Electron + Next.js desktop application
 │   ├── main/             Electron main process (IPC, file I/O, Git, sync, clipper server, vault watcher)
 │   ├── src/components/   41 React components + markdown rendering engine
@@ -748,9 +748,9 @@ Contributions are welcome! Here's how you can help:
 1. **Report bugs** &mdash; Open an issue with steps to reproduce
 2. **Suggest features** &mdash; Open an issue describing what you'd like to see
 3. **Submit code** &mdash; Fork, create a branch, make your changes, and open a PR
-4. **Create plugins** &mdash; Build and share plugins via [NoterivPlugins](https://github.com/thejacedev/NoterivPlugins)
-5. **Create themes** &mdash; Design and share themes via [NoterivThemes](https://github.com/thejacedev/NoterivThemes)
-6. **Create snippets** &mdash; Write and share CSS snippets via [NoterivSnippets](https://github.com/thejacedev/NoterivSnippets)
+4. **Create plugins** &mdash; Build and share plugins via [GlyphPlugins](https://github.com/thejacedev/GlyphPlugins)
+5. **Create themes** &mdash; Design and share themes via [GlyphThemes](https://github.com/thejacedev/GlyphThemes)
+6. **Create snippets** &mdash; Write and share CSS snippets via [GlyphSnippets](https://github.com/thejacedev/GlyphSnippets)
 
 ---
 

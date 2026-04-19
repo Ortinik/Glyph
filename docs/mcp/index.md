@@ -5,15 +5,15 @@ order: 1
 
 # MCP Server
 
-Noteriv includes an MCP (Model Context Protocol) server that gives AI assistants full access to your notes. The server exposes 22 tools for reading, writing, searching, and managing your vault, allowing AI agents like Claude, ChatGPT, and others to interact with your knowledge base directly.
+Glyph includes an MCP (Model Context Protocol) server that gives AI assistants full access to your notes. The server exposes 22 tools for reading, writing, searching, and managing your vault, allowing AI agents like Claude, ChatGPT, and others to interact with your knowledge base directly.
 
-The MCP server is published on npm as [`glyph-mcp`](https://www.npmjs.com/package/glyph-mcp) and can be run with a single command. It auto-discovers your vaults from the Noteriv desktop app's configuration, so there is no manual setup required in most cases.
+The MCP server is published on npm as [`glyph-mcp`](https://www.npmjs.com/package/glyph-mcp) and can be run with a single command. It auto-discovers your vaults from the Glyph desktop app's configuration, so there is no manual setup required in most cases.
 
 ## What is MCP?
 
 The Model Context Protocol is an open standard created by Anthropic for connecting AI assistants to external data sources and tools. Instead of copying and pasting notes into a chat window, MCP lets an AI assistant read your notes, search your vault, create new notes, and manage your knowledge base programmatically.
 
-When you connect Noteriv's MCP server to an AI assistant, the assistant can:
+When you connect Glyph's MCP server to an AI assistant, the assistant can:
 
 - Read any note in your vault by path
 - Write new notes or update existing ones
@@ -29,11 +29,11 @@ When you connect Noteriv's MCP server to an AI assistant, the assistant can:
 
 The MCP server runs as a Node.js process that communicates over standard input/output (stdio). When an AI assistant wants to use a tool, it sends a JSON request to the server, and the server responds with the result.
 
-The server reads the Noteriv desktop app's configuration file to discover your vaults:
+The server reads the Glyph desktop app's configuration file to discover your vaults:
 
-- **macOS**: `~/Library/Application Support/Noteriv/config.json`
-- **Windows**: `%APPDATA%/Noteriv/config.json`
-- **Linux**: `~/.config/glyph/config.json` (or `~/.config/Noteriv/config.json`)
+- **macOS**: `~/Library/Application Support/Glyph/config.json`
+- **Windows**: `%APPDATA%/Glyph/config.json`
+- **Linux**: `~/.config/glyph/config.json` (or `~/.config/Glyph/config.json`)
 
 The configuration file contains a list of vault paths and an active vault ID. The server uses the active vault by default, and you can switch vaults at runtime using the `switch_vault` or `set_vault_path` tools.
 
@@ -81,7 +81,7 @@ The MCP server is implemented as a single JavaScript file (`mcp/index.js`) using
 
 Key implementation details:
 
-- **Config discovery**: The server reads the Noteriv config file from the platform-appropriate location (macOS: `~/Library/Application Support/Noteriv/`, Windows: `%APPDATA%/Noteriv/`, Linux: `~/.config/glyph/`).
+- **Config discovery**: The server reads the Glyph config file from the platform-appropriate location (macOS: `~/Library/Application Support/Glyph/`, Windows: `%APPDATA%/Glyph/`, Linux: `~/.config/glyph/`).
 - **Vault resolution**: If a vault path is passed as a command-line argument, it is used directly. Otherwise, the server reads the config file and uses the active vault, falling back to the first configured vault.
 - **File walking**: The `walkDir` function recursively lists files and folders, skipping hidden directories (`.git`, `.glyph`) and `node_modules`.
 - **Search**: Full-text search is case-insensitive and checks both filenames and file content. Results are capped at 20 files with up to 5 matching lines per file.

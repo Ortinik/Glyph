@@ -5,11 +5,11 @@ order: 1
 
 # Plugins
 
-Noteriv has a community plugin system that lets you extend the app with new commands, sidebar panels, status bar items, settings tabs, and custom behavior. Plugins are JavaScript files that run inside the app and interact with your notes through a sandboxed API.
+Glyph has a community plugin system that lets you extend the app with new commands, sidebar panels, status bar items, settings tabs, and custom behavior. Plugins are JavaScript files that run inside the app and interact with your notes through a sandboxed API.
 
 ## How Plugins Work
 
-Each plugin is a folder inside your vault's `.glyph/plugins/` directory. The folder contains a `manifest.json` that describes the plugin and a `main.js` (or other entry file) that contains the plugin code. When a plugin is enabled, Noteriv loads its entry file, executes it in a sandboxed environment, and calls the plugin's `onLoad` function with an API object.
+Each plugin is a folder inside your vault's `.glyph/plugins/` directory. The folder contains a `manifest.json` that describes the plugin and a `main.js` (or other entry file) that contains the plugin code. When a plugin is enabled, Glyph loads its entry file, executes it in a sandboxed environment, and calls the plugin's `onLoad` function with an API object.
 
 Plugins can:
 
@@ -33,7 +33,7 @@ The easiest way to install plugins is through the built-in community browser:
 3. Find a plugin you want and click **Install**.
 4. Toggle the plugin **On** to enable it.
 
-Community plugins are hosted in the [NoterivPlugins](https://github.com/thejacedev/NoterivPlugins) GitHub repository. The app downloads the plugin's `manifest.json` and `main.js` files and saves them to `.glyph/plugins/{plugin-id}/` in your vault.
+Community plugins are hosted in the [GlyphPlugins](https://github.com/thejacedev/GlyphPlugins) GitHub repository. The app downloads the plugin's `manifest.json` and `main.js` files and saves them to `.glyph/plugins/{plugin-id}/` in your vault.
 
 ### From a Local Folder
 

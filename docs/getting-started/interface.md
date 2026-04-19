@@ -5,7 +5,7 @@ order: 5
 
 # Interface
 
-Noteriv's desktop interface is designed around a keyboard-driven workflow with a clean, distraction-free layout. Every element has a purpose, and most can be hidden when you need to focus on writing. This guide explains each part of the UI.
+Glyph's desktop interface is designed around a keyboard-driven workflow with a clean, distraction-free layout. Every element has a purpose, and most can be hidden when you need to focus on writing. This guide explains each part of the UI.
 
 ## Layout overview
 
@@ -38,7 +38,7 @@ In the top-left corner, the current vault name is displayed. Clicking it opens a
 - Switch to a different vault by clicking its name.
 - See the file path for each vault.
 - Access git settings for vaults with a remote configured (click the git icon).
-- Remove a vault from Noteriv (click the X button).
+- Remove a vault from Glyph (click the X button).
 - Create a new vault (click "New vault" at the bottom).
 
 ### Tab bar
@@ -160,7 +160,7 @@ Zen mode pairs well with focus mode (`Ctrl+Shift+D`) for a completely immersive 
 
 ## Fullscreen
 
-Press `F11` to toggle fullscreen mode. This expands Noteriv to fill your entire screen, hiding the operating system's title bar and taskbar. Press `F11` again to return to windowed mode.
+Press `F11` to toggle fullscreen mode. This expands Glyph to fill your entire screen, hiding the operating system's title bar and taskbar. Press `F11` again to return to windowed mode.
 
 ## Customizing the interface
 

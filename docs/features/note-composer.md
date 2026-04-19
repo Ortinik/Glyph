@@ -31,7 +31,7 @@ The merge interface shows:
 
 When you click the "Merge N files" button:
 
-1. Noteriv reads the content of each selected file in order.
+1. Glyph reads the content of each selected file in order.
 2. If the heading option is enabled, it prepends an `## {filename}` heading (without extension) before each file's content.
 3. It appends the merged block to the end of the current note's content, separated by a blank line.
 4. If the delete option is enabled, it deletes each source file.
@@ -58,7 +58,7 @@ Only the selected level is used as a split boundary. Headings at other levels ar
 
 ### Preview
 
-Before splitting, Noteriv shows a preview of the files that would be created. Each preview entry shows:
+Before splitting, Glyph shows a preview of the files that would be created. Each preview entry shows:
 
 - **File name.** Derived from the heading text, sanitized for use as a filename. Special characters (`< > : " / \ | ? * #`) are removed, spaces are replaced with hyphens, and the result is truncated to 200 characters. If a heading has no text, the file is named `Untitled.md`.
 - **Content preview.** The first 200 characters of the section's content, giving you a sense of what each file will contain.
@@ -73,10 +73,10 @@ Content before the first heading at the target level is captured as a "Preamble"
 
 When you click the "Split into N files" button:
 
-1. Noteriv splits the content at each heading boundary, producing an array of `{ title, content }` sections.
+1. Glyph splits the content at each heading boundary, producing an array of `{ title, content }` sections.
 2. For each section, it creates a new `.md` file in the same directory as the current note. The filename is the sanitized heading text.
 3. If a file with the same name already exists and is the current file, it is skipped to avoid overwriting.
-4. After all files are created, Noteriv opens the first new file in the editor.
+4. After all files are created, Glyph opens the first new file in the editor.
 5. The modal closes.
 
 The original file is not deleted or modified. You can delete it manually after verifying the split results.

@@ -5,7 +5,7 @@ order: 8
 
 # Command Palette
 
-The command palette is a searchable launcher for every action in Noteriv. Instead of remembering keyboard shortcuts or hunting through menus, you type what you want to do and the palette finds the matching command.
+The command palette is a searchable launcher for every action in Glyph. Instead of remembering keyboard shortcuts or hunting through menus, you type what you want to do and the palette finds the matching command.
 
 ## Opening the Palette
 
@@ -49,7 +49,7 @@ The selection highlight starts at the top of the list. When you execute a comman
 
 ## Available Commands
 
-The palette includes every action registered in Noteriv. Here is a representative list, grouped by category:
+The palette includes every action registered in Glyph. Here is a representative list, grouped by category:
 
 ### File
 

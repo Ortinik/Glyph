@@ -5,7 +5,7 @@ order: 7
 
 # Search
 
-Noteriv provides two search tools: Quick Open for finding files by name, and Vault Search for finding text across all files. Both are keyboard-driven and designed to get you to the right note in a few keystrokes.
+Glyph provides two search tools: Quick Open for finding files by name, and Vault Search for finding text across all files. Both are keyboard-driven and designed to get you to the right note in a few keystrokes.
 
 ## Quick Open
 
@@ -46,9 +46,9 @@ Vault Search is a full-text search across every file in your vault. Press `Ctrl+
 
 ### How It Works
 
-When you type a query, Noteriv sends it to the backend, which scans every `.md` file in the vault for lines containing the query string. Matching is case-insensitive. Results are returned as a list of matches, each with the file path, line number, and the text of the matching line.
+When you type a query, Glyph sends it to the backend, which scans every `.md` file in the vault for lines containing the query string. Matching is case-insensitive. Results are returned as a list of matches, each with the file path, line number, and the text of the matching line.
 
-Search is debounced: Noteriv waits 200 milliseconds after you stop typing before executing the search. This prevents unnecessary work while you are still composing your query and keeps the UI responsive.
+Search is debounced: Glyph waits 200 milliseconds after you stop typing before executing the search. This prevents unnecessary work while you are still composing your query and keeps the UI responsive.
 
 ### Display
 

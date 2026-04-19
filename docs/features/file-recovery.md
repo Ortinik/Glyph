@@ -5,13 +5,13 @@ order: 9
 
 # File Recovery
 
-File recovery is Noteriv's local snapshot system. Every time you save a note, a copy of the previous content is stored as a timestamped snapshot. If you make a mistake, lose content, or want to compare what a note looked like earlier, you can browse and restore any snapshot without relying on Git or an external backup.
+File recovery is Glyph's local snapshot system. Every time you save a note, a copy of the previous content is stored as a timestamped snapshot. If you make a mistake, lose content, or want to compare what a note looked like earlier, you can browse and restore any snapshot without relying on Git or an external backup.
 
 ## How Snapshots Work
 
 ### Automatic Capture
 
-Before Noteriv writes new content to a file, it saves the current content as a snapshot. This happens transparently on every save operation -- you do not need to trigger it manually. If the content is empty (whitespace only), no snapshot is created.
+Before Glyph writes new content to a file, it saves the current content as a snapshot. This happens transparently on every save operation -- you do not need to trigger it manually. If the content is empty (whitespace only), no snapshot is created.
 
 ### Storage Location
 
@@ -37,11 +37,11 @@ Snapshot filenames follow the pattern `{sanitized-name}-{timestamp}.md`:
 
 ### Retention Limit
 
-Noteriv keeps up to **50 snapshots per file**. When a new snapshot would exceed this limit, the oldest snapshots are deleted automatically. This prevents unbounded disk usage while keeping a meaningful history window.
+Glyph keeps up to **50 snapshots per file**. When a new snapshot would exceed this limit, the oldest snapshots are deleted automatically. This prevents unbounded disk usage while keeping a meaningful history window.
 
 ### Age-Based Cleanup
 
-Noteriv can also clean up snapshots older than a configurable number of days (default: 30). This runs periodically and removes stale snapshots across all files in the vault.
+Glyph can also clean up snapshots older than a configurable number of days (default: 30). This runs periodically and removes stale snapshots across all files in the vault.
 
 ## Recovery Screen
 
@@ -103,7 +103,7 @@ This color-coded diff makes it easy to understand what changed without reading t
 
 ## Snapshots vs. Note History
 
-Noteriv has two overlapping but distinct history features:
+Glyph has two overlapping but distinct history features:
 
 | | File Recovery (Snapshots) | Note History (Git) |
 |---|---|---|
@@ -121,7 +121,7 @@ Snapshots are your safety net for recent work. [Note History](./note-history.md)
 Snapshots are lightweight:
 
 - Each snapshot is a plain text file, so disk usage is proportional to the size of your notes.
-- The snapshot directory is read lazily -- Noteriv only scans it when you open the recovery screen.
+- The snapshot directory is read lazily -- Glyph only scans it when you open the recovery screen.
 - Writing a snapshot is a single file-write operation that happens in the background after the main save completes.
 - The 50-snapshot limit and age-based cleanup keep the directory from growing indefinitely.
 

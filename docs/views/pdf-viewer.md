@@ -5,11 +5,11 @@ order: 7
 
 # PDF Viewer
 
-Noteriv includes a built-in PDF viewer that opens PDF files inline, directly inside the application. You can read documents, highlight text, add underlines, write text notes, and export all your annotations to a Markdown file with page references. This eliminates the need to switch to an external PDF reader and makes it easy to integrate PDF reading into your note-taking workflow.
+Glyph includes a built-in PDF viewer that opens PDF files inline, directly inside the application. You can read documents, highlight text, add underlines, write text notes, and export all your annotations to a Markdown file with page references. This eliminates the need to switch to an external PDF reader and makes it easy to integrate PDF reading into your note-taking workflow.
 
 ## Opening PDFs
 
-Place a PDF file inside your vault (or any subfolder) and click it in the file explorer. Noteriv detects the `.pdf` extension and opens the file in the PDF viewer instead of the text editor. The viewer occupies the same editor pane, so you can have a PDF open in one tab and Markdown notes in another.
+Place a PDF file inside your vault (or any subfolder) and click it in the file explorer. Glyph detects the `.pdf` extension and opens the file in the PDF viewer instead of the text editor. The viewer occupies the same editor pane, so you can have a PDF open in one tab and Markdown notes in another.
 
 PDFs are rendered using [pdf.js](https://mozilla.github.io/pdf.js/), the same engine used by Firefox for its built-in PDF reader. This provides high-fidelity rendering for text, vector graphics, and embedded images.
 

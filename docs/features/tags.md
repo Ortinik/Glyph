@@ -5,7 +5,7 @@ order: 3
 
 # Tags
 
-Tags let you categorize and cross-reference notes without folders. Write a `#tag` anywhere in a note's body and Noteriv will index it, count it, and make it searchable across your entire vault.
+Tags let you categorize and cross-reference notes without folders. Write a `#tag` anywhere in a note's body and Glyph will index it, count it, and make it searchable across your entire vault.
 
 ## Syntax
 
@@ -90,7 +90,7 @@ Tags are sorted by total count (descending), then alphabetically. The most-used 
 
 ## How Tags Are Extracted
 
-Noteriv scans every `.md` and `.markdown` file in the vault using a regular expression that:
+Glyph scans every `.md` and `.markdown` file in the vault using a regular expression that:
 
 1. Detects fenced code blocks and skips their contents entirely.
 2. Skips heading lines (lines starting with `# `, `## `, etc.).
@@ -126,6 +126,6 @@ This helps keep your tagging consistent and avoids unintentional repetition.
 ## Tips
 
 - **Use hierarchical tags for broad categories.** Instead of `#alpha-project-backend`, use `#project/alpha/backend`. The tree view makes hierarchies much easier to navigate.
-- **Keep tag names lowercase.** While Noteriv's tag pane is case-sensitive in display, search and filtering are case-insensitive. Consistent casing avoids visual clutter.
+- **Keep tag names lowercase.** While Glyph's tag pane is case-sensitive in display, search and filtering are case-insensitive. Consistent casing avoids visual clutter.
 - **Combine tags with folders.** Tags and folders serve different purposes. Folders give a file a single physical location; tags let a note belong to multiple categories. Use both together for maximum flexibility.
 - **Review the tag pane periodically.** Stale or misspelled tags accumulate over time. A quick scan of the tag pane helps you spot and consolidate them.

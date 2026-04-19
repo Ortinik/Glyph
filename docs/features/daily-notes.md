@@ -5,11 +5,11 @@ order: 4
 
 # Daily Notes
 
-Daily notes give you a quick way to capture thoughts, tasks, and logs for the current day. Press a single shortcut to open today's note -- if it does not exist yet, Noteriv creates it for you automatically.
+Daily notes give you a quick way to capture thoughts, tasks, and logs for the current day. Press a single shortcut to open today's note -- if it does not exist yet, Glyph creates it for you automatically.
 
 ## Opening Today's Note
 
-Press `Ctrl+D` (or `Cmd+D` on macOS) to open the daily note for the current date. If the file already exists, it opens in the editor. If it does not, Noteriv creates a new empty file with the appropriate name and opens it.
+Press `Ctrl+D` (or `Cmd+D` on macOS) to open the daily note for the current date. If the file already exists, it opens in the editor. If it does not, Glyph creates a new empty file with the appropriate name and opens it.
 
 You can also trigger this action from the command palette (`Ctrl+Shift+P`, search for "Open Daily Note").
 
@@ -27,7 +27,7 @@ This format sorts chronologically in any file browser and avoids locale-dependen
 
 ## Storage Location
 
-Noteriv checks for a folder named `DailyNotes/` in the vault root. If it exists, daily notes are created inside it:
+Glyph checks for a folder named `DailyNotes/` in the vault root. If it exists, daily notes are created inside it:
 
 ```
 vault/
@@ -88,7 +88,7 @@ You can then press `Ctrl+T` immediately after creating a daily note to insert th
 
 ## Tasks and Due Dates
 
-Daily notes work well as a home for tasks. Noteriv recognizes the standard checkbox syntax:
+Daily notes work well as a home for tasks. Glyph recognizes the standard checkbox syntax:
 
 ```markdown
 - [ ] Review pull request

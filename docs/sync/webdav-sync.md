@@ -5,7 +5,7 @@ order: 4
 
 # WebDAV Sync
 
-WebDAV sync connects your Noteriv vault to any server that supports the WebDAV protocol. This includes self-hosted solutions like Nextcloud and ownCloud, as well as any standards-compliant WebDAV server. Files are transferred over HTTP/HTTPS, making WebDAV sync a good choice for users who want full control over where their data is stored without relying on GitHub or a specific cloud provider.
+WebDAV sync connects your Glyph vault to any server that supports the WebDAV protocol. This includes self-hosted solutions like Nextcloud and ownCloud, as well as any standards-compliant WebDAV server. Files are transferred over HTTP/HTTPS, making WebDAV sync a good choice for users who want full control over where their data is stored without relying on GitHub or a specific cloud provider.
 
 ## What Is WebDAV
 
@@ -52,9 +52,9 @@ Your WebDAV account password. For Nextcloud, you can generate an app-specific pa
 
 ### Remote Path
 
-The directory path on the WebDAV server where your vault files will be stored. Default: `/Noteriv`. This path is relative to the WebDAV root. If the directory does not exist, Noteriv creates it (with intermediate directories) on the first sync.
+The directory path on the WebDAV server where your vault files will be stored. Default: `/Glyph`. This path is relative to the WebDAV root. If the directory does not exist, Glyph creates it (with intermediate directories) on the first sync.
 
-For example, if your WebDAV server root is `https://cloud.example.com/remote.php/dav/files/alice/` and the remote path is `/Noteriv`, files will be stored at `https://cloud.example.com/remote.php/dav/files/alice/Noteriv/`.
+For example, if your WebDAV server root is `https://cloud.example.com/remote.php/dav/files/alice/` and the remote path is `/Glyph`, files will be stored at `https://cloud.example.com/remote.php/dav/files/alice/Glyph/`.
 
 ## How It Works
 
@@ -62,7 +62,7 @@ WebDAV sync operates similarly to folder sync, but files are transferred over HT
 
 ### Push Pass (Local to Server)
 
-Noteriv walks the vault directory and collects all local files with their relative paths. For each file:
+Glyph walks the vault directory and collects all local files with their relative paths. For each file:
 
 1. Check if the file exists on the server at the corresponding remote path.
 2. Compare modification times. If the local file is newer (or does not exist on the server), upload it.
@@ -71,7 +71,7 @@ Noteriv walks the vault directory and collects all local files with their relati
 
 ### Pull Pass (Server to Local)
 
-Noteriv lists the remote directory contents recursively. For each remote file:
+Glyph lists the remote directory contents recursively. For each remote file:
 
 1. Check if the file exists locally at the corresponding vault path.
 2. Compare modification times. If the remote file is newer (or does not exist locally), download it.
@@ -104,13 +104,13 @@ This works well for single-user workflows but can lose data when multiple client
 
 1. Log into your Nextcloud web interface.
 2. Go to Settings > Security > Devices & sessions.
-3. Create a new app password for Noteriv.
-4. In Noteriv, set the server URL to:
+3. Create a new app password for Glyph.
+4. In Glyph, set the server URL to:
    ```
    https://your-nextcloud-server/remote.php/dav/files/YOUR_USERNAME/
    ```
 5. Enter your Nextcloud username and the app password.
-6. Set the remote path to `/Noteriv` (or any folder name you prefer).
+6. Set the remote path to `/Glyph` (or any folder name you prefer).
 7. Click Test Connection to verify.
 
 ### ownCloud
@@ -138,7 +138,7 @@ If you are running your own WebDAV server (Apache mod_dav, Nginx, etc.):
    ```
    (Port 5006 is the default HTTPS WebDAV port on Synology.)
 3. Use your Synology DSM username and password.
-4. Set the remote path to your desired shared folder, e.g., `/Noteriv`.
+4. Set the remote path to your desired shared folder, e.g., `/Glyph`.
 
 ## Sync Interval
 
@@ -186,5 +186,5 @@ To optimize:
 - Deletions are not propagated. Deleted local files are not removed from the server, and vice versa.
 - WebDAV sync is desktop-only. The mobile app does not support WebDAV.
 - Some WebDAV servers have file size limits. Check your server configuration for `upload_max_filesize` or equivalent settings.
-- WebDAV sync does not support server-side versioning. Even if your WebDAV server (like Nextcloud) has file versioning, Noteriv does not interact with it. Use git sync for version history.
+- WebDAV sync does not support server-side versioning. Even if your WebDAV server (like Nextcloud) has file versioning, Glyph does not interact with it. Use git sync for version history.
 - Connection timeouts may occur on unreliable networks. The sync will retry on the next interval.
