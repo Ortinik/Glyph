@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState, useRef, useCallback } from "react";
+import { useEffect, useState, useRef, useCallback, Fragment } from "react";
 import {
   computeVaultInsights,
   type VaultInsightsData,
@@ -294,15 +294,15 @@ export default function VaultInsights({ vaultPath, onFileSelect, onClose }: Vaul
       <div>
         <div className="vi-health-grid">
           {items.map((item) => (
-            <>
-              <span key={item.label + "-l"} className="vi-health-label">{item.label}</span>
-              <div key={item.label + "-b"} className="vi-health-bar-track">
+            <Fragment key={item.label}>
+              <span className="vi-health-label">{item.label}</span>
+              <div className="vi-health-bar-track">
                 <div
                   className="vi-health-bar-fill"
                   style={{ width: `${item.pct}%`, background: healthColor(item.pct) }}
                 />
               </div>
-            </>
+            </Fragment>
           ))}
         </div>
         <div className="vi-health-overall">

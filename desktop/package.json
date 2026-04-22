@@ -71,7 +71,7 @@
     "electron-serve": "^3.0.1",
     "electron-updater": "^6.8.3",
     "katex": "^0.16.38",
-    "mermaid": "^11.13.0",
+    "mermaid": "^11.14.0",
     "next": "^16.2.4",
     "pdfjs-dist": "^5.5.207",
     "react": "19.2.3",
