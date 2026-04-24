@@ -1,12 +1,10 @@
 {
   "$schema": "https://typedoc.org/schema.json",
   "entryPoints": [
-    "./src/lib",
-    "./src/components/markdown",
-    "./src/types"
+    "./src/"
   ],
   "entryPointStrategy": "expand",
-  "out": "../docs",
+  "out": "../docs-dev",
   "name": "Glyph Desktop API",
   "includeVersion": true,
   "readme": "../README.md",
