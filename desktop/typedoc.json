@@ -1,0 +1,21 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "entryPoints": [
+    "./src/lib",
+    "./src/components/markdown",
+    "./src/types"
+  ],
+  "entryPointStrategy": "expand",
+  "out": "../docs",
+  "name": "Glyph Desktop API",
+  "includeVersion": true,
+  "readme": "../README.md",
+  "exclude": [
+    "**/*.test.ts",
+    "**/*.spec.ts",
+    "node_modules"
+  ],
+  "cleanOutputDir": true,
+  "githubPages": false,
+  "hideGenerator": true
+}

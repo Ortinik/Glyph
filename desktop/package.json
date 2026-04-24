@@ -16,7 +16,9 @@
     "build": "next build && electron-builder",
     "build:next": "next build",
     "start": "electron .",
-    "lint": "eslint"
+    "lint": "eslint",
+    "docs": "typedoc",
+    "docs:watch": "typedoc --watch"
   },
   "build": {
     "appId": "com.glyph.app",
@@ -51,7 +53,7 @@
     },
     "publish": {
       "provider": "github",
-      "owner": "thejacedev",
+      "owner": "Ortinik",
       "repo": "Glyph"
     }
   },
@@ -92,6 +94,7 @@
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
     "tailwindcss": "^4",
+    "typedoc": "^0.28.19",
     "typescript": "^5"
   }
 }
