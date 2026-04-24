@@ -644,7 +644,7 @@ export class PluginManager {
 // ── Community plugins ──
 
 const COMMUNITY_PLUGINS_BASE =
-  "https://raw.githubusercontent.com/thejacedev/GlyphPlugins/master";
+  "https://raw.githubusercontent.com/thejacedev/NoterivPlugins/master";
 
 export interface CommunityPluginEntry {
   id: string;

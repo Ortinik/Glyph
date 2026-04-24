@@ -11,7 +11,7 @@ Glyph is an open-source project, and contributions of all kinds are welcome. Whe
 
 ### Report Bugs
 
-Found a bug? Open an issue on the [GitHub repository](https://github.com/thejacedev/Glyph/issues) with:
+Found a bug? Open an issue on the [GitHub repository](https://github.com/ortinik/Glyph/issues) with:
 
 - A clear, descriptive title.
 - Steps to reproduce the bug.
@@ -37,15 +37,15 @@ Code contributions are welcome for bug fixes, new features, performance improvem
 
 ### Create Plugins
 
-Plugins extend Glyph without modifying the core codebase. If you build a useful plugin, consider publishing it to the [GlyphPlugins](https://github.com/thejacedev/GlyphPlugins) repository so others can install it from the community browser. See [Creating Plugins](./plugins/creating-plugins.md) for the API guide.
+Plugins extend Glyph without modifying the core codebase. If you build a useful plugin, consider publishing it to the [GlyphPlugins](https://github.com/thejacedev/NoterivPlugins) repository so others can install it from the community browser. See [Creating Plugins](./plugins/creating-plugins.md) for the API guide.
 
 ### Create Themes
 
-Design a color scheme and share it via the [GlyphThemes](https://github.com/thejacedev/GlyphThemes) repository. Custom themes are JSON files with 18 color properties. See [Custom Themes](./themes/custom-themes.md) for the format.
+Design a color scheme and share it via the [GlyphThemes](https://github.com/thejacedev/NoterivThemes) repository. Custom themes are JSON files with 18 color properties. See [Custom Themes](./themes/custom-themes.md) for the format.
 
 ### Create CSS Snippets
 
-Build useful CSS snippets and share them via the [GlyphSnippets](https://github.com/thejacedev/GlyphSnippets) repository. See [CSS Snippets](./themes/css-snippets.md) for details.
+Build useful CSS snippets and share them via the [GlyphSnippets](https://github.com/thejacedev/NoterivSnippets) repository. See [CSS Snippets](./themes/css-snippets.md) for details.
 
 ### Improve Documentation
 

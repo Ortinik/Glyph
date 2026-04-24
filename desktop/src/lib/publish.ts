@@ -127,7 +127,7 @@ export function generatePublishHTML(markdown: string, title: string): string {
 </head>
 <body>
 ${body}
-<div class="footer">Published with <a href="https://github.com/thejacedev/Glyph">Glyph</a></div>
+<div class="footer">Published with <a href="https://github.com/thejacedev/Noteriv">Glyph</a></div>
 </body>
 </html>`;
 }
