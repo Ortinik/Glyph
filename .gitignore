@@ -53,6 +53,10 @@ next-env.d.ts
 *.pem
 .vercel
 eas.json
+
 # build tools
 bundletool-*.jar
 phone/eas.json
+
+# zip archives
+docs-dev.zip
